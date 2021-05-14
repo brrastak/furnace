@@ -93,36 +93,14 @@ F 3 "~" H 4100 3400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x10_Male J?
-U 1 1 609BABA5
-P 1550 6050
-F 0 "J?" H 1658 6631 50  0000 C CNN
-F 1 "Conn_01x10_Male" H 1658 6540 50  0000 C CNN
-F 2 "" H 1550 6050 50  0001 C CNN
-F 3 "~" H 1550 6050 50  0001 C CNN
-	1    1550 6050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:TestPoint TP?
 U 1 1 609BBCCA
-P 3000 5950
-F 0 "TP?" H 3058 6068 50  0000 L CNN
-F 1 "TestPoint" H 3058 5977 50  0001 L CNN
-F 2 "" H 3200 5950 50  0001 C CNN
-F 3 "~" H 3200 5950 50  0001 C CNN
-	1    3000 5950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x24 J?
-U 1 1 609BC9D9
-P 4350 6150
-F 0 "J?" H 4430 6142 50  0000 L CNN
-F 1 "Conn_01x24" H 4430 6051 50  0000 L CNN
-F 2 "" H 4350 6150 50  0001 C CNN
-F 3 "~" H 4350 6150 50  0001 C CNN
-	1    4350 6150
+P 5550 5650
+F 0 "TP?" H 5608 5768 50  0000 L CNN
+F 1 "TestPoint" H 5608 5677 50  0001 L CNN
+F 2 "" H 5750 5650 50  0001 C CNN
+F 3 "~" H 5750 5650 50  0001 C CNN
+	1    5550 5650
 	1    0    0    -1  
 $EndComp
 $Comp

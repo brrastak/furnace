@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 7 13
+Sheet 7 14
 Title ""
 Date ""
 Rev ""
@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L B0505S-1WR2:B0505S-1WR2 PS?
+L furnace_controller-rescue:B0505S-1WR2-B0505S-1WR2 PS?
 U 1 1 60AE766F
 P 4050 3600
 AR Path="/60AE766F" Ref="PS?"  Part="1" 
@@ -195,7 +195,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 3500 4550 3500
 $Comp
-L Regulator_Linear:LM317L_SO8 U?
+L furnace_controller-rescue:LM317L_SO8-Regulator_Linear U?
 U 1 1 60AE76B8
 P 6900 3500
 AR Path="/609CA6A8/60AE76B8" Ref="U?"  Part="1" 

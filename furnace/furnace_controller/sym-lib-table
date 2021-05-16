@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name ADUM1301ARWZ-RL)(type Legacy)(uri ${KIPRJMOD}/ADUM1301ARWZ-RL.lib)(options "")(descr ""))
   (lib (name adum1301)(type Legacy)(uri ${KIPRJMOD}/adum1301.lib)(options "")(descr ""))
+  (lib (name furnace_controller-rescue)(type Legacy)(uri ${KIPRJMOD}/furnace_controller-rescue.lib)(options "")(descr ""))
 )

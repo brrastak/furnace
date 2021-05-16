@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 13
+Sheet 3 14
 Title ""
 Date ""
 Rev ""
@@ -16,12 +16,12 @@ $EndDescr
 $Comp
 L Connector:Conn_01x10_Male J?
 U 1 1 609EA720
-P 6750 3750
-F 0 "J?" H 6858 4331 50  0000 C CNN
-F 1 "Conn_01x10_Male" H 6858 4240 50  0000 C CNN
-F 2 "" H 6750 3750 50  0001 C CNN
-F 3 "~" H 6750 3750 50  0001 C CNN
-	1    6750 3750
+P 2600 4100
+F 0 "J?" H 2708 4681 50  0000 C CNN
+F 1 "Conn_01x10_Male" H 2708 4590 50  0000 C CNN
+F 2 "" H 2600 4100 50  0001 C CNN
+F 3 "~" H 2600 4100 50  0001 C CNN
+	1    2600 4100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -38,12 +38,12 @@ $EndComp
 $Comp
 L Connector:Conn_01x04_Male J?
 U 1 1 609EAA53
-P 4600 3450
-F 0 "J?" H 4708 3731 50  0000 C CNN
-F 1 "Conn_01x04_Male" H 4708 3640 50  0000 C CNN
-F 2 "" H 4600 3450 50  0001 C CNN
-F 3 "~" H 4600 3450 50  0001 C CNN
-	1    4600 3450
+P 2600 2850
+F 0 "J?" H 2708 3131 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 2708 3040 50  0000 C CNN
+F 2 "" H 2600 2850 50  0001 C CNN
+F 3 "~" H 2600 2850 50  0001 C CNN
+	1    2600 2850
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

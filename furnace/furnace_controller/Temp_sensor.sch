@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 13
+Sheet 4 14
 Title ""
 Date ""
 Rev ""
@@ -33,7 +33,7 @@ F 3 "" H 7650 3450 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND1 #PWR?
+L furnace_controller-rescue:GND1-power #PWR?
 U 1 1 60A0EB0A
 P 3450 2350
 AR Path="/609CA6A8/609D24C0/60A0EB0A" Ref="#PWR?"  Part="1" 
@@ -230,7 +230,7 @@ Wire Wire Line
 Wire Wire Line
 	3450 2350 3550 2350
 $Comp
-L power:GND1 #PWR?
+L furnace_controller-rescue:GND1-power #PWR?
 U 1 1 60B09F47
 P 6450 2150
 AR Path="/609CA6A8/609D24C0/60B09F47" Ref="#PWR?"  Part="1" 
@@ -249,7 +249,7 @@ $EndComp
 Wire Wire Line
 	6450 2150 6550 2150
 $Comp
-L power:GND1 #PWR?
+L furnace_controller-rescue:GND1-power #PWR?
 U 1 1 60B0A5B6
 P 6450 3450
 AR Path="/609CA6A8/609D24C0/60B0A5B6" Ref="#PWR?"  Part="1" 
@@ -316,7 +316,7 @@ Text Label 10050 2950 0    50   ~ 0
 Text Label 10350 2950 0    50   ~ 0
 ~CS5
 $Comp
-L power:GND1 #PWR?
+L furnace_controller-rescue:GND1-power #PWR?
 U 1 1 60B0F1ED
 P 3450 3350
 AR Path="/609CA6A8/609D24C0/60B0F1ED" Ref="#PWR?"  Part="1" 
@@ -360,7 +360,7 @@ $EndSheet
 Wire Wire Line
 	3450 3350 3550 3350
 $Comp
-L power:GND1 #PWR?
+L furnace_controller-rescue:GND1-power #PWR?
 U 1 1 60B0FB21
 P 3450 4350
 AR Path="/609CA6A8/609D24C0/60B0FB21" Ref="#PWR?"  Part="1" 
@@ -404,7 +404,7 @@ $EndSheet
 Wire Wire Line
 	3450 4350 3550 4350
 $Comp
-L power:GND1 #PWR?
+L furnace_controller-rescue:GND1-power #PWR?
 U 1 1 60B108C7
 P 3450 5350
 AR Path="/609CA6A8/609D24C0/60B108C7" Ref="#PWR?"  Part="1" 
@@ -448,7 +448,7 @@ $EndSheet
 Wire Wire Line
 	3450 5350 3550 5350
 $Comp
-L power:GND1 #PWR?
+L furnace_controller-rescue:GND1-power #PWR?
 U 1 1 60B118E3
 P 3450 6350
 AR Path="/609CA6A8/609D24C0/60B118E3" Ref="#PWR?"  Part="1" 
@@ -548,7 +548,7 @@ $EndComp
 Wire Wire Line
 	7550 4700 7650 4700
 $Comp
-L power:GND1 #PWR?
+L furnace_controller-rescue:GND1-power #PWR?
 U 1 1 60B14823
 P 6450 4700
 AR Path="/609CA6A8/609D24C0/60B14823" Ref="#PWR?"  Part="1" 
@@ -627,7 +627,7 @@ $EndComp
 Wire Wire Line
 	7550 5950 7650 5950
 $Comp
-L power:GND1 #PWR?
+L furnace_controller-rescue:GND1-power #PWR?
 U 1 1 60B180EF
 P 6450 5950
 AR Path="/609CA6A8/609D24C0/60B180EF" Ref="#PWR?"  Part="1" 
@@ -738,7 +738,7 @@ Wire Wire Line
 Wire Wire Line
 	4850 6050 4550 6050
 $Comp
-L power:GND1 #PWR?
+L furnace_controller-rescue:GND1-power #PWR?
 U 1 1 60B43E6A
 P 6450 4500
 AR Path="/609CA6A8/609D24C0/60B43E6A" Ref="#PWR?"  Part="1" 
@@ -757,7 +757,7 @@ $EndComp
 Wire Wire Line
 	6450 4500 6550 4500
 $Comp
-L power:GND1 #PWR?
+L furnace_controller-rescue:GND1-power #PWR?
 U 1 1 60B472DC
 P 6450 5750
 AR Path="/609CA6A8/609D24C0/60B472DC" Ref="#PWR?"  Part="1" 

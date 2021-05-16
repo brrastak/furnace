@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 13
+Sheet 2 14
 Title ""
 Date ""
 Rev ""
@@ -37,19 +37,6 @@ F 1 "Micro_SD_Card" H 8300 4276 50  0000 C CNN
 F 2 "" H 9500 3950 50  0001 C CNN
 F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 8350 3650 50  0001 C CNN
 	1    8350 3650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Regulator_Linear:AMS1117-3.3 U?
-U 1 1 609CF000
-P 3800 3500
-AR Path="/609CF000" Ref="U?"  Part="1" 
-AR Path="/609C9D41/609CF000" Ref="U?"  Part="1" 
-F 0 "U?" H 3800 3742 50  0000 C CNN
-F 1 "AMS1117-3.3" H 3800 3651 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 3800 3700 50  0001 C CNN
-F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 3900 3250 50  0001 C CNN
-	1    3800 3500
 	1    0    0    -1  
 $EndComp
 $Comp

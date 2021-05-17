@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 14
+Sheet 1 15
 Title ""
 Date ""
 Rev ""
@@ -84,12 +84,12 @@ $EndComp
 $Comp
 L Device:C C?
 U 1 1 609B27F2
-P 4100 3400
-F 0 "C?" H 4215 3446 50  0000 L CNN
-F 1 "0603" H 4215 3355 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4138 3250 50  0001 C CNN
-F 3 "~" H 4100 3400 50  0001 C CNN
-	1    4100 3400
+P 4050 3100
+F 0 "C?" H 4165 3146 50  0000 L CNN
+F 1 "0603" H 4165 3055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4088 2950 50  0001 C CNN
+F 3 "~" H 4050 3100 50  0001 C CNN
+	1    4050 3100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -115,16 +115,10 @@ F 3 "~" H 1250 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 2550 3800 1400 850 
+S 2500 3500 1400 850 
 U 609C9D41
 F0 "MAIN" 50
 F1 "Main.sch" 50
-$EndSheet
-$Sheet
-S 4500 3850 1250 750 
-U 609CA1D9
-F0 "EXTERNAL" 50
-F1 "External.sch" 50
 $EndSheet
 $Sheet
 S 1000 4000 1000 500 
@@ -146,4 +140,31 @@ F2 "CHARGE_PUMP_CLK" I L 1000 5400 50
 F3 "+5V_IN" I L 1000 5100 50 
 F4 "-5V_IN" I L 1000 5200 50 
 $EndSheet
+$Sheet
+S 2500 5000 1000 500 
+U 60A364EE
+F0 "OLED_DISPLAY_CONNECTOR" 50
+F1 "OLED_display_connector.sch" 50
+$EndSheet
+$Sheet
+S 4000 5000 1000 500 
+U 60A36559
+F0 "KEYBOARD_CONNECTOR" 50
+F1 "Keyboard_connector.sch" 50
+$EndSheet
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 60A373FD
+P 7000 3950
+AR Path="/609CA1D9/60A373FD" Ref="J?"  Part="1" 
+AR Path="/60A373FD" Ref="J?"  Part="1" 
+F 0 "J?" H 7108 4231 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 7108 4140 50  0000 C CNN
+F 2 "" H 7000 3950 50  0001 C CNN
+F 3 "~" H 7000 3950 50  0001 C CNN
+	1    7000 3950
+	1    0    0    -1  
+$EndComp
+Text Notes 7450 4000 0    50   ~ 0
+I2C_DISPLAY
 $EndSCHEMATC

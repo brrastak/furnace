@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 14 14
+Sheet 13 15
 Title ""
 Date ""
 Rev ""
@@ -139,7 +139,7 @@ Wire Wire Line
 	7000 2550 7300 2550
 Connection ~ 7300 2550
 Wire Wire Line
-	7300 2550 7700 2550
+	7300 2550 7450 2550
 Wire Wire Line
 	7700 2450 7700 2550
 Connection ~ 7700 2550
@@ -152,12 +152,12 @@ Connection ~ 7300 2850
 $Comp
 L Transistor_FET:IRLML6402 Q?
 U 1 1 60A19F59
-P 6400 4550
-F 0 "Q?" H 6604 4504 50  0000 L CNN
-F 1 "IRLML6402" H 6604 4595 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 6600 4475 50  0001 L CIN
-F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 6400 4550 50  0001 L CNN
-	1    6400 4550
+P 6400 4650
+F 0 "Q?" H 6604 4604 50  0000 L CNN
+F 1 "IRLML6402" H 6604 4695 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 6600 4575 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 6400 4650 50  0001 L CNN
+	1    6400 4650
 	1    0    0    1   
 $EndComp
 $Comp
@@ -174,13 +174,13 @@ $EndComp
 $Comp
 L Diode:BAT54S D?
 U 1 1 60A281E0
-P 5400 4250
-F 0 "D?" H 5400 4475 50  0000 C CNN
-F 1 "BAT54S" H 5400 4384 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5475 4375 50  0001 L CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 5280 4250 50  0001 C CNN
-	1    5400 4250
-	1    0    0    -1  
+P 5400 4350
+F 0 "D?" V 5500 4550 50  0000 C CNN
+F 1 "BAT54S" V 5400 4484 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5475 4475 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 5280 4350 50  0001 C CNN
+	1    5400 4350
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Diode:BAT54S D?
@@ -298,27 +298,27 @@ $EndComp
 $Comp
 L Device:R R?
 U 1 1 60A272DA
-P 5950 4250
+P 5950 4350
 AR Path="/60A272DA" Ref="R?"  Part="1" 
 AR Path="/609FED99/60A272DA" Ref="R?"  Part="1" 
-F 0 "R?" V 5850 4200 50  0000 L CNN
-F 1 "100" V 6050 4150 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5880 4250 50  0001 C CNN
-F 3 "~" H 5950 4250 50  0001 C CNN
-	1    5950 4250
+F 0 "R?" V 5850 4300 50  0000 L CNN
+F 1 "100" V 6050 4250 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5880 4350 50  0001 C CNN
+F 3 "~" H 5950 4350 50  0001 C CNN
+	1    5950 4350
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R R?
 U 1 1 60A440E9
-P 5950 4550
+P 5950 4650
 AR Path="/60A440E9" Ref="R?"  Part="1" 
 AR Path="/609FED99/60A440E9" Ref="R?"  Part="1" 
-F 0 "R?" V 5850 4500 50  0000 L CNN
-F 1 "680" V 6050 4450 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5880 4550 50  0001 C CNN
-F 3 "~" H 5950 4550 50  0001 C CNN
-	1    5950 4550
+F 0 "R?" V 5850 4600 50  0000 L CNN
+F 1 "680" V 6050 4550 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5880 4650 50  0001 C CNN
+F 3 "~" H 5950 4650 50  0001 C CNN
+	1    5950 4650
 	0    1    1    0   
 $EndComp
 $Comp
@@ -363,33 +363,21 @@ $EndComp
 Wire Wire Line
 	4500 3850 4500 3900
 Wire Wire Line
-	5800 4550 5400 4550
-Wire Wire Line
-	4500 4550 4500 4250
-Wire Wire Line
 	5800 5550 5400 5550
 Wire Wire Line
 	4500 5550 4500 4900
-Connection ~ 4500 4550
 Wire Wire Line
 	5400 5450 5400 5550
 Connection ~ 5400 5550
 Wire Wire Line
 	5400 5550 4500 5550
 Wire Wire Line
-	5400 4450 5400 4550
-Connection ~ 5400 4550
+	6100 4350 6200 4350
 Wire Wire Line
-	5400 4550 4500 4550
+	6200 4350 6200 4650
 Wire Wire Line
-	5700 4250 5800 4250
-Wire Wire Line
-	6100 4250 6200 4250
-Wire Wire Line
-	6200 4250 6200 4550
-Wire Wire Line
-	6200 4550 6100 4550
-Connection ~ 6200 4550
+	6200 4650 6100 4650
+Connection ~ 6200 4650
 Wire Wire Line
 	5700 5250 5800 5250
 Wire Wire Line
@@ -400,31 +388,20 @@ Wire Wire Line
 	6200 5550 6100 5550
 Connection ~ 6200 5550
 Wire Wire Line
-	6500 4750 6500 5050
-Wire Wire Line
-	4500 3900 6500 3900
-Wire Wire Line
-	6500 3900 6500 4350
+	6500 4850 6500 5050
 Connection ~ 4500 3900
 Wire Wire Line
 	4500 3900 4500 3950
 NoConn ~ 5100 5250
-NoConn ~ 5100 4250
 Connection ~ 4500 4900
 Wire Wire Line
-	4500 4900 4500 4550
+	4500 4900 4500 4650
 Text HLabel 2900 4900 0    50   Input ~ 0
 CHARGE_PUMP_CLK
 Text Notes 3050 4750 0    50   ~ 0
 MCU pin should be \n5V tolerant and \nopen drain
 Wire Wire Line
-	7100 3900 6500 3900
-Connection ~ 6500 3900
-Wire Wire Line
-	7400 4100 7400 4400
-Wire Wire Line
 	7900 4400 7400 4400
-Connection ~ 7400 4400
 Wire Wire Line
 	7900 4700 7400 4700
 Wire Wire Line
@@ -434,13 +411,11 @@ Wire Wire Line
 Connection ~ 7400 4700
 Connection ~ 6500 5050
 Wire Wire Line
-	6500 5050 6500 5350
-Wire Wire Line
 	8900 4700 9400 4700
 Wire Wire Line
 	8900 4400 9400 4400
 Wire Wire Line
-	7700 3900 8900 3900
+	7700 3900 8450 3900
 Wire Wire Line
 	8900 3900 8900 3800
 Wire Wire Line
@@ -614,4 +589,37 @@ Wire Wire Line
 Connection ~ 5300 2850
 Wire Wire Line
 	5300 2850 5850 2850
+Wire Wire Line
+	4500 4650 5400 4650
+Connection ~ 4500 4650
+Wire Wire Line
+	4500 4250 4500 4650
+Wire Wire Line
+	4500 3900 6500 3900
+Wire Wire Line
+	5400 4650 5800 4650
+Wire Wire Line
+	6500 5050 6500 5350
+Connection ~ 5400 4650
+Wire Wire Line
+	5600 4350 5800 4350
+NoConn ~ 5400 4050
+Wire Wire Line
+	6500 4450 6500 3900
+Connection ~ 6500 3900
+Wire Wire Line
+	6500 3900 7100 3900
+Wire Wire Line
+	7400 4100 7400 4400
+Connection ~ 7400 4400
+Wire Wire Line
+	8450 3800 8450 3900
+Connection ~ 8450 3900
+Wire Wire Line
+	8450 3900 8900 3900
+Wire Wire Line
+	7450 2450 7450 2550
+Connection ~ 7450 2550
+Wire Wire Line
+	7450 2550 7700 2550
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 8 15
+Sheet 7 18
 Title ""
 Date ""
 Rev ""
@@ -159,60 +159,12 @@ Wire Wire Line
 	6450 4050 7350 4050
 Wire Wire Line
 	6450 4250 7350 4250
-$Comp
-L Device:D_Zener D?
-U 1 1 60B59226
-P 4850 4650
-AR Path="/60B59226" Ref="D?"  Part="1" 
-AR Path="/609CA6A8/60AD75F8/60B59226" Ref="D?"  Part="1" 
-AR Path="/609CA6A8/60B0F1FC/60B59226" Ref="D?"  Part="1" 
-F 0 "D?" V 4804 4730 50  0000 L CNN
-F 1 "PESD5Z3.3" V 4895 4730 50  0000 L CNN
-F 2 "" H 4850 4650 50  0001 C CNN
-F 3 "~" H 4850 4650 50  0001 C CNN
-	1    4850 4650
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Zener D?
-U 1 1 60B594A8
-P 4550 4650
-AR Path="/60B594A8" Ref="D?"  Part="1" 
-AR Path="/609CA6A8/60AD75F8/60B594A8" Ref="D?"  Part="1" 
-AR Path="/609CA6A8/60B0F1FC/60B594A8" Ref="D?"  Part="1" 
-F 0 "D?" V 4504 4730 50  0000 L CNN
-F 1 "PESD5Z3.3" V 4595 4730 50  0001 L CNN
-F 2 "" H 4550 4650 50  0001 C CNN
-F 3 "~" H 4550 4650 50  0001 C CNN
-	1    4550 4650
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4350 5050 4550 5050
-Wire Wire Line
-	4850 4800 4850 5050
-Connection ~ 4850 5050
-Wire Wire Line
-	4850 5050 5450 5050
-Wire Wire Line
-	4550 4800 4550 5050
-Connection ~ 4550 5050
-Wire Wire Line
-	4550 5050 4850 5050
-Wire Wire Line
-	4350 4350 4850 4350
-Wire Wire Line
-	4350 4050 4550 4050
-Wire Wire Line
-	4850 4500 4850 4350
-Connection ~ 4850 4350
-Wire Wire Line
-	4850 4350 5200 4350
-Wire Wire Line
-	4550 4500 4550 4050
-Connection ~ 4550 4050
-Wire Wire Line
-	4550 4050 5200 4050
 Wire Wire Line
 	4350 3050 6050 3050
+Wire Wire Line
+	4350 5050 5450 5050
+Wire Wire Line
+	4350 4350 5200 4350
+Wire Wire Line
+	4350 4050 5200 4050
 $EndSCHEMATC

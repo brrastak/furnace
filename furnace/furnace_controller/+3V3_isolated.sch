@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 6 15
+Sheet 6 18
 Title ""
 Date ""
 Rev ""
@@ -265,9 +265,6 @@ Text HLabel 9050 3500 2    50   Output ~ 0
 Text HLabel 9050 4500 2    50   Output ~ 0
 GND_ISO
 Wire Wire Line
-	9050 3500 8550 3500
-Connection ~ 8100 3500
-Wire Wire Line
 	9050 4500 8550 4500
 Wire Wire Line
 	8550 4500 8550 4200
@@ -291,35 +288,34 @@ Connection ~ 3250 3800
 $Comp
 L Connector:TestPoint TP?
 U 1 1 60B566B5
-P 8550 4100
+P 8550 4200
 AR Path="/60B566B5" Ref="TP?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60B566B5" Ref="TP?"  Part="1" 
-F 0 "TP?" H 8608 4218 50  0000 L CNN
-F 1 "TestPoint" H 8608 4127 50  0001 L CNN
-F 2 "" H 8750 4100 50  0001 C CNN
-F 3 "~" H 8750 4100 50  0001 C CNN
-	1    8550 4100
+F 0 "TP?" H 8608 4318 50  0000 L CNN
+F 1 "TestPoint" H 8608 4227 50  0001 L CNN
+F 2 "" H 8750 4200 50  0001 C CNN
+F 3 "~" H 8750 4200 50  0001 C CNN
+	1    8550 4200
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:TestPoint TP?
 U 1 1 60B56DD4
-P 8550 3400
+P 8550 3500
 AR Path="/60B56DD4" Ref="TP?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60B56DD4" Ref="TP?"  Part="1" 
-F 0 "TP?" H 8608 3518 50  0000 L CNN
-F 1 "TestPoint" H 8608 3427 50  0001 L CNN
-F 2 "" H 8750 3400 50  0001 C CNN
-F 3 "~" H 8750 3400 50  0001 C CNN
-	1    8550 3400
+F 0 "TP?" H 8608 3618 50  0000 L CNN
+F 1 "TestPoint" H 8608 3527 50  0001 L CNN
+F 2 "" H 8750 3500 50  0001 C CNN
+F 3 "~" H 8750 3500 50  0001 C CNN
+	1    8550 3500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	8550 4100 8550 4200
 Connection ~ 8550 4200
 Wire Wire Line
-	8550 3400 8550 3500
-Connection ~ 8550 3500
+	8100 3500 8550 3500
+Connection ~ 8100 3500
 Wire Wire Line
-	8550 3500 8100 3500
+	8550 3500 9050 3500
+Connection ~ 8550 3500
 $EndSCHEMATC

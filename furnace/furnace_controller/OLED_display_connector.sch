@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 14 15
+Sheet 4 18
 Title ""
 Date ""
 Rev ""
@@ -410,9 +410,9 @@ Wire Wire Line
 Text HLabel 3500 3250 0    50   Input ~ 0
 ~DPY_RST
 Text HLabel 3500 3550 0    50   Input ~ 0
-DPY_I2C_SDA
+SDA
 Text HLabel 3500 3450 0    50   Input ~ 0
-DPY_I2C_SCK
+SCK
 Wire Wire Line
 	6750 3150 6500 3150
 Connection ~ 6500 3150
@@ -426,8 +426,6 @@ Wire Wire Line
 	6000 3050 6750 3050
 Wire Wire Line
 	3500 3450 4000 3450
-Wire Wire Line
-	3500 3550 4200 3550
 Wire Wire Line
 	6750 3650 6650 3650
 Wire Wire Line
@@ -475,8 +473,6 @@ Wire Wire Line
 	4000 3150 4000 3450
 Connection ~ 4000 3450
 Wire Wire Line
-	4000 3450 4100 3450
-Wire Wire Line
 	4500 3150 4500 3550
 Connection ~ 4500 3550
 Wire Wire Line
@@ -504,46 +500,6 @@ Wire Wire Line
 Connection ~ 5000 2650
 Wire Wire Line
 	5000 2650 5500 2650
-$Comp
-L Connector:Conn_01x03_Male J?
-U 1 1 60AC9E35
-P 3500 3950
-F 0 "J?" H 3608 4231 50  0000 C CNN
-F 1 "Conn_01x03_Male" H 3608 4140 50  0000 C CNN
-F 2 "" H 3500 3950 50  0001 C CNN
-F 3 "~" H 3500 3950 50  0001 C CNN
-	1    3500 3950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 3850 4100 3850
-Wire Wire Line
-	4100 3850 4100 3450
-Connection ~ 4100 3450
-Wire Wire Line
-	4100 3450 6750 3450
-Wire Wire Line
-	3700 3950 4200 3950
-Wire Wire Line
-	4200 3950 4200 3550
-Connection ~ 4200 3550
-Wire Wire Line
-	4200 3550 4500 3550
-$Comp
-L power:GND #PWR?
-U 1 1 60ACF274
-P 3800 4050
-AR Path="/609FED99/60ACF274" Ref="#PWR?"  Part="1" 
-AR Path="/60A364EE/60ACF274" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 3800 3800 50  0001 C CNN
-F 1 "GND" H 3805 3877 50  0000 C CNN
-F 2 "" H 3800 4050 50  0001 C CNN
-F 3 "" H 3800 4050 50  0001 C CNN
-	1    3800 4050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3700 4050 3800 4050
 Wire Wire Line
 	5150 4450 5500 4450
 $Comp
@@ -578,6 +534,7 @@ AR Path="/609CA6A8/60A0A500/60AD77C2" Ref="C?"  Part="1"
 AR Path="/609CA6A8/60A0A922/60AD77C2" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AD77C2" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AD77C2" Ref="C?"  Part="1" 
+AR Path="/60A364EE/60AD77C2" Ref="C?"  Part="1" 
 F 0 "C?" H 6615 4796 50  0000 L CNN
 F 1 "4,7" H 6615 4705 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6538 4600 50  0001 C CNN
@@ -592,4 +549,10 @@ Wire Wire Line
 Connection ~ 5500 4450
 Wire Wire Line
 	5500 4450 6750 4450
+Text Notes 7700 1400 2    197  ~ 0
+Connector fo OLED display
+Wire Wire Line
+	4000 3450 6750 3450
+Wire Wire Line
+	3500 3550 4500 3550
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 13 15
+Sheet 3 18
 Title ""
 Date ""
 Rev ""
@@ -137,12 +137,8 @@ Wire Wire Line
 	6100 2550 6400 2550
 Wire Wire Line
 	7000 2550 7300 2550
-Connection ~ 7300 2550
-Wire Wire Line
-	7300 2550 7450 2550
 Wire Wire Line
 	7700 2450 7700 2550
-Connection ~ 7700 2550
 Wire Wire Line
 	7700 2850 7300 2850
 Connection ~ 6700 2850
@@ -415,8 +411,6 @@ Wire Wire Line
 Wire Wire Line
 	8900 4400 9400 4400
 Wire Wire Line
-	7700 3900 8450 3900
-Wire Wire Line
 	8900 3900 8900 3800
 Wire Wire Line
 	8900 3900 8900 4400
@@ -446,27 +440,27 @@ $EndComp
 $Comp
 L Connector:TestPoint TP?
 U 1 1 60AC6F73
-P 7450 2450
+P 7450 2550
 AR Path="/60AC6F73" Ref="TP?"  Part="1" 
 AR Path="/609FED99/60AC6F73" Ref="TP?"  Part="1" 
-F 0 "TP?" H 7508 2568 50  0000 L CNN
-F 1 "TestPoint" H 7508 2477 50  0001 L CNN
-F 2 "" H 7650 2450 50  0001 C CNN
-F 3 "~" H 7650 2450 50  0001 C CNN
-	1    7450 2450
+F 0 "TP?" H 7508 2668 50  0000 L CNN
+F 1 "TestPoint" H 7508 2577 50  0001 L CNN
+F 2 "" H 7650 2550 50  0001 C CNN
+F 3 "~" H 7650 2550 50  0001 C CNN
+	1    7450 2550
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:TestPoint TP?
 U 1 1 60AC7FF7
-P 8450 3800
+P 8450 3900
 AR Path="/60AC7FF7" Ref="TP?"  Part="1" 
 AR Path="/609FED99/60AC7FF7" Ref="TP?"  Part="1" 
-F 0 "TP?" H 8508 3918 50  0000 L CNN
-F 1 "TestPoint" H 8508 3827 50  0001 L CNN
-F 2 "" H 8650 3800 50  0001 C CNN
-F 3 "~" H 8650 3800 50  0001 C CNN
-	1    8450 3800
+F 0 "TP?" H 8508 4018 50  0000 L CNN
+F 1 "TestPoint" H 8508 3927 50  0001 L CNN
+F 2 "" H 8650 3900 50  0001 C CNN
+F 3 "~" H 8650 3900 50  0001 C CNN
+	1    8450 3900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -556,14 +550,10 @@ Connection ~ 6100 2850
 Connection ~ 4250 2850
 Wire Wire Line
 	4250 2850 4750 2850
-Connection ~ 4750 2850
-Wire Wire Line
-	4750 2850 5300 2850
 Wire Wire Line
 	6700 2850 7300 2850
 Wire Wire Line
 	5850 2950 5850 2850
-Connection ~ 5850 2850
 Wire Wire Line
 	5850 2850 6100 2850
 Text HLabel 2900 2850 0    50   Input ~ 0
@@ -574,21 +564,16 @@ Connection ~ 3700 2850
 $Comp
 L Connector:TestPoint TP?
 U 1 1 60AFF250
-P 5300 2750
+P 5300 2850
 AR Path="/60AFF250" Ref="TP?"  Part="1" 
 AR Path="/609FED99/60AFF250" Ref="TP?"  Part="1" 
-F 0 "TP?" H 5358 2868 50  0000 L CNN
-F 1 "TestPoint" H 5358 2777 50  0001 L CNN
-F 2 "" H 5500 2750 50  0001 C CNN
-F 3 "~" H 5500 2750 50  0001 C CNN
-	1    5300 2750
+F 0 "TP?" H 5358 2968 50  0000 L CNN
+F 1 "TestPoint" H 5358 2877 50  0001 L CNN
+F 2 "" H 5500 2850 50  0001 C CNN
+F 3 "~" H 5500 2850 50  0001 C CNN
+	1    5300 2850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5300 2750 5300 2850
-Connection ~ 5300 2850
-Wire Wire Line
-	5300 2850 5850 2850
 Wire Wire Line
 	4500 4650 5400 4650
 Connection ~ 4500 4650
@@ -613,13 +598,22 @@ Wire Wire Line
 	7400 4100 7400 4400
 Connection ~ 7400 4400
 Wire Wire Line
-	8450 3800 8450 3900
-Connection ~ 8450 3900
-Wire Wire Line
 	8450 3900 8900 3900
 Wire Wire Line
-	7450 2450 7450 2550
-Connection ~ 7450 2550
+	4750 2850 5300 2850
+Connection ~ 4750 2850
+Wire Wire Line
+	5300 2850 5850 2850
+Connection ~ 5300 2850
+Connection ~ 5850 2850
+Wire Wire Line
+	7300 2550 7450 2550
+Connection ~ 7300 2550
 Wire Wire Line
 	7450 2550 7700 2550
+Connection ~ 7450 2550
+Connection ~ 7700 2550
+Wire Wire Line
+	8450 3900 7700 3900
+Connection ~ 8450 3900
 $EndSCHEMATC

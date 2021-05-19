@@ -733,12 +733,6 @@ Wire Wire Line
 	6450 5750 6550 5750
 Wire Notes Line rgb(194, 1, 0)
 	7050 1450 7050 6300
-Wire Bus Line
-	1050 3250 2550 3250
-Wire Bus Line
-	1050 2750 2550 2750
-Wire Bus Line
-	9050 2750 10550 2750
 Text Label 9200 4400 2    50   ~ 0
 MISO
 Text Label 9200 4300 2    50   ~ 0
@@ -820,4 +814,10 @@ Text HLabel 10550 3250 2    50   Input ~ 0
 SCK
 Text HLabel 10550 2750 2    50   Input ~ 0
 ~CS
+Wire Bus Line
+	1050 2750 2550 2750
+Wire Bus Line
+	1050 3250 2550 3250
+Wire Bus Line
+	9050 2750 10550 2750
 $EndSCHEMATC

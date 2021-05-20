@@ -167,7 +167,7 @@ NoConn ~ 6050 4600
 Text HLabel 5000 4400 0    50   BiDi ~ 0
 SDA
 Text HLabel 5000 4500 0    50   Input ~ 0
-SCL
+SCK
 $Comp
 L Connector:Conn_01x03_Male J?
 U 1 1 60B324B2

@@ -231,29 +231,29 @@ Entry Wire Line
 Entry Wire Line
 	3000 3000 3100 3100
 Text Label 3400 2800 0    50   ~ 0
-KYBD1
+KYBD0
 Text Label 3400 3100 0    50   ~ 0
-KYBD2
+KYBD1
 Text Label 3400 3400 0    50   ~ 0
-KYBD3
+KYBD2
 Text Label 3400 3700 0    50   ~ 0
-KYBD4
+KYBD3
 Text Label 3400 4000 0    50   ~ 0
-KYBD5
+KYBD4
 Text Label 3400 4300 0    50   ~ 0
-KYBD6
+KYBD5
 Text Label 3400 4600 0    50   ~ 0
-KYBD7
+KYBD6
 Text Label 3400 4900 0    50   ~ 0
-KYBD8
+KYBD7
 Text Label 3400 5500 0    50   ~ 0
-KYBD10
+KYBD9
 Text Label 2600 2300 0    50   ~ 0
-KYBD[1..10]
+KYBD[0..9]
 Text Notes 8000 1350 2    197  ~ 0
 Connector for matrix keyboard
 Text Label 3400 5200 0    50   ~ 0
-KYBD9
+KYBD8
 Text HLabel 2500 2300 0    50   BiDi ~ 0
 KYBD
 $Comp

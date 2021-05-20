@@ -231,7 +231,7 @@ Text HLabel 4100 4400 0    50   Input ~ 0
 Text HLabel 4100 4500 0    50   Input ~ 0
 MOSI
 Text HLabel 4100 4700 0    50   Input ~ 0
-SCL
+SCK
 Text HLabel 4100 4900 0    50   Output ~ 0
 MISO
 $Comp

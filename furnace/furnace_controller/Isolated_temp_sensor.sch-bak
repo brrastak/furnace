@@ -54,13 +54,13 @@ Text Label 3450 1850 2    50   ~ 0
 Text HLabel 1050 3250 0    50   Input ~ 0
 TC-
 Text Label 3450 2050 2    50   ~ 0
-TC+1
+TC+0
 Text Label 3450 2150 2    50   ~ 0
-TC-1
+TC-0
 Text Label 7650 3250 0    50   ~ 0
 MISO
 Text Label 7650 3150 0    50   ~ 0
-~CS1
+~CS0
 Text HLabel 1050 2750 0    50   Input ~ 0
 TC+
 Text Label 7650 3050 0    50   ~ 0
@@ -88,15 +88,15 @@ Entry Wire Line
 Entry Wire Line
 	2350 2750 2450 2850
 Text Label 1250 2950 0    50   ~ 0
-TC+1
+TC+0
 Text Label 1550 2950 0    50   ~ 0
-TC+2
+TC+1
 Text Label 1850 2950 0    50   ~ 0
-TC+3
+TC+2
 Text Label 2150 2950 0    50   ~ 0
-TC+4
+TC+3
 Text Label 2450 2950 0    50   ~ 0
-TC+5
+TC+4
 Wire Wire Line
 	1250 2850 1250 2950
 Wire Wire Line
@@ -128,19 +128,19 @@ Wire Wire Line
 Wire Wire Line
 	2450 3350 2450 3450
 Text Label 1250 3450 0    50   ~ 0
-TC-1
+TC-0
 Text Label 1550 3450 0    50   ~ 0
-TC-2
+TC-1
 Text Label 1850 3450 0    50   ~ 0
-TC-3
+TC-2
 Text Label 2150 3450 0    50   ~ 0
-TC-4
+TC-3
 Text Label 2450 3450 0    50   ~ 0
-TC-5
+TC-4
 $Sheet
 S 3550 1750 1000 700 
 U 60AD75F8
-F0 "THERMOCOUPLE1" 50
+F0 "THERMOCOUPLE0" 50
 F1 "Thermocouple.sch" 50
 F2 "TC+" I L 3550 2050 50 
 F3 "TC-" I L 3550 2150 50 
@@ -153,7 +153,7 @@ $EndSheet
 $Sheet
 S 6550 2750 1000 800 
 U 60AD7668
-F0 "ISOLATOR1" 50
+F0 "ISOLATOR0" 50
 F1 "Isolator.sch" 50
 F2 "OUTC" O R 7550 3250 50 
 F3 "INA" I R 7550 3050 50 
@@ -291,9 +291,9 @@ $EndComp
 Text Label 3450 2850 2    50   ~ 0
 +3V3_ISO
 Text Label 3450 3050 2    50   ~ 0
-TC+2
+TC+1
 Text Label 3450 3150 2    50   ~ 0
-TC-2
+TC-1
 Wire Wire Line
 	3550 2850 3450 2850
 Wire Wire Line
@@ -303,7 +303,7 @@ Wire Wire Line
 $Sheet
 S 3550 2750 1000 700 
 U 60B0F1FC
-F0 "THERMOCOUPLE2" 50
+F0 "THERMOCOUPLE1" 50
 F1 "Thermocouple.sch" 50
 F2 "TC+" I L 3550 3050 50 
 F3 "TC-" I L 3550 3150 50 
@@ -335,9 +335,9 @@ $EndComp
 Text Label 3450 3850 2    50   ~ 0
 +3V3_ISO
 Text Label 3450 4050 2    50   ~ 0
-TC+3
+TC+2
 Text Label 3450 4150 2    50   ~ 0
-TC-3
+TC-2
 Wire Wire Line
 	3550 3850 3450 3850
 Wire Wire Line
@@ -347,7 +347,7 @@ Wire Wire Line
 $Sheet
 S 3550 3750 1000 700 
 U 60B0FB30
-F0 "THERMOCOUPLE3" 50
+F0 "THERMOCOUPLE2" 50
 F1 "Thermocouple.sch" 50
 F2 "TC+" I L 3550 4050 50 
 F3 "TC-" I L 3550 4150 50 
@@ -379,9 +379,9 @@ $EndComp
 Text Label 3450 4850 2    50   ~ 0
 +3V3_ISO
 Text Label 3450 5050 2    50   ~ 0
-TC+4
+TC+3
 Text Label 3450 5150 2    50   ~ 0
-TC-4
+TC-3
 Wire Wire Line
 	3550 4850 3450 4850
 Wire Wire Line
@@ -391,7 +391,7 @@ Wire Wire Line
 $Sheet
 S 3550 4750 1000 700 
 U 60B108D6
-F0 "THERMOCOUPLE4" 50
+F0 "THERMOCOUPLE3" 50
 F1 "Thermocouple.sch" 50
 F2 "TC+" I L 3550 5050 50 
 F3 "TC-" I L 3550 5150 50 
@@ -423,9 +423,9 @@ $EndComp
 Text Label 3450 5850 2    50   ~ 0
 +3V3_ISO
 Text Label 3450 6050 2    50   ~ 0
-TC+5
+TC+4
 Text Label 3450 6150 2    50   ~ 0
-TC-5
+TC-4
 Wire Wire Line
 	3550 5850 3450 5850
 Wire Wire Line
@@ -435,7 +435,7 @@ Wire Wire Line
 $Sheet
 S 3550 5750 1000 700 
 U 60B118F2
-F0 "THERMOCOUPLE5" 50
+F0 "THERMOCOUPLE4" 50
 F1 "Thermocouple.sch" 50
 F2 "TC+" I L 3550 6050 50 
 F3 "TC-" I L 3550 6150 50 
@@ -465,7 +465,7 @@ F 3 "" H 7650 4700 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Text Label 7650 4300 0    50   ~ 0
-~CS2
+~CS1
 Wire Wire Line
 	7550 4300 7650 4300
 Wire Wire Line
@@ -475,7 +475,7 @@ Wire Wire Line
 $Sheet
 S 6550 4000 1000 800 
 U 60B14815
-F0 "ISOLATOR2" 50
+F0 "ISOLATOR1" 50
 F1 "Isolator.sch" 50
 F2 "OUTC" O R 7550 4500 50 
 F3 "INA" I R 7550 4300 50 
@@ -544,7 +544,7 @@ F 3 "" H 7650 5950 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Text Label 7650 5550 0    50   ~ 0
-~CS4
+~CS3
 Wire Wire Line
 	7550 5550 7650 5550
 Wire Wire Line
@@ -554,7 +554,7 @@ Wire Wire Line
 $Sheet
 S 6550 5250 1000 800 
 U 60B180E1
-F0 "ISOLATOR3" 50
+F0 "ISOLATOR2" 50
 F1 "Isolator.sch" 50
 F2 "OUTC" O R 7550 5750 50 
 F3 "INA" I R 7550 5550 50 
@@ -606,9 +606,9 @@ Text Label 6450 5350 2    50   ~ 0
 Wire Wire Line
 	6550 5350 6450 5350
 Text Label 7650 4400 0    50   ~ 0
-~CS3
+~CS2
 Text Label 7650 5650 0    50   ~ 0
-~CS5
+~CS4
 NoConn ~ 7650 4500
 NoConn ~ 7650 5750
 Wire Wire Line
@@ -771,13 +771,13 @@ F 3 "~" H 9900 4400 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Text Label 10350 2950 0    50   ~ 0
-~CS5
-Text Label 10050 2950 0    50   ~ 0
 ~CS4
-Text Label 9750 2950 0    50   ~ 0
+Text Label 10050 2950 0    50   ~ 0
 ~CS3
-Text Label 9450 2950 0    50   ~ 0
+Text Label 9750 2950 0    50   ~ 0
 ~CS2
+Text Label 9450 2950 0    50   ~ 0
+~CS1
 Wire Wire Line
 	10550 3750 10050 3750
 Wire Wire Line
@@ -793,7 +793,7 @@ MISO
 Wire Wire Line
 	9150 2850 9150 2950
 Text Label 9150 2950 0    50   ~ 0
-~CS1
+~CS0
 Entry Wire Line
 	10250 2750 10350 2850
 Entry Wire Line

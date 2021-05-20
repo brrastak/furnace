@@ -27,26 +27,15 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x05_Male J?
-U 1 1 609DE10B
-P 1750 3900
-F 0 "J?" H 1858 4281 50  0000 C CNN
-F 1 "PLS-5" H 1858 4190 50  0000 C CNN
-F 2 "" H 1750 3900 50  0001 C CNN
-F 3 "~" H 1750 3900 50  0001 C CNN
-	1    1750 3900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x03_Male J?
 U 1 1 60B5D67E
-P 1750 3150
-F 0 "J?" H 1858 3431 50  0000 C CNN
-F 1 "PLS-3" H 1858 3340 50  0000 C CNN
-F 2 "" H 1750 3150 50  0001 C CNN
-F 3 "~" H 1750 3150 50  0001 C CNN
-	1    1750 3150
-	1    0    0    -1  
+P 8200 5200
+F 0 "J?" H 8308 5481 50  0000 C CNN
+F 1 "PLS-3" H 8308 5390 50  0000 C CNN
+F 2 "" H 8200 5200 50  0001 C CNN
+F 3 "~" H 8200 5200 50  0001 C CNN
+	1    8200 5200
+	-1   0    0    -1  
 $EndComp
 Text Notes 6300 1100 2    197  ~ 0
 MCU\n
@@ -357,8 +346,6 @@ Wire Wire Line
 Wire Wire Line
 	4700 2800 4700 2850
 Wire Wire Line
-	4700 2850 5300 2850
-Wire Wire Line
 	5300 2850 5300 3100
 Wire Wire Line
 	5300 3100 5400 3100
@@ -420,7 +407,7 @@ Text HLabel 8900 4450 0    50   Input ~ 0
 DPY_I2C_SDA
 Text HLabel 8900 4350 0    50   Input ~ 0
 DPY_I2C_SCK
-Text HLabel 9050 4850 0    50   Input ~ 0
+Text HLabel 9700 4850 0    50   Input ~ 0
 CHARGE_PUMP_CLK
 Text HLabel 8750 5150 0    50   BiDi ~ 0
 KYBD
@@ -429,11 +416,11 @@ TEMP_SPI_MISO
 Text HLabel 7250 4450 2    50   Input ~ 0
 TEMP_SPI_SCK
 Text HLabel 7250 4250 2    50   Input ~ 0
-TEMP_SPI_~CS
-Text HLabel 7850 5300 0    50   BiDi ~ 0
+~TEMP_SPI_CS
+Text HLabel 9550 5350 0    50   BiDi ~ 0
 TEMP_I2C_SDA
-Text HLabel 7850 5200 0    50   Input ~ 0
-TEMP_I2C_SCL
+Text HLabel 9550 5250 0    50   Input ~ 0
+TEMP_I2C_SCK
 Text HLabel 8750 5550 0    50   Input ~ 0
 BZ_EN
 Text HLabel 7650 5800 0    50   Input ~ 0
@@ -441,11 +428,215 @@ SD_SPI_~CS~
 Text HLabel 7650 5900 0    50   Input ~ 0
 SD_SPI_MOSI
 Text HLabel 7650 6100 0    50   Input ~ 0
-SD_SPI_SCL
+SD_SPI_SCK
 Text HLabel 7650 6300 0    50   Output ~ 0
 SD_SPI_MISO
 Text HLabel 8550 6000 2    50   Input ~ 0
 EXT_UART_RX
 Text HLabel 8500 6200 2    50   Output ~ 0
 HEATER_CTRL
+Wire Wire Line
+	6700 5500 6800 5500
+Text Label 6800 5500 0    50   ~ 0
+SWDIO
+Wire Wire Line
+	6700 5600 6800 5600
+Text Label 6800 5600 0    50   ~ 0
+SWCLK
+Text Label 5050 2850 0    50   ~ 0
+NRST
+Wire Wire Line
+	4700 2850 5300 2850
+Text Notes 3150 4650 0    50   ~ 0
+Programming
+Text Label 3600 5400 0    50   ~ 0
+NRST
+Text Label 3600 5200 0    50   ~ 0
+SWDIO
+Text Label 3600 5100 0    50   ~ 0
+SWCLK
+$Comp
+L power:GND #PWR?
+U 1 1 60A6ADB8
+P 3600 5500
+AR Path="/60A6ADB8" Ref="#PWR?"  Part="1" 
+AR Path="/609C9D41/60A6ADB8" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3600 5250 50  0001 C CNN
+F 1 "GND" H 3605 5327 50  0000 C CNN
+F 2 "" H 3600 5500 50  0001 C CNN
+F 3 "" H 3600 5500 50  0001 C CNN
+	1    3600 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60A6B5AC
+P 3600 5000
+AR Path="/609CA6A8/60A6B5AC" Ref="#PWR?"  Part="1" 
+AR Path="/609C9D41/60A6B5AC" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3600 4850 50  0001 C CNN
+F 1 "+3V3" H 3615 5173 50  0000 C CNN
+F 2 "" H 3600 5000 50  0001 C CNN
+F 3 "" H 3600 5000 50  0001 C CNN
+	1    3600 5000
+	1    0    0    -1  
+$EndComp
+Text Label 5300 4400 2    50   ~ 0
+SWO
+Wire Wire Line
+	5300 4400 5400 4400
+Text Label 3600 5300 0    50   ~ 0
+SWO
+$Comp
+L Connector:Conn_01x06_Male J?
+U 1 1 60A6D6DF
+P 3300 5200
+F 0 "J?" H 3408 5581 50  0000 C CNN
+F 1 "PLS-6" H 3408 5490 50  0000 C CNN
+F 2 "" H 3300 5200 50  0001 C CNN
+F 3 "~" H 3300 5200 50  0001 C CNN
+	1    3300 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 5000 3500 5000
+Wire Wire Line
+	3600 5100 3500 5100
+Wire Wire Line
+	3600 5200 3500 5200
+Wire Wire Line
+	3600 5300 3500 5300
+Wire Wire Line
+	3600 5400 3500 5400
+Wire Wire Line
+	3600 5500 3500 5500
+Text Label 6800 4700 0    50   ~ 0
+SPI1_SCK
+Text Label 6800 4800 0    50   ~ 0
+SPI1_MISO
+Text Label 6800 4200 0    50   ~ 0
+~TEMP_CS0
+Text Label 6800 4300 0    50   ~ 0
+~TEMP_CS1
+Text Label 6800 4400 0    50   ~ 0
+~TEMP_CS2
+Text Label 6800 4500 0    50   ~ 0
+~TEMP_CS3
+Text Label 6800 4600 0    50   ~ 0
+~TEMP_CS4
+Wire Wire Line
+	6800 4200 6700 4200
+Wire Wire Line
+	6800 4300 6700 4300
+Wire Wire Line
+	6800 4400 6700 4400
+Wire Wire Line
+	6800 4500 6700 4500
+Wire Wire Line
+	6800 4600 6700 4600
+Wire Wire Line
+	6800 4700 6700 4700
+Wire Wire Line
+	6800 4800 6700 4800
+Text Label 5300 4200 2    50   ~ 0
+BZ_EN
+Wire Wire Line
+	5300 4200 5400 4200
+Text Label 5300 5600 2    50   ~ 0
+SPI2_MISO
+Text Label 5300 5400 2    50   ~ 0
+~SPI2__CS
+Text Label 5300 5500 2    50   ~ 0
+SPI2_SCK
+Text Label 5300 5700 2    50   ~ 0
+SPI2_MOSI
+Wire Wire Line
+	5300 5400 5400 5400
+Wire Wire Line
+	5300 5500 5400 5500
+Wire Wire Line
+	5300 5600 5400 5600
+Wire Wire Line
+	5300 5700 5400 5700
+Text Label 5300 4800 2    50   ~ 0
+I2C1_SCK
+Text Label 5300 4900 2    50   ~ 0
+I2C1_SDA
+Wire Wire Line
+	5300 4800 5400 4800
+Wire Wire Line
+	5300 4900 5400 4900
+Text Label 6800 5100 0    50   ~ 0
+UART1_TX
+Text Label 6800 5200 0    50   ~ 0
+UART1_RX
+Text Notes 8100 4850 0    50   ~ 0
+Debug_UART
+$Comp
+L power:GND #PWR?
+U 1 1 60AA9C84
+P 7900 5300
+AR Path="/60AA9C84" Ref="#PWR?"  Part="1" 
+AR Path="/609C9D41/60AA9C84" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7900 5050 50  0001 C CNN
+F 1 "GND" H 7905 5127 50  0000 C CNN
+F 2 "" H 7900 5300 50  0001 C CNN
+F 3 "" H 7900 5300 50  0001 C CNN
+	1    7900 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 5100 8000 5100
+Wire Wire Line
+	6700 5200 8000 5200
+Wire Wire Line
+	7900 5300 8000 5300
+Text Label 5300 5000 2    50   ~ 0
+DPY_PWR_EN
+Text Label 6800 5000 0    50   ~ 0
+CHARGE_PUMP_CLK
+Wire Wire Line
+	5300 5000 5400 5000
+Text Label 6800 5400 0    50   ~ 0
+KYBD0
+Text Label 6800 5300 0    50   ~ 0
+KYBD1
+Text Label 6800 4900 0    50   ~ 0
+KYBD2
+Text Label 6800 5700 0    50   ~ 0
+KYBD3
+Text Label 5200 5300 2    50   ~ 0
+KYBD4
+Text Label 5200 5200 2    50   ~ 0
+KYBD5
+Text Label 5200 5100 2    50   ~ 0
+KYBD6
+Text Label 5300 4700 2    50   ~ 0
+KYBD7
+Text Label 5300 4600 2    50   ~ 0
+KYBD8
+Text Label 5300 4500 2    50   ~ 0
+KYBD9
+Wire Wire Line
+	5300 4500 5400 4500
+Wire Wire Line
+	5300 4600 5400 4600
+Wire Wire Line
+	5300 4700 5400 4700
+Wire Wire Line
+	5200 5100 5400 5100
+Wire Wire Line
+	5200 5200 5400 5200
+Wire Wire Line
+	5200 5300 5400 5300
+Wire Wire Line
+	6700 5700 6800 5700
+Wire Wire Line
+	6700 4900 6800 4900
+Wire Wire Line
+	6700 5300 6800 5300
+Wire Wire Line
+	6700 5400 6800 5400
+Wire Wire Line
+	6700 5000 6800 5000
 $EndSCHEMATC

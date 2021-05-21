@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 18
+Sheet 2 17
 Title ""
 Date ""
 Rev ""
@@ -19,6 +19,7 @@ U 1 1 609CC27B
 P 6100 4400
 AR Path="/609CC27B" Ref="U?"  Part="1" 
 AR Path="/609C9D41/609CC27B" Ref="U?"  Part="1" 
+AR Path="/60B42F62/609CC27B" Ref="U?"  Part="1" 
 F 0 "U?" H 6700 5100 50  0000 C CNN
 F 1 "STM32F103C6Tx" H 6950 5000 50  0000 C CNN
 F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 5500 3000 50  0001 R CNN
@@ -30,6 +31,8 @@ $Comp
 L Connector:Conn_01x03_Male J?
 U 1 1 60B5D67E
 P 8200 5200
+AR Path="/609C9D41/60B5D67E" Ref="J?"  Part="1" 
+AR Path="/60B42F62/60B5D67E" Ref="J?"  Part="1" 
 F 0 "J?" H 8308 5481 50  0000 C CNN
 F 1 "PLS-3" H 8308 5390 50  0000 C CNN
 F 2 "" H 8200 5200 50  0001 C CNN
@@ -45,6 +48,7 @@ U 1 1 60B4CB82
 P 4700 2650
 AR Path="/60B4CB82" Ref="R?"  Part="1" 
 AR Path="/609C9D41/60B4CB82" Ref="R?"  Part="1" 
+AR Path="/60B42F62/60B4CB82" Ref="R?"  Part="1" 
 F 0 "R?" H 4770 2696 50  0000 L CNN
 F 1 "10k" H 4770 2605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4630 2650 50  0001 C CNN
@@ -58,6 +62,7 @@ U 1 1 60B4CB88
 P 6200 6000
 AR Path="/60B4CB88" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60B4CB88" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60B4CB88" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 6200 5750 50  0001 C CNN
 F 1 "GND" H 6205 5827 50  0000 C CNN
 F 2 "" H 6200 6000 50  0001 C CNN
@@ -71,6 +76,7 @@ U 1 1 60B4CB8E
 P 6550 2150
 AR Path="/60B4CB8E" Ref="C?"  Part="1" 
 AR Path="/609C9D41/60B4CB8E" Ref="C?"  Part="1" 
+AR Path="/60B42F62/60B4CB8E" Ref="C?"  Part="1" 
 F 0 "C?" H 6665 2196 50  0000 L CNN
 F 1 "0,1" H 6665 2105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6588 2000 50  0001 C CNN
@@ -84,6 +90,7 @@ U 1 1 60B4D7B8
 P 7750 2000
 AR Path="/609CA6A8/60B4D7B8" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60B4D7B8" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60B4D7B8" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 7750 1850 50  0001 C CNN
 F 1 "+3V3" H 7765 2173 50  0000 C CNN
 F 2 "" H 7750 2000 50  0001 C CNN
@@ -105,6 +112,7 @@ AR Path="/609CA6A8/60B4F8D6" Ref="C?"  Part="1"
 AR Path="/609CA6A8/60AE5653/60B4F8D6" Ref="C?"  Part="1" 
 AR Path="/60A364EE/60B4F8D6" Ref="C?"  Part="1" 
 AR Path="/609C9D41/60B4F8D6" Ref="C?"  Part="1" 
+AR Path="/60B42F62/60B4F8D6" Ref="C?"  Part="1" 
 F 0 "C?" H 7865 2196 50  0000 L CNN
 F 1 "4,7" H 7865 2105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 7788 2000 50  0001 C CNN
@@ -129,6 +137,7 @@ U 1 1 60A4CF16
 P 6950 2150
 AR Path="/60A4CF16" Ref="C?"  Part="1" 
 AR Path="/609C9D41/60A4CF16" Ref="C?"  Part="1" 
+AR Path="/60B42F62/60A4CF16" Ref="C?"  Part="1" 
 F 0 "C?" H 7065 2196 50  0000 L CNN
 F 1 "0,1" H 7065 2105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6988 2000 50  0001 C CNN
@@ -142,6 +151,7 @@ U 1 1 60A4D090
 P 7350 2150
 AR Path="/60A4D090" Ref="C?"  Part="1" 
 AR Path="/609C9D41/60A4D090" Ref="C?"  Part="1" 
+AR Path="/60B42F62/60A4D090" Ref="C?"  Part="1" 
 F 0 "C?" H 7465 2196 50  0000 L CNN
 F 1 "0,1" H 7465 2105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7388 2000 50  0001 C CNN
@@ -155,6 +165,7 @@ U 1 1 60A4D2CE
 P 7350 3050
 AR Path="/60A4D2CE" Ref="C?"  Part="1" 
 AR Path="/609C9D41/60A4D2CE" Ref="C?"  Part="1" 
+AR Path="/60B42F62/60A4D2CE" Ref="C?"  Part="1" 
 F 0 "C?" H 7465 3096 50  0000 L CNN
 F 1 "0,01" H 7465 3005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7388 2900 50  0001 C CNN
@@ -168,6 +179,7 @@ U 1 1 60A4D379
 P 7750 3050
 AR Path="/60A4D379" Ref="C?"  Part="1" 
 AR Path="/609C9D41/60A4D379" Ref="C?"  Part="1" 
+AR Path="/60B42F62/60A4D379" Ref="C?"  Part="1" 
 F 0 "C?" H 7865 3096 50  0000 L CNN
 F 1 "1u" H 7865 3005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7788 2900 50  0001 C CNN
@@ -181,6 +193,7 @@ U 1 1 60A5067C
 P 7750 2300
 AR Path="/60A5067C" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60A5067C" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60A5067C" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 7750 2050 50  0001 C CNN
 F 1 "GND" H 7755 2127 50  0000 C CNN
 F 2 "" H 7750 2300 50  0001 C CNN
@@ -194,6 +207,7 @@ U 1 1 60A508BF
 P 7750 3200
 AR Path="/60A508BF" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60A508BF" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60A508BF" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 7750 2950 50  0001 C CNN
 F 1 "GND" H 7755 3027 50  0000 C CNN
 F 2 "" H 7750 3200 50  0001 C CNN
@@ -213,6 +227,8 @@ $Comp
 L Device:Crystal Y?
 U 1 1 60A53D72
 P 3350 3600
+AR Path="/609C9D41/60A53D72" Ref="Y?"  Part="1" 
+AR Path="/60B42F62/60A53D72" Ref="Y?"  Part="1" 
 F 0 "Y?" H 3350 3868 50  0000 C CNN
 F 1 "8MHz" H 3350 3777 50  0000 C CNN
 F 2 "" H 3350 3600 50  0001 C CNN
@@ -226,6 +242,7 @@ U 1 1 60A55C72
 P 3000 3750
 AR Path="/60A55C72" Ref="C?"  Part="1" 
 AR Path="/609C9D41/60A55C72" Ref="C?"  Part="1" 
+AR Path="/60B42F62/60A55C72" Ref="C?"  Part="1" 
 F 0 "C?" H 3115 3796 50  0000 L CNN
 F 1 "10p" H 3115 3705 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3038 3600 50  0001 C CNN
@@ -239,6 +256,7 @@ U 1 1 60A56506
 P 3600 3750
 AR Path="/60A56506" Ref="C?"  Part="1" 
 AR Path="/609C9D41/60A56506" Ref="C?"  Part="1" 
+AR Path="/60B42F62/60A56506" Ref="C?"  Part="1" 
 F 0 "C?" H 3715 3796 50  0000 L CNN
 F 1 "10p" H 3715 3705 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3638 3600 50  0001 C CNN
@@ -252,6 +270,7 @@ U 1 1 60A57477
 P 3000 3900
 AR Path="/60A57477" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60A57477" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60A57477" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 3000 3650 50  0001 C CNN
 F 1 "GND" H 3005 3727 50  0000 C CNN
 F 2 "" H 3000 3900 50  0001 C CNN
@@ -275,6 +294,7 @@ U 1 1 60A5E844
 P 4050 3600
 AR Path="/60A5E844" Ref="R?"  Part="1" 
 AR Path="/609C9D41/60A5E844" Ref="R?"  Part="1" 
+AR Path="/60B42F62/60A5E844" Ref="R?"  Part="1" 
 F 0 "R?" V 4150 3550 50  0000 L CNN
 F 1 "0" V 3950 3600 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3980 3600 50  0001 C CNN
@@ -295,6 +315,7 @@ U 1 1 60A7599F
 P 4700 3050
 AR Path="/60A7599F" Ref="C?"  Part="1" 
 AR Path="/609C9D41/60A7599F" Ref="C?"  Part="1" 
+AR Path="/60B42F62/60A7599F" Ref="C?"  Part="1" 
 F 0 "C?" H 4815 3096 50  0000 L CNN
 F 1 "0,1" H 4815 3005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4738 2900 50  0001 C CNN
@@ -308,6 +329,7 @@ U 1 1 60A77B5B
 P 4700 3200
 AR Path="/60A77B5B" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60A77B5B" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60A77B5B" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 4700 2950 50  0001 C CNN
 F 1 "GND" H 4705 3027 50  0000 C CNN
 F 2 "" H 4700 3200 50  0001 C CNN
@@ -321,6 +343,7 @@ U 1 1 60A78458
 P 4700 2500
 AR Path="/609CA6A8/60A78458" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60A78458" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60A78458" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 4700 2350 50  0001 C CNN
 F 1 "+3V3" H 4715 2673 50  0000 C CNN
 F 2 "" H 4700 2500 50  0001 C CNN
@@ -334,6 +357,7 @@ U 1 1 60A78F77
 P 5300 3300
 AR Path="/60A78F77" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60A78F77" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60A78F77" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 5300 3050 50  0001 C CNN
 F 1 "GND" H 5305 3127 50  0000 C CNN
 F 2 "" H 5300 3300 50  0001 C CNN
@@ -362,6 +386,7 @@ U 1 1 60A96EAD
 P 7750 2900
 AR Path="/609CA6A8/60A96EAD" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60A96EAD" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60A96EAD" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 7750 2750 50  0001 C CNN
 F 1 "+3V3" H 7765 3073 50  0000 C CNN
 F 2 "" H 7750 2900 50  0001 C CNN
@@ -399,41 +424,37 @@ Wire Wire Line
 	7350 2900 7750 2900
 Connection ~ 7350 2900
 Connection ~ 7750 2900
-Text HLabel 9000 4000 0    50   Input ~ 0
+Text HLabel 10000 2500 2    50   Output ~ 0
 DPY_PWR_EN
-Text HLabel 8950 4200 0    50   Input ~ 0
+Text HLabel 10000 2750 2    50   Output ~ 0
 ~DPY_RST
-Text HLabel 8900 4450 0    50   Input ~ 0
+Text HLabel 10000 3250 2    50   BiDi ~ 0
 DPY_I2C_SDA
-Text HLabel 8900 4350 0    50   Input ~ 0
+Text HLabel 10000 3000 2    50   Output ~ 0
 DPY_I2C_SCK
-Text HLabel 9700 4850 0    50   Input ~ 0
+Text HLabel 10000 2000 2    50   Output ~ 0
 CHARGE_PUMP_CLK
-Text HLabel 8750 5150 0    50   BiDi ~ 0
+Text HLabel 10000 4000 2    50   BiDi ~ 0
 KYBD
-Text HLabel 7250 4600 2    50   Output ~ 0
+Text HLabel 1500 3250 0    50   Input ~ 0
 TEMP_SPI_MISO
-Text HLabel 7250 4450 2    50   Input ~ 0
+Text HLabel 1500 3000 0    50   Output ~ 0
 TEMP_SPI_SCK
-Text HLabel 7250 4250 2    50   Input ~ 0
+Text HLabel 1500 2500 0    50   Output ~ 0
 ~TEMP_SPI_CS
-Text HLabel 9550 5350 0    50   BiDi ~ 0
-TEMP_I2C_SDA
-Text HLabel 9550 5250 0    50   Input ~ 0
-TEMP_I2C_SCK
-Text HLabel 8750 5550 0    50   Input ~ 0
+Text HLabel 10000 4500 2    50   Output ~ 0
 BZ_EN
-Text HLabel 7650 5800 0    50   Input ~ 0
-SD_SPI_~CS~
-Text HLabel 7650 5900 0    50   Input ~ 0
+Text HLabel 10000 5000 2    50   Output ~ 0
+~SD_SPI_CS
+Text HLabel 10000 5500 2    50   Output ~ 0
 SD_SPI_MOSI
-Text HLabel 7650 6100 0    50   Input ~ 0
+Text HLabel 10000 5250 2    50   Output ~ 0
 SD_SPI_SCK
-Text HLabel 7650 6300 0    50   Output ~ 0
+Text HLabel 10000 5750 2    50   Input ~ 0
 SD_SPI_MISO
-Text HLabel 8550 6000 2    50   Input ~ 0
+Text HLabel 1500 2000 0    50   Input ~ 0
 EXT_UART_RX
-Text HLabel 8500 6200 2    50   Output ~ 0
+Text HLabel 10000 1500 2    50   Output ~ 0
 HEATER_CTRL
 Wire Wire Line
 	6700 5500 6800 5500
@@ -461,6 +482,7 @@ U 1 1 60A6ADB8
 P 3600 5500
 AR Path="/60A6ADB8" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60A6ADB8" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60A6ADB8" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 3600 5250 50  0001 C CNN
 F 1 "GND" H 3605 5327 50  0000 C CNN
 F 2 "" H 3600 5500 50  0001 C CNN
@@ -474,6 +496,7 @@ U 1 1 60A6B5AC
 P 3600 5000
 AR Path="/609CA6A8/60A6B5AC" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60A6B5AC" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60A6B5AC" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 3600 4850 50  0001 C CNN
 F 1 "+3V3" H 3615 5173 50  0000 C CNN
 F 2 "" H 3600 5000 50  0001 C CNN
@@ -491,6 +514,8 @@ $Comp
 L Connector:Conn_01x06_Male J?
 U 1 1 60A6D6DF
 P 3300 5200
+AR Path="/609C9D41/60A6D6DF" Ref="J?"  Part="1" 
+AR Path="/60B42F62/60A6D6DF" Ref="J?"  Part="1" 
 F 0 "J?" H 3408 5581 50  0000 C CNN
 F 1 "PLS-6" H 3408 5490 50  0000 C CNN
 F 2 "" H 3300 5200 50  0001 C CNN
@@ -570,7 +595,7 @@ Text Label 6800 5100 0    50   ~ 0
 UART1_TX
 Text Label 6800 5200 0    50   ~ 0
 UART1_RX
-Text Notes 8100 4850 0    50   ~ 0
+Text Notes 7850 4750 0    50   ~ 0
 Debug_UART
 $Comp
 L power:GND #PWR?
@@ -578,6 +603,7 @@ U 1 1 60AA9C84
 P 7900 5300
 AR Path="/60AA9C84" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60AA9C84" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60AA9C84" Ref="#PWR?"  Part="1" 
 F 0 "#PWR?" H 7900 5050 50  0001 C CNN
 F 1 "GND" H 7905 5127 50  0000 C CNN
 F 2 "" H 7900 5300 50  0001 C CNN
@@ -611,11 +637,11 @@ Text Label 5200 5200 2    50   ~ 0
 KYBD5
 Text Label 5200 5100 2    50   ~ 0
 KYBD6
-Text Label 5300 4700 2    50   ~ 0
-KYBD7
 Text Label 5300 4600 2    50   ~ 0
-KYBD8
+KYBD7
 Text Label 5300 4500 2    50   ~ 0
+KYBD8
+Text Label 5300 4300 2    50   ~ 0
 KYBD9
 Wire Wire Line
 	5300 4500 5400 4500
@@ -639,4 +665,138 @@ Wire Wire Line
 	6700 5400 6800 5400
 Wire Wire Line
 	6700 5000 6800 5000
+Text Label 9500 1500 2    50   ~ 0
+UART1_TX
+Text Label 2000 2000 0    50   ~ 0
+UART1_RX
+Text Label 9500 5750 2    50   ~ 0
+SPI2_MISO
+Text Label 9500 5000 2    50   ~ 0
+~SPI2__CS
+Text Label 9500 5250 2    50   ~ 0
+SPI2_SCK
+Text Label 9500 5500 2    50   ~ 0
+SPI2_MOSI
+Text Label 2000 3000 0    50   ~ 0
+SPI1_SCK
+Text Label 2000 3250 0    50   ~ 0
+SPI1_MISO
+Text Label 1700 2700 0    50   ~ 0
+~TEMP_CS0
+Text Label 2150 2700 0    50   ~ 0
+~TEMP_CS1
+Text Label 2600 2700 0    50   ~ 0
+~TEMP_CS2
+Text Label 3050 2700 0    50   ~ 0
+~TEMP_CS3
+Text Label 3500 2700 0    50   ~ 0
+~TEMP_CS4
+Entry Wire Line
+	1600 2500 1700 2600
+Entry Wire Line
+	2050 2500 2150 2600
+Entry Wire Line
+	2500 2500 2600 2600
+Entry Wire Line
+	2950 2500 3050 2600
+Entry Wire Line
+	3400 2500 3500 2600
+Wire Wire Line
+	1700 2700 1700 2600
+Wire Wire Line
+	2150 2700 2150 2600
+Wire Wire Line
+	2600 2700 2600 2600
+Wire Wire Line
+	3050 2700 3050 2600
+Wire Wire Line
+	3500 2700 3500 2600
+Text Label 9500 2000 2    50   ~ 0
+CHARGE_PUMP_CLK
+Text Label 9500 3000 2    50   ~ 0
+I2C1_SCK
+Text Label 9500 3250 2    50   ~ 0
+I2C1_SDA
+Text Label 9500 2500 2    50   ~ 0
+DPY_PWR_EN
+Wire Wire Line
+	5300 4300 5400 4300
+Text Label 5300 4700 2    50   ~ 0
+~DPY_RST
+Text Label 9500 2750 2    50   ~ 0
+~DPY_RST
+Text Label 9500 4500 2    50   ~ 0
+BZ_EN
+Text Label 9750 4200 2    50   ~ 0
+KYBD9
+Text Label 9150 4200 2    50   ~ 0
+KYBD7
+Text Label 9450 4200 2    50   ~ 0
+KYBD8
+Text Label 9800 3800 2    50   ~ 0
+KYBD4
+Text Label 8550 4200 2    50   ~ 0
+KYBD5
+Text Label 8850 4200 2    50   ~ 0
+KYBD6
+Text Label 9500 3800 2    50   ~ 0
+KYBD3
+Text Label 9200 3800 2    50   ~ 0
+KYBD2
+Text Label 8600 3800 2    50   ~ 0
+KYBD0
+Text Label 8900 3800 2    50   ~ 0
+KYBD1
+Entry Wire Line
+	9900 4000 9800 3900
+Entry Wire Line
+	9500 3900 9600 4000
+Entry Wire Line
+	9200 3900 9300 4000
+Entry Wire Line
+	8900 3900 9000 4000
+Entry Wire Line
+	8600 3900 8700 4000
+Entry Wire Line
+	8650 4000 8550 4100
+Entry Wire Line
+	8950 4000 8850 4100
+Entry Wire Line
+	9250 4000 9150 4100
+Entry Wire Line
+	9550 4000 9450 4100
+Entry Wire Line
+	9850 4000 9750 4100
+Wire Wire Line
+	1500 2000 2000 2000
+Wire Wire Line
+	1500 3000 2000 3000
+Wire Wire Line
+	1500 3250 2000 3250
+Wire Wire Line
+	9500 1500 10000 1500
+Wire Wire Line
+	9500 2000 10000 2000
+Wire Wire Line
+	9500 2500 10000 2500
+Wire Wire Line
+	9500 2750 10000 2750
+Wire Wire Line
+	9500 3000 10000 3000
+Wire Wire Line
+	9500 3250 10000 3250
+Wire Wire Line
+	9500 4500 10000 4500
+Wire Wire Line
+	9500 5000 10000 5000
+Wire Wire Line
+	9500 5250 10000 5250
+Wire Wire Line
+	9500 5500 10000 5500
+Wire Wire Line
+	9500 5750 10000 5750
+Wire Bus Line
+	1500 2500 3500 2500
+Wire Bus Line
+	8500 4000 10000 4000
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 18
+Sheet 4 17
 Title ""
 Date ""
 Rev ""
@@ -409,7 +409,7 @@ Wire Wire Line
 	6500 2350 6750 2350
 Text HLabel 3500 3250 0    50   Input ~ 0
 ~DPY_RST
-Text HLabel 3500 3550 0    50   Input ~ 0
+Text HLabel 3500 3550 0    50   BiDi ~ 0
 SDA
 Text HLabel 3500 3450 0    50   Input ~ 0
 SCK

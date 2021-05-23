@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name furnace_230V-rescue)(type Legacy)(uri ${KIPRJMOD}/furnace_230V-rescue.lib)(options "")(descr ""))
+  (lib (name ac-dc)(type Legacy)(uri ${KIPRJMOD}/ac-dc.lib)(options "")(descr ""))
+  (lib (name B0505S-1WR2)(type Legacy)(uri ${KIPRJMOD}/B0505S-1WR2.lib)(options "")(descr ""))
+  (lib (name lm317l_so8)(type Legacy)(uri ${KIPRJMOD}/lm317l_so8.lib)(options "")(descr ""))
+)

@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AC-DC
+D Compact AC/DC board mount power module 3W 5V
+K AC/DC module power supply
+$ENDCMP
+#
+#End Doc Library

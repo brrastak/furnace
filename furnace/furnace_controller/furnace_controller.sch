@@ -344,11 +344,11 @@ Wire Wire Line
 	7650 3100 7650 3200
 Wire Wire Line
 	9500 3200 7850 3200
+Connection ~ 7850 3200
+Wire Wire Line
+	7850 3200 7850 3300
 Wire Bus Line
 	2000 3150 2000 5500
 Wire Bus Line
 	2500 3350 2500 5600
-Connection ~ 7850 3200
-Wire Wire Line
-	7850 3200 7850 3300
 $EndSCHEMATC

@@ -454,8 +454,6 @@ Text HLabel 10000 5750 2    50   Input ~ 0
 SD_SPI_MISO
 Text HLabel 1500 1000 0    50   Input ~ 0
 EXT_UART_RX
-Text HLabel 10000 1500 2    50   Output ~ 0
-HEATER_CTRL
 Wire Wire Line
 	6700 5500 6800 5500
 Text Label 6800 5500 0    50   ~ 0
@@ -665,7 +663,7 @@ Wire Wire Line
 	6700 5400 6800 5400
 Wire Wire Line
 	6700 5000 6800 5000
-Text Label 9000 1500 2    50   ~ 0
+Text Label 8000 1200 2    50   ~ 0
 UART1_TX
 Text Label 3500 1250 0    50   ~ 0
 UART1_RX
@@ -774,8 +772,6 @@ Wire Wire Line
 Wire Wire Line
 	1500 3250 2000 3250
 Wire Wire Line
-	9500 1500 10000 1500
-Wire Wire Line
 	9500 2000 10000 2000
 Wire Wire Line
 	9500 2500 10000 2500
@@ -882,19 +878,88 @@ Wire Wire Line
 $Comp
 L Device:R R?
 U 1 1 60B10008
-P 9350 1500
+P 8350 1200
 AR Path="/60B10008" Ref="R?"  Part="1" 
 AR Path="/609C9D41/60B10008" Ref="R?"  Part="1" 
 AR Path="/60B42F62/60B10008" Ref="R?"  Part="1" 
-F 0 "R?" V 9450 1450 50  0000 L CNN
-F 1 "100" V 9250 1450 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 9280 1500 50  0001 C CNN
-F 3 "~" H 9350 1500 50  0001 C CNN
-	1    9350 1500
+F 0 "R?" V 8450 1150 50  0000 L CNN
+F 1 "3,3k" V 8250 1150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8280 1200 50  0001 C CNN
+F 3 "~" H 8350 1200 50  0001 C CNN
+	1    8350 1200
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	9000 1500 9200 1500
+	8000 1200 8200 1200
+$Comp
+L Transistor_BJT:BC847 Q?
+U 1 1 60AE3B9E
+P 8900 1200
+F 0 "Q?" H 9091 1246 50  0000 L CNN
+F 1 "BC847" H 9091 1155 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9100 1125 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 8900 1200 50  0001 L CNN
+	1    8900 1200
+	1    0    0    -1  
+$EndComp
+Text HLabel 10000 1000 2    50   Output ~ 0
+HEATER_CTRL
+Wire Wire Line
+	9500 1000 10000 1000
+$Comp
+L Device:R R?
+U 1 1 60AE8C55
+P 9350 1000
+AR Path="/60AE8C55" Ref="R?"  Part="1" 
+AR Path="/609C9D41/60AE8C55" Ref="R?"  Part="1" 
+AR Path="/60B42F62/60AE8C55" Ref="R?"  Part="1" 
+F 0 "R?" V 9450 950 50  0000 L CNN
+F 1 "180" V 9250 950 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 9280 1000 50  0001 C CNN
+F 3 "~" H 9350 1000 50  0001 C CNN
+	1    9350 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60AF1C85
+P 8600 1350
+AR Path="/60AF1C85" Ref="R?"  Part="1" 
+AR Path="/609C9D41/60AF1C85" Ref="R?"  Part="1" 
+AR Path="/60B42F62/60AF1C85" Ref="R?"  Part="1" 
+F 0 "R?" H 8670 1396 50  0000 L CNN
+F 1 "56k" H 8670 1305 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8530 1350 50  0001 C CNN
+F 3 "~" H 8600 1350 50  0001 C CNN
+	1    8600 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60AF59E1
+P 9000 1500
+AR Path="/60AF59E1" Ref="#PWR?"  Part="1" 
+AR Path="/609C9D41/60AF59E1" Ref="#PWR?"  Part="1" 
+AR Path="/60B42F62/60AF59E1" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9000 1250 50  0001 C CNN
+F 1 "GND" H 9005 1327 50  0000 C CNN
+F 2 "" H 9000 1500 50  0001 C CNN
+F 3 "" H 9000 1500 50  0001 C CNN
+	1    9000 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 1200 8600 1200
+Wire Wire Line
+	8600 1200 8700 1200
+Connection ~ 8600 1200
+Wire Wire Line
+	9000 1000 9200 1000
+Wire Wire Line
+	9000 1400 9000 1500
+Wire Wire Line
+	8600 1500 9000 1500
+Connection ~ 9000 1500
 Wire Bus Line
 	1500 2500 3500 2500
 Wire Bus Line

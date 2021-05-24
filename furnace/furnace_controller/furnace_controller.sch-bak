@@ -83,7 +83,7 @@ F0 "KEYBOARD_CONNECTOR" 50
 F1 "Keyboard_connector.sch" 50
 F2 "KYBD" B L 8000 3750 50 
 $EndSheet
-Text Notes 9600 2600 0    50   ~ 0
+Text Notes 9550 2750 0    50   ~ 0
 I2C display (1602a)\ndo not use at the same time \nas OLED display\nbecause of 5V on data lines
 $Sheet
 S 3000 3000 1000 500 
@@ -344,11 +344,11 @@ Wire Wire Line
 	7650 3100 7650 3200
 Wire Wire Line
 	9500 3200 7850 3200
+Connection ~ 7850 3200
+Wire Wire Line
+	7850 3200 7850 3300
 Wire Bus Line
 	2000 3150 2000 5500
 Wire Bus Line
 	2500 3350 2500 5600
-Connection ~ 7850 3200
-Wire Wire Line
-	7850 3200 7850 3300
 $EndSCHEMATC

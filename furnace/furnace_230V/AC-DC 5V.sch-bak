@@ -16,12 +16,269 @@ $EndDescr
 $Comp
 L ac-dc:AC-DC PS?
 U 1 1 60AB52E3
-P 5600 3450
-F 0 "PS?" H 5600 3775 50  0000 C CNN
-F 1 "AC-DC 5V 700mA" H 5600 3684 50  0000 C CNN
-F 2 "" H 5600 3150 50  0001 C CNN
-F 3 "" H 6000 3100 50  0001 C CNN
-	1    5600 3450
+P 5900 4100
+F 0 "PS?" H 5900 4425 50  0000 C CNN
+F 1 "AC-DC 5V 700mA" H 5900 4334 50  0000 C CNN
+F 2 "" H 5900 3800 50  0001 C CNN
+F 3 "" H 6300 3750 50  0001 C CNN
+	1    5900 4100
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C C?
+U 1 1 60ABB472
+P 3000 4150
+F 0 "C?" H 3115 4196 50  0000 L CNN
+F 1 "0,15 275V" H 3115 4105 50  0000 L CNN
+F 2 "" H 3038 4000 50  0001 C CNN
+F 3 "~" H 3000 4150 50  0001 C CNN
+	1    3000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60ABBB35
+P 4750 4150
+F 0 "C?" H 4865 4196 50  0000 L CNN
+F 1 "0,15 275V" H 4865 4105 50  0000 L CNN
+F 2 "" H 4788 4000 50  0001 C CNN
+F 3 "~" H 4750 4150 50  0001 C CNN
+	1    4750 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L_Core_Iron_Coupled_1243 L?
+U 1 1 60ABCAA3
+P 4050 4100
+F 0 "L?" H 4050 4381 50  0000 C CNN
+F 1 "L_Core_Iron_Coupled_1243" H 4050 4290 50  0000 C CNN
+F 2 "" H 4050 4100 50  0001 C CNN
+F 3 "~" H 4050 4100 50  0001 C CNN
+	1    4050 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60ABD84E
+P 6750 4150
+F 0 "C?" H 6865 4196 50  0000 L CNN
+F 1 "10u" H 6865 4105 50  0000 L CNN
+F 2 "" H 6788 4000 50  0001 C CNN
+F 3 "~" H 6750 4150 50  0001 C CNN
+	1    6750 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60ABDA72
+P 7500 4150
+F 0 "C?" H 7615 4196 50  0000 L CNN
+F 1 "10u" H 7615 4105 50  0000 L CNN
+F 2 "" H 7538 4000 50  0001 C CNN
+F 3 "~" H 7500 4150 50  0001 C CNN
+	1    7500 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L?
+U 1 1 60ABDC2D
+P 7250 4000
+F 0 "L?" V 7350 4000 50  0000 C CNN
+F 1 "L" V 7200 4000 50  0000 C CNN
+F 2 "" H 7250 4000 50  0001 C CNN
+F 3 "~" H 7250 4000 50  0001 C CNN
+	1    7250 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 60ABE587
+P 8000 4150
+F 0 "D?" V 7954 4230 50  0000 L CNN
+F 1 "D_TVS" V 8045 4230 50  0000 L CNN
+F 2 "" H 8000 4150 50  0001 C CNN
+F 3 "~" H 8000 4150 50  0001 C CNN
+	1    8000 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse F?
+U 1 1 60ABEDE5
+P 2350 4000
+F 0 "F?" V 2250 4000 50  0000 C CNN
+F 1 "0,1A" V 2450 4000 50  0000 C CNN
+F 2 "" V 2280 4000 50  0001 C CNN
+F 3 "~" H 2350 4000 50  0001 C CNN
+	1    2350 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 60ACEC46
+P 7000 4000
+AR Path="/60ACEC46" Ref="TP?"  Part="1" 
+AR Path="/609CA6A8/60AE5653/60ACEC46" Ref="TP?"  Part="1" 
+AR Path="/60AAC605/60ACEC46" Ref="TP?"  Part="1" 
+AR Path="/60AABABA/60ACEC46" Ref="TP?"  Part="1" 
+F 0 "TP?" H 7058 4118 50  0000 L CNN
+F 1 "TestPoint" H 7058 4027 50  0001 L CNN
+F 2 "" H 7200 4000 50  0001 C CNN
+F 3 "~" H 7200 4000 50  0001 C CNN
+	1    7000 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 60ACED6E
+P 8750 4000
+AR Path="/60ACED6E" Ref="TP?"  Part="1" 
+AR Path="/609CA6A8/60AE5653/60ACED6E" Ref="TP?"  Part="1" 
+AR Path="/60AAC605/60ACED6E" Ref="TP?"  Part="1" 
+AR Path="/60AABABA/60ACED6E" Ref="TP?"  Part="1" 
+F 0 "TP?" H 8808 4118 50  0000 L CNN
+F 1 "TestPoint" H 8808 4027 50  0001 L CNN
+F 2 "" H 8950 4000 50  0001 C CNN
+F 3 "~" H 8950 4000 50  0001 C CNN
+	1    8750 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60AD2417
+P 9000 4150
+AR Path="/60AD2417" Ref="R?"  Part="1" 
+AR Path="/609CA6A8/60AD2417" Ref="R?"  Part="1" 
+AR Path="/609CA6A8/60AE5653/60AD2417" Ref="R?"  Part="1" 
+AR Path="/60AAC605/60AD2417" Ref="R?"  Part="1" 
+AR Path="/60AAE212/60AD2417" Ref="R?"  Part="1" 
+AR Path="/60AABABA/60AD2417" Ref="R?"  Part="1" 
+F 0 "R?" H 9070 4196 50  0000 L CNN
+F 1 "680" H 9070 4105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8930 4150 50  0001 C CNN
+F 3 "~" H 9000 4150 50  0001 C CNN
+	1    9000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 60AD2617
+P 9000 4650
+F 0 "D?" V 9039 4532 50  0000 R CNN
+F 1 "LED" V 8948 4532 50  0000 R CNN
+F 2 "" H 9000 4650 50  0001 C CNN
+F 3 "~" H 9000 4650 50  0001 C CNN
+	1    9000 4650
+	0    -1   -1   0   
+$EndComp
+Text Notes 8100 2200 2    197  ~ 0
+AC/DC +5V power source
+Text HLabel 10000 4000 2    50   Output ~ 0
++5V
+Text HLabel 10000 5000 2    50   Output ~ 0
+GND
+Text HLabel 1500 4000 0    50   Input ~ 0
+AC1
+Text HLabel 1500 4500 0    50   Input ~ 0
+AC2
+Wire Wire Line
+	1500 4000 2200 4000
+Wire Wire Line
+	2500 4000 3000 4000
+Wire Wire Line
+	3000 4000 3850 4000
+Connection ~ 3000 4000
+Wire Wire Line
+	4250 4000 4750 4000
+Wire Wire Line
+	4750 4000 5500 4000
+Connection ~ 4750 4000
+Wire Wire Line
+	1500 4500 3000 4500
+Wire Wire Line
+	3850 4500 3850 4200
+Wire Wire Line
+	4250 4200 4250 4500
+Wire Wire Line
+	4250 4500 4750 4500
+Wire Wire Line
+	5500 4500 5500 4200
+Wire Wire Line
+	4750 4300 4750 4500
+Connection ~ 4750 4500
+Wire Wire Line
+	4750 4500 5500 4500
+Wire Wire Line
+	3000 4300 3000 4500
+Connection ~ 3000 4500
+Wire Wire Line
+	3000 4500 3850 4500
+Wire Wire Line
+	6300 4000 6750 4000
+Connection ~ 6750 4000
+Wire Wire Line
+	6750 4000 7000 4000
+Wire Wire Line
+	6300 4200 6300 4500
+Wire Wire Line
+	6300 4500 6750 4500
+Wire Wire Line
+	8500 4500 8500 5000
+Wire Wire Line
+	8500 5000 9000 5000
+Connection ~ 8500 4000
+Wire Wire Line
+	8500 4000 8750 4000
+Connection ~ 8750 4000
+Wire Wire Line
+	8750 4000 9000 4000
+Connection ~ 9000 4000
+Wire Wire Line
+	9000 4000 10000 4000
+Wire Wire Line
+	6750 4300 6750 4500
+Connection ~ 6750 4500
+Wire Wire Line
+	9000 4300 9000 4500
+Wire Wire Line
+	9000 4800 9000 5000
+Connection ~ 9000 5000
+Wire Wire Line
+	9000 5000 10000 5000
+Wire Wire Line
+	6750 4500 7500 4500
+Wire Wire Line
+	7500 4000 8000 4000
+$Comp
+L Device:CP C?
+U 1 1 60B2B0B1
+P 8500 4150
+F 0 "C?" H 8618 4196 50  0000 L CNN
+F 1 "47u" H 8618 4105 50  0000 L CNN
+F 2 "" H 8538 4000 50  0001 C CNN
+F 3 "~" H 8500 4150 50  0001 C CNN
+	1    8500 4150
+	1    0    0    -1  
+$EndComp
+Connection ~ 8000 4000
+Wire Wire Line
+	8000 4000 8500 4000
+Wire Wire Line
+	7000 4000 7100 4000
+Connection ~ 7000 4000
+Wire Wire Line
+	7400 4000 7500 4000
+Connection ~ 7500 4000
+Wire Wire Line
+	7500 4300 7500 4500
+Connection ~ 7500 4500
+Wire Wire Line
+	7500 4500 8000 4500
+Wire Wire Line
+	8000 4300 8000 4500
+Connection ~ 8000 4500
+Wire Wire Line
+	8000 4500 8500 4500
+Wire Wire Line
+	8500 4300 8500 4500
+Connection ~ 8500 4500
 $EndSCHEMATC

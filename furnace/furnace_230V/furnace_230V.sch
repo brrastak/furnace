@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Amplifier_Operational:LM321 U?
-U 1 1 609BBA47
-P 2800 4700
-F 0 "U?" H 3144 4746 50  0000 L CNN
-F 1 "LM321" H 3144 4655 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2800 4700 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm321.pdf" H 2800 4700 50  0001 C CNN
-	1    2800 4700
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x04 J?
 U 1 1 60AAE60F
 P 2650 2400
@@ -100,12 +89,6 @@ F3 "+3V3" I L 5000 3100 50
 F4 "GND" I L 5000 3400 50 
 $EndSheet
 $Sheet
-S 6000 5500 1000 500 
-U 60AAE212
-F0 "CURRENT_SENSOR" 50
-F1 "Current_sensor.sch" 50
-$EndSheet
-$Sheet
 S 6500 3000 1000 500 
 U 60AAE4BD
 F0 "VOLTAGE_DIVIDER" 50
@@ -138,4 +121,13 @@ F 3 "~" H 1600 3400 50  0001 C CNN
 	1    1600 3400
 	-1   0    0    -1  
 $EndComp
+$Sheet
+S 6500 4000 1000 500 
+U 60AAE212
+F0 "CURRENT_SENSOR" 50
+F1 "Current_sensor.sch" 50
+F2 "CURR" O R 7500 4250 50 
+F3 "+3V3" I R 7500 4100 50 
+F4 "GND" I R 7500 4400 50 
+$EndSheet
 $EndSCHEMATC

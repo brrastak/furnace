@@ -86,6 +86,7 @@ AR Path="/60B590E5" Ref="TP?"  Part="1"
 AR Path="/609CA6A8/60AE5653/60B590E5" Ref="TP?"  Part="1" 
 AR Path="/60AAC605/60B590E5" Ref="TP?"  Part="1" 
 AR Path="/60AAE4BD/60B590E5" Ref="TP?"  Part="1" 
+AR Path="/60AABDBE/60B590E5" Ref="TP?"  Part="1" 
 F 0 "TP?" V 4558 4118 50  0000 L CNN
 F 1 "TestPoint" H 4558 4027 50  0001 L CNN
 F 2 "" H 4700 4000 50  0001 C CNN

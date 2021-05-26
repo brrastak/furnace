@@ -143,7 +143,7 @@ F 3 "~" H 8700 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 8850 2200 2    197  ~ 0
-Input 230V voltage mesurement circuit
+Input 230V voltage measurement circuit
 $Comp
 L Device:C C?
 U 1 1 60B35196

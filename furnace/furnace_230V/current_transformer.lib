@@ -1,0 +1,24 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# current_transformer
+#
+DEF current_transformer T 0 0 N Y 1 F N
+F0 "T" 0 125 50 H V C CNN
+F1 "current_transformer" 0 -50 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Transformer*Coilcraft*CST1*
+$ENDFPLIST
+DRAW
+A 0 0 50 1 1800 1 1 0 N 50 0 -50 0
+A 100 0 50 1 1800 1 1 0 N 150 0 50 0
+C -70 25 10 1 1 0 F
+P 2 0 1 0 -50 30 150 30 N
+X 1 1 -200 0 150 R 50 50 1 1 P
+X 2 2 300 0 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library

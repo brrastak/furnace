@@ -349,10 +349,6 @@ Wire Wire Line
 	7850 3700 7850 3800
 Text Notes 6750 1050 2    197  ~ 0
 Controller
-Wire Bus Line
-	2000 3650 2000 6000
-Wire Bus Line
-	2500 3850 2500 6100
 Text Notes 3000 1650 0    50   ~ 0
 +5V
 Text Notes 3000 1950 0    50   ~ 0
@@ -363,4 +359,8 @@ Text Notes 3000 1850 0    50   ~ 0
 Heater
 Text Notes 950  1300 0    50   ~ 0
 This board\n1. Mesures furnace temperature\n2. Controls load throught the 230V board\n3. Provides user interface (display + keyboard)
+Wire Bus Line
+	2000 3650 2000 6000
+Wire Bus Line
+	2500 3850 2500 6100
 $EndSCHEMATC

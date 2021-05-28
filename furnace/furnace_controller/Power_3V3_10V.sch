@@ -361,8 +361,6 @@ Wire Wire Line
 Wire Wire Line
 	5800 5550 5400 5550
 Wire Wire Line
-	4500 5550 4500 4900
-Wire Wire Line
 	5400 5450 5400 5550
 Connection ~ 5400 5550
 Wire Wire Line
@@ -389,13 +387,8 @@ Connection ~ 4500 3900
 Wire Wire Line
 	4500 3900 4500 3950
 NoConn ~ 5100 5250
-Connection ~ 4500 4900
-Wire Wire Line
-	4500 4900 4500 4650
-Text HLabel 2900 4900 0    50   Input ~ 0
+Text HLabel 3000 5750 0    50   Input ~ 0
 CHARGE_PUMP_CLK
-Text Notes 3050 4750 0    50   ~ 0
-MCU pin should be \n5V tolerant and \nopen drain
 Wire Wire Line
 	7900 4400 7400 4400
 Wire Wire Line
@@ -523,8 +516,6 @@ $EndComp
 Text HLabel 2900 2550 0    50   Input ~ 0
 +5V_IN
 Wire Wire Line
-	2900 4900 4500 4900
-Wire Wire Line
 	2900 2550 3700 2550
 Connection ~ 6100 2550
 Connection ~ 3700 2550
@@ -616,4 +607,73 @@ Wire Wire Line
 Connection ~ 8450 3900
 Text HLabel 2900 2850 0    50   Input ~ 0
 GND_IN
+Wire Wire Line
+	4500 4650 4500 5550
+$Comp
+L Transistor_BJT:BC847 Q?
+U 1 1 60B184A0
+P 4400 5750
+AR Path="/609C9D41/60B184A0" Ref="Q?"  Part="1" 
+AR Path="/60B39FE1/60B184A0" Ref="Q?"  Part="1" 
+F 0 "Q?" H 4591 5796 50  0000 L CNN
+F 1 "BC847" H 4591 5705 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4600 5675 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 4400 5750 50  0001 L CNN
+	1    4400 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60B184A6
+P 4000 6000
+AR Path="/60B184A6" Ref="R?"  Part="1" 
+AR Path="/60B39FE1/60B184A6" Ref="R?"  Part="1" 
+F 0 "R?" H 4070 6046 50  0000 L CNN
+F 1 "56k" H 4070 5955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3930 6000 50  0001 C CNN
+F 3 "~" H 4000 6000 50  0001 C CNN
+	1    4000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60B184AC
+P 3650 5750
+AR Path="/60B184AC" Ref="R?"  Part="1" 
+AR Path="/60B39FE1/60B184AC" Ref="R?"  Part="1" 
+F 0 "R?" V 3750 5700 50  0000 L CNN
+F 1 "3,3k" V 3550 5650 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3580 5750 50  0001 C CNN
+F 3 "~" H 3650 5750 50  0001 C CNN
+	1    3650 5750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3800 5750 4000 5750
+Wire Wire Line
+	4000 5850 4000 5750
+Connection ~ 4000 5750
+Wire Wire Line
+	4000 5750 4200 5750
+Wire Wire Line
+	4000 6150 4000 6250
+Connection ~ 4500 5550
+$Comp
+L power:GND #PWR?
+U 1 1 60B1D9CB
+P 4500 6250
+F 0 "#PWR?" H 4500 6000 50  0001 C CNN
+F 1 "GND" H 4505 6077 50  0000 C CNN
+F 2 "" H 4500 6250 50  0001 C CNN
+F 3 "" H 4500 6250 50  0001 C CNN
+	1    4500 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 5750 3000 5750
+Wire Wire Line
+	4000 6250 4500 6250
+Wire Wire Line
+	4500 5950 4500 6250
+Connection ~ 4500 6250
 $EndSCHEMATC

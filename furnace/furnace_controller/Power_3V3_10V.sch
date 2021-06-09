@@ -532,7 +532,7 @@ Wire Wire Line
 	6500 5050 6500 5350
 Wire Wire Line
 	5400 4350 5600 4350
-NoConn ~ 5400 4050
+NoConn ~ 5200 4050
 Wire Wire Line
 	6500 4450 6500 3900
 Connection ~ 6500 3900

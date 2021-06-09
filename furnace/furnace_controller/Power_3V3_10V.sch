@@ -646,7 +646,7 @@ F 3 "~" H 6100 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4500 4250 4500 5550
+	4500 4250 4500 4650
 $Comp
 L Device:R R?
 U 1 1 60B1B4E2
@@ -713,4 +713,14 @@ Wire Wire Line
 Connection ~ 6500 6250
 Wire Wire Line
 	6500 6250 8900 6250
+Wire Wire Line
+	5200 4650 4500 4650
+Connection ~ 5200 4650
+Connection ~ 4500 4650
+Wire Wire Line
+	4500 4650 4500 5550
+Wire Wire Line
+	5200 5550 4500 5550
+Connection ~ 5200 5550
+Connection ~ 4500 5550
 $EndSCHEMATC

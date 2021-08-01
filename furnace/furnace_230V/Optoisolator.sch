@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 9 9
+Sheet 8 9
 Title ""
 Date ""
 Rev ""
@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Isolator:H11L1 U?
+L furnace_230V-rescue:H11L1-Isolator U5
 U 1 1 60AB014C
 P 6300 4100
-F 0 "U?" H 6644 4146 50  0000 L CNN
+F 0 "U5" H 6644 4146 50  0000 L CNN
 F 1 "H11L1" H 6644 4055 50  0000 L CNN
 F 2 "" H 6210 4100 50  0001 C CNN
 F 3 "https://www.onsemi.com/pub/Collateral/H11L3M-D.PDF" H 6210 4100 50  0001 C CNN
@@ -25,12 +25,12 @@ F 3 "https://www.onsemi.com/pub/Collateral/H11L3M-D.PDF" H 6210 4100 50  0001 C 
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L furnace_230V-rescue:R-Device R?
 U 1 1 60AC1EDD
 P 5350 4000
 AR Path="/60AAE0B8/60AC1EDD" Ref="R?"  Part="1" 
-AR Path="/60AAEC6C/60AC1EDD" Ref="R?"  Part="1" 
-F 0 "R?" V 5250 4000 50  0000 C CNN
+AR Path="/60AAEC6C/60AC1EDD" Ref="R15"  Part="1" 
+F 0 "R15" V 5250 4000 50  0000 C CNN
 F 1 "680" V 5450 4000 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5280 4000 50  0001 C CNN
 F 3 "~" H 5350 4000 50  0001 C CNN
@@ -38,12 +38,12 @@ F 3 "~" H 5350 4000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R?
+L furnace_230V-rescue:R-Device R?
 U 1 1 60AC2929
 P 7000 3850
 AR Path="/60AAE0B8/60AC2929" Ref="R?"  Part="1" 
-AR Path="/60AAEC6C/60AC2929" Ref="R?"  Part="1" 
-F 0 "R?" H 7100 3950 50  0000 C CNN
+AR Path="/60AAEC6C/60AC2929" Ref="R16"  Part="1" 
+F 0 "R16" H 7100 3950 50  0000 C CNN
 F 1 "3,3k" H 7150 3850 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6930 3850 50  0001 C CNN
 F 3 "~" H 7000 3850 50  0001 C CNN
@@ -51,14 +51,14 @@ F 3 "~" H 7000 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP?
+L furnace_230V-rescue:TestPoint-Connector TP?
 U 1 1 60ACF622
 P 5000 4000
 AR Path="/60ACF622" Ref="TP?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60ACF622" Ref="TP?"  Part="1" 
 AR Path="/60AAC605/60ACF622" Ref="TP?"  Part="1" 
-AR Path="/60AAEC6C/60ACF622" Ref="TP?"  Part="1" 
-F 0 "TP?" H 5058 4118 50  0000 L CNN
+AR Path="/60AAEC6C/60ACF622" Ref="TP10"  Part="1" 
+F 0 "TP10" H 5058 4118 50  0000 L CNN
 F 1 "TestPoint" H 5058 4027 50  0001 L CNN
 F 2 "" H 5200 4000 50  0001 C CNN
 F 3 "~" H 5200 4000 50  0001 C CNN

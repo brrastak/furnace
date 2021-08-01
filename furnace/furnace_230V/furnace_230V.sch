@@ -14,23 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector_Generic:Conn_01x04 J?
-U 1 1 60AAE60F
-P 10200 3200
-AR Path="/60AAC03E/60AAE60F" Ref="J?"  Part="1" 
-AR Path="/60AAE60F" Ref="J?"  Part="1" 
-F 0 "J?" H 10150 2800 50  0000 L CNN
-F 1 "CWF-4R" H 10050 2900 50  0000 L CNN
-F 2 "" H 10200 3200 50  0001 C CNN
-F 3 "~" H 10200 3200 50  0001 C CNN
-	1    10200 3200
-	1    0    0    1   
-$EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J?
+L furnace_230V-rescue:Screw_Terminal_01x02-Connector J1
 U 1 1 60AAEFEC
 P 1800 1500
-F 0 "J?" H 1880 1492 50  0000 L CNN
+F 0 "J1" H 1880 1492 50  0000 L CNN
 F 1 "TC0" H 1880 1401 50  0000 L CNN
 F 2 "" H 1800 1500 50  0001 C CNN
 F 3 "~" H 1800 1500 50  0001 C CNN
@@ -111,10 +98,10 @@ F5 "GND2" I R 8500 5400 50
 F6 "OUT" O R 8500 5250 50 
 $EndSheet
 $Comp
-L Connector:Screw_Terminal_01x02 J?
+L furnace_230V-rescue:Screw_Terminal_01x02-Connector J2
 U 1 1 60AB629C
 P 1800 2500
-F 0 "J?" H 1880 2492 50  0000 L CNN
+F 0 "J2" H 1880 2492 50  0000 L CNN
 F 1 "TC0" H 1880 2401 50  0000 L CNN
 F 2 "" H 1800 2500 50  0001 C CNN
 F 3 "~" H 1800 2500 50  0001 C CNN
@@ -182,13 +169,13 @@ Wire Wire Line
 	2500 1600 6250 1600
 Text Notes 6150 1050 2    197  ~ 0
 230V
-Text Notes 10500 3050 0    50   ~ 0
+Text Notes 10300 3000 0    50   ~ 0
 +5V
-Text Notes 10500 3350 0    50   ~ 0
+Text Notes 10300 3400 0    50   ~ 0
 GND
-Text Notes 10500 3150 0    50   ~ 0
+Text Notes 10300 3150 0    50   ~ 0
 UART_TX
-Text Notes 10500 3250 0    50   ~ 0
+Text Notes 10300 3250 0    50   ~ 0
 Heater
 Wire Wire Line
 	10000 3100 9750 3100
@@ -215,12 +202,12 @@ Wire Wire Line
 Wire Wire Line
 	9250 2400 8500 2400
 Wire Wire Line
-	10000 3000 9000 3000
+	10000 3000 9900 3000
 Connection ~ 9000 3000
 Wire Wire Line
 	9000 3000 9000 2100
 Wire Wire Line
-	10000 3300 9250 3300
+	10000 3300 9900 3300
 Connection ~ 9250 3300
 Wire Wire Line
 	9250 3300 9250 2400
@@ -338,4 +325,29 @@ Wire Wire Line
 	7300 5100 7300 5250
 Wire Wire Line
 	7300 5250 7500 5250
+$Comp
+L Connector_Generic:Conn_01x06 J3
+U 1 1 610690C6
+P 10200 3100
+F 0 "J3" H 10150 3550 50  0000 L CNN
+F 1 "IDC-6" H 10100 3450 50  0000 L CNN
+F 2 "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical" H 10200 3100 50  0001 C CNN
+F 3 "~" H 10200 3100 50  0001 C CNN
+	1    10200 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 2900 9900 2900
+Wire Wire Line
+	9900 2900 9900 3000
+Connection ~ 9900 3000
+Wire Wire Line
+	9900 3000 9000 3000
+Wire Wire Line
+	10000 3400 9900 3400
+Wire Wire Line
+	9900 3400 9900 3300
+Connection ~ 9900 3300
+Wire Wire Line
+	9900 3300 9250 3300
 $EndSCHEMATC

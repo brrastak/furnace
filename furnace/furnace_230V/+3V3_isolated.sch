@@ -20,10 +20,10 @@ P 4050 3600
 AR Path="/60AE766F" Ref="PS?"  Part="1" 
 AR Path="/609CA6A8/60AE766F" Ref="PS?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AE766F" Ref="PS?"  Part="1" 
-AR Path="/60AAC605/60AE766F" Ref="PS?"  Part="1" 
-F 0 "PS?" H 4050 3967 50  0000 C CNN
+AR Path="/60AAC605/60AE766F" Ref="PS2"  Part="1" 
+F 0 "PS2" H 4050 3967 50  0000 C CNN
 F 1 "B0505S-1WR2" H 4050 3876 50  0000 C CNN
-F 2 "CONV_B0505S-1WR2" H 4050 3600 50  0001 L BNN
+F 2 "" H 4050 3600 50  0001 L BNN
 F 3 "" H 4050 3600 50  0001 L BNN
 F 4 "Manufacturer Recommendations" H 4050 3600 50  0001 L BNN "STANDARD"
 F 5 "2018.12.05-B/2" H 4050 3600 50  0001 L BNN "PARTREV"
@@ -33,7 +33,7 @@ F 7 "10.41mm" H 4050 3600 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L furnace_230V-rescue:C-Device C?
 U 1 1 60AE7675
 P 6250 3650
 AR Path="/60AE7675" Ref="C?"  Part="1" 
@@ -44,8 +44,8 @@ AR Path="/609CA6A8/60A0A500/60AE7675" Ref="C?"  Part="1"
 AR Path="/609CA6A8/60A0A922/60AE7675" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE7675" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AE7675" Ref="C?"  Part="1" 
-AR Path="/60AAC605/60AE7675" Ref="C?"  Part="1" 
-F 0 "C?" H 6365 3696 50  0000 L CNN
+AR Path="/60AAC605/60AE7675" Ref="C10"  Part="1" 
+F 0 "C10" H 6365 3696 50  0000 L CNN
 F 1 "0,1" H 6365 3605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6288 3500 50  0001 C CNN
 F 3 "~" H 6250 3650 50  0001 C CNN
@@ -53,7 +53,7 @@ F 3 "~" H 6250 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L furnace_230V-rescue:C-Device C?
 U 1 1 60AE767B
 P 3250 3650
 AR Path="/60AE767B" Ref="C?"  Part="1" 
@@ -64,8 +64,8 @@ AR Path="/609CA6A8/60A0A500/60AE767B" Ref="C?"  Part="1"
 AR Path="/609CA6A8/60A0A922/60AE767B" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE767B" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AE767B" Ref="C?"  Part="1" 
-AR Path="/60AAC605/60AE767B" Ref="C?"  Part="1" 
-F 0 "C?" H 3365 3696 50  0000 L CNN
+AR Path="/60AAC605/60AE767B" Ref="C8"  Part="1" 
+F 0 "C8" H 3365 3696 50  0000 L CNN
 F 1 "4,7" H 3365 3605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 3288 3500 50  0001 C CNN
 F 3 "~" H 3250 3650 50  0001 C CNN
@@ -73,7 +73,7 @@ F 3 "~" H 3250 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L furnace_230V-rescue:C-Device C?
 U 1 1 60AE7681
 P 4750 3650
 AR Path="/60AE7681" Ref="C?"  Part="1" 
@@ -84,8 +84,8 @@ AR Path="/609CA6A8/60A0A500/60AE7681" Ref="C?"  Part="1"
 AR Path="/609CA6A8/60A0A922/60AE7681" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE7681" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AE7681" Ref="C?"  Part="1" 
-AR Path="/60AAC605/60AE7681" Ref="C?"  Part="1" 
-F 0 "C?" H 4865 3696 50  0000 L CNN
+AR Path="/60AAC605/60AE7681" Ref="C9"  Part="1" 
+F 0 "C9" H 4865 3696 50  0000 L CNN
 F 1 "10u" H 4865 3605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 4788 3500 50  0001 C CNN
 F 3 "~" H 4750 3650 50  0001 C CNN
@@ -101,14 +101,14 @@ Wire Wire Line
 Wire Wire Line
 	3550 3800 3550 3700
 $Comp
-L Device:R R?
+L furnace_230V-rescue:R-Device R?
 U 1 1 60AE7692
 P 5150 3650
 AR Path="/60AE7692" Ref="R?"  Part="1" 
 AR Path="/609CA6A8/60AE7692" Ref="R?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AE7692" Ref="R?"  Part="1" 
-AR Path="/60AAC605/60AE7692" Ref="R?"  Part="1" 
-F 0 "R?" H 5220 3696 50  0000 L CNN
+AR Path="/60AAC605/60AE7692" Ref="R2"  Part="1" 
+F 0 "R2" H 5220 3696 50  0000 L CNN
 F 1 "680" H 5220 3605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5080 3650 50  0001 C CNN
 F 3 "~" H 5150 3650 50  0001 C CNN
@@ -116,14 +116,14 @@ F 3 "~" H 5150 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L furnace_230V-rescue:R-Device R?
 U 1 1 60AE7698
 P 5550 3650
 AR Path="/60AE7698" Ref="R?"  Part="1" 
 AR Path="/609CA6A8/60AE7698" Ref="R?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AE7698" Ref="R?"  Part="1" 
-AR Path="/60AAC605/60AE7698" Ref="R?"  Part="1" 
-F 0 "R?" H 5620 3696 50  0000 L CNN
+AR Path="/60AAC605/60AE7698" Ref="R3"  Part="1" 
+F 0 "R3" H 5620 3696 50  0000 L CNN
 F 1 "680" H 5620 3605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5480 3650 50  0001 C CNN
 F 3 "~" H 5550 3650 50  0001 C CNN
@@ -131,7 +131,7 @@ F 3 "~" H 5550 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L furnace_230V-rescue:C-Device C?
 U 1 1 60AE769E
 P 8100 3650
 AR Path="/60AE769E" Ref="C?"  Part="1" 
@@ -142,8 +142,8 @@ AR Path="/609CA6A8/60A0A500/60AE769E" Ref="C?"  Part="1"
 AR Path="/609CA6A8/60A0A922/60AE769E" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE769E" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AE769E" Ref="C?"  Part="1" 
-AR Path="/60AAC605/60AE769E" Ref="C?"  Part="1" 
-F 0 "C?" H 8215 3696 50  0000 L CNN
+AR Path="/60AAC605/60AE769E" Ref="C12"  Part="1" 
+F 0 "C12" H 8215 3696 50  0000 L CNN
 F 1 "1u" H 8215 3605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 8138 3500 50  0001 C CNN
 F 3 "~" H 8100 3650 50  0001 C CNN
@@ -151,7 +151,7 @@ F 3 "~" H 8100 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L furnace_230V-rescue:C-Device C?
 U 1 1 60AE76A4
 P 6900 4050
 AR Path="/60AE76A4" Ref="C?"  Part="1" 
@@ -162,8 +162,8 @@ AR Path="/609CA6A8/60A0A500/60AE76A4" Ref="C?"  Part="1"
 AR Path="/609CA6A8/60A0A922/60AE76A4" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE76A4" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AE76A4" Ref="C?"  Part="1" 
-AR Path="/60AAC605/60AE76A4" Ref="C?"  Part="1" 
-F 0 "C?" H 7015 4096 50  0000 L CNN
+AR Path="/60AAC605/60AE76A4" Ref="C11"  Part="1" 
+F 0 "C11" H 7015 4096 50  0000 L CNN
 F 1 "10u" H 7015 4005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6938 3900 50  0001 C CNN
 F 3 "~" H 6900 4050 50  0001 C CNN
@@ -171,14 +171,14 @@ F 3 "~" H 6900 4050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L furnace_230V-rescue:R-Device R?
 U 1 1 60AE76AA
 P 7500 3650
 AR Path="/60AE76AA" Ref="R?"  Part="1" 
 AR Path="/609CA6A8/60AE76AA" Ref="R?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AE76AA" Ref="R?"  Part="1" 
-AR Path="/60AAC605/60AE76AA" Ref="R?"  Part="1" 
-F 0 "R?" H 7570 3696 50  0000 L CNN
+AR Path="/60AAC605/60AE76AA" Ref="R4"  Part="1" 
+F 0 "R4" H 7570 3696 50  0000 L CNN
 F 1 "240 1%" H 7570 3605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7430 3650 50  0001 C CNN
 F 3 "~" H 7500 3650 50  0001 C CNN
@@ -186,14 +186,14 @@ F 3 "~" H 7500 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L furnace_230V-rescue:R-Device R?
 U 1 1 60AE76B0
 P 7500 4050
 AR Path="/60AE76B0" Ref="R?"  Part="1" 
 AR Path="/609CA6A8/60AE76B0" Ref="R?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AE76B0" Ref="R?"  Part="1" 
-AR Path="/60AAC605/60AE76B0" Ref="R?"  Part="1" 
-F 0 "R?" H 7570 4096 50  0000 L CNN
+AR Path="/60AAC605/60AE76B0" Ref="R5"  Part="1" 
+F 0 "R5" H 7570 4096 50  0000 L CNN
 F 1 "390 1%" H 7570 4005 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 7430 4050 50  0001 C CNN
 F 3 "~" H 7500 4050 50  0001 C CNN
@@ -210,8 +210,8 @@ U 1 1 60AE76B8
 P 6900 3500
 AR Path="/609CA6A8/60AE76B8" Ref="U?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AE76B8" Ref="U?"  Part="1" 
-AR Path="/60AAC605/60AE76B8" Ref="U?"  Part="1" 
-F 0 "U?" H 6900 3742 50  0000 C CNN
+AR Path="/60AAC605/60AE76B8" Ref="U2"  Part="1" 
+F 0 "U2" H 6900 3742 50  0000 C CNN
 F 1 "LM317L_SO8" H 6900 3651 50  0000 C CNN
 F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6900 3700 50  0001 C CIN
 F 3 "http://www.ti.com/lit/ds/snvs775k/snvs775k.pdf" H 6900 3300 50  0001 C CNN
@@ -297,13 +297,13 @@ Wire Wire Line
 	3050 3800 3250 3800
 Connection ~ 3250 3800
 $Comp
-L Connector:TestPoint TP?
+L furnace_230V-rescue:TestPoint-Connector TP?
 U 1 1 60B566B5
 P 8550 4200
 AR Path="/60B566B5" Ref="TP?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60B566B5" Ref="TP?"  Part="1" 
-AR Path="/60AAC605/60B566B5" Ref="TP?"  Part="1" 
-F 0 "TP?" H 8608 4318 50  0000 L CNN
+AR Path="/60AAC605/60B566B5" Ref="TP5"  Part="1" 
+F 0 "TP5" H 8608 4318 50  0000 L CNN
 F 1 "TestPoint" H 8608 4227 50  0001 L CNN
 F 2 "" H 8750 4200 50  0001 C CNN
 F 3 "~" H 8750 4200 50  0001 C CNN
@@ -311,13 +311,13 @@ F 3 "~" H 8750 4200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP?
+L furnace_230V-rescue:TestPoint-Connector TP?
 U 1 1 60B56DD4
 P 8550 3500
 AR Path="/60B56DD4" Ref="TP?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60B56DD4" Ref="TP?"  Part="1" 
-AR Path="/60AAC605/60B56DD4" Ref="TP?"  Part="1" 
-F 0 "TP?" H 8608 3618 50  0000 L CNN
+AR Path="/60AAC605/60B56DD4" Ref="TP4"  Part="1" 
+F 0 "TP4" H 8608 3618 50  0000 L CNN
 F 1 "TestPoint" H 8608 3527 50  0001 L CNN
 F 2 "" H 8750 3500 50  0001 C CNN
 F 3 "~" H 8750 3500 50  0001 C CNN

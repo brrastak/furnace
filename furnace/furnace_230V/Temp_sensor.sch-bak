@@ -71,7 +71,7 @@ AR Path="/60AAC605/60ACF1AA" Ref="TP?"  Part="1"
 AR Path="/60AAE178/60ACF1AA" Ref="TP6"  Part="1" 
 F 0 "TP6" H 7058 4618 50  0000 L CNN
 F 1 "TestPoint" H 7058 4527 50  0001 L CNN
-F 2 "" H 7200 4500 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 7200 4500 50  0001 C CNN
 F 3 "~" H 7200 4500 50  0001 C CNN
 	1    7000 4500
 	1    0    0    -1  

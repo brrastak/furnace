@@ -23,7 +23,7 @@ AR Path="/60AAC605/60ACFCB9" Ref="TP?"  Part="1"
 AR Path="/60AAE212/60ACFCB9" Ref="TP11"  Part="1" 
 F 0 "TP11" H 4558 4118 50  0000 L CNN
 F 1 "TestPoint" H 4558 4027 50  0001 L CNN
-F 2 "" H 4700 4000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 4700 4000 50  0001 C CNN
 F 3 "~" H 4700 4000 50  0001 C CNN
 	1    4500 4000
 	1    0    0    -1  
@@ -49,7 +49,7 @@ AR Path="/60AAC605/60AEBDD4" Ref="TP?"  Part="1"
 AR Path="/60AAE212/60AEBDD4" Ref="TP12"  Part="1" 
 F 0 "TP12" H 4558 4618 50  0000 L CNN
 F 1 "TestPoint" H 4558 4527 50  0001 L CNN
-F 2 "" H 4700 4500 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 4700 4500 50  0001 C CNN
 F 3 "~" H 4700 4500 50  0001 C CNN
 	1    4500 4500
 	1    0    0    -1  
@@ -143,7 +143,7 @@ AR Path="/60AAE4BD/60AF1C95" Ref="TP?"  Part="1"
 AR Path="/60AAE212/60AF1C95" Ref="TP13"  Part="1" 
 F 0 "TP13" H 8058 4118 50  0000 L CNN
 F 1 "TestPoint" H 8058 4027 50  0001 L CNN
-F 2 "" H 8200 4000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 8200 4000 50  0001 C CNN
 F 3 "~" H 8200 4000 50  0001 C CNN
 	1    8000 4000
 	1    0    0    -1  

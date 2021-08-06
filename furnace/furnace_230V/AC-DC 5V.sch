@@ -84,8 +84,8 @@ L furnace_230V-rescue:L-Device L2
 U 1 1 60ABDC2D
 P 7250 4000
 F 0 "L2" V 7350 4000 50  0000 C CNN
-F 1 "L" V 7200 4000 50  0000 C CNN
-F 2 "" H 7250 4000 50  0001 C CNN
+F 1 "2.2u" V 7200 4000 50  0000 C CNN
+F 2 "Inductor_SMD:L_12x12mm_H8mm" H 7250 4000 50  0001 C CNN
 F 3 "~" H 7250 4000 50  0001 C CNN
 	1    7250 4000
 	0    -1   -1   0   
@@ -122,7 +122,7 @@ AR Path="/60AAC605/60ACEC46" Ref="TP?"  Part="1"
 AR Path="/60AABABA/60ACEC46" Ref="TP1"  Part="1" 
 F 0 "TP1" H 7058 4118 50  0000 L CNN
 F 1 "TestPoint" H 7058 4027 50  0001 L CNN
-F 2 "" H 7200 4000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 7200 4000 50  0001 C CNN
 F 3 "~" H 7200 4000 50  0001 C CNN
 	1    7000 4000
 	1    0    0    -1  
@@ -137,7 +137,7 @@ AR Path="/60AAC605/60ACED6E" Ref="TP?"  Part="1"
 AR Path="/60AABABA/60ACED6E" Ref="TP2"  Part="1" 
 F 0 "TP2" H 8808 4118 50  0000 L CNN
 F 1 "TestPoint" H 8808 4027 50  0001 L CNN
-F 2 "" H 8950 4000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 8950 4000 50  0001 C CNN
 F 3 "~" H 8950 4000 50  0001 C CNN
 	1    8750 4000
 	1    0    0    -1  

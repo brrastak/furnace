@@ -21,7 +21,7 @@ AR Path="/60AAE0B8/60AC3251" Ref="R?"  Part="1"
 AR Path="/60AAE4BD/60AC3251" Ref="R10"  Part="1" 
 F 0 "R10" H 4570 3696 50  0000 L CNN
 F 1 "180k 0,25W 1%" H 4570 3605 50  0000 L CNN
-F 2 "" V 4430 3650 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4430 3650 50  0001 C CNN
 F 3 "~" H 4500 3650 50  0001 C CNN
 	1    4500 3650
 	1    0    0    -1  
@@ -107,7 +107,7 @@ AR Path="/60AAC605/60ACD704" Ref="TP?"  Part="1"
 AR Path="/60AAE4BD/60ACD704" Ref="TP7"  Part="1" 
 F 0 "TP7" H 5558 4118 50  0000 L CNN
 F 1 "TestPoint" H 5558 4027 50  0001 L CNN
-F 2 "" H 5700 4000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 5700 4000 50  0001 C CNN
 F 3 "~" H 5700 4000 50  0001 C CNN
 	1    5500 4000
 	1    0    0    -1  
@@ -122,7 +122,7 @@ AR Path="/60AAC605/60ACD8BB" Ref="TP?"  Part="1"
 AR Path="/60AAE4BD/60ACD8BB" Ref="TP8"  Part="1" 
 F 0 "TP8" H 5558 4618 50  0000 L CNN
 F 1 "TestPoint" H 5558 4527 50  0001 L CNN
-F 2 "" H 5700 4500 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 5700 4500 50  0001 C CNN
 F 3 "~" H 5700 4500 50  0001 C CNN
 	1    5500 4500
 	1    0    0    -1  
@@ -137,7 +137,7 @@ AR Path="/60AAC605/60ACDB72" Ref="TP?"  Part="1"
 AR Path="/60AAE4BD/60ACDB72" Ref="TP9"  Part="1" 
 F 0 "TP9" H 8558 4118 50  0000 L CNN
 F 1 "TestPoint" H 8558 4027 50  0001 L CNN
-F 2 "" H 8700 4000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 8700 4000 50  0001 C CNN
 F 3 "~" H 8700 4000 50  0001 C CNN
 	1    8500 4000
 	1    0    0    -1  
@@ -190,7 +190,7 @@ AR Path="/60AAE0B8/60B376FC" Ref="R?"  Part="1"
 AR Path="/60AAE4BD/60B376FC" Ref="R12"  Part="1" 
 F 0 "R12" H 4570 4696 50  0000 L CNN
 F 1 "180k 0,25W 1%" H 4570 4605 50  0000 L CNN
-F 2 "" V 4430 4650 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4430 4650 50  0001 C CNN
 F 3 "~" H 4500 4650 50  0001 C CNN
 	1    4500 4650
 	1    0    0    -1  

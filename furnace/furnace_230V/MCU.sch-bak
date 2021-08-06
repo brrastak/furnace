@@ -89,7 +89,7 @@ AR Path="/60AAE4BD/60B590E5" Ref="TP?"  Part="1"
 AR Path="/60AABDBE/60B590E5" Ref="TP3"  Part="1" 
 F 0 "TP3" V 4558 4118 50  0000 L CNN
 F 1 "TestPoint" H 4558 4027 50  0001 L CNN
-F 2 "" H 4700 4000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 4700 4000 50  0001 C CNN
 F 3 "~" H 4700 4000 50  0001 C CNN
 	1    4500 4000
 	0    -1   -1   0   

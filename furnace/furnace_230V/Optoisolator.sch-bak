@@ -19,7 +19,7 @@ U 1 1 60AB014C
 P 6300 4100
 F 0 "U5" H 6644 4146 50  0000 L CNN
 F 1 "H11L1" H 6644 4055 50  0000 L CNN
-F 2 "" H 6210 4100 50  0001 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm_SMDSocket_SmallPads" H 6210 4100 50  0001 C CNN
 F 3 "https://www.onsemi.com/pub/Collateral/H11L3M-D.PDF" H 6210 4100 50  0001 C CNN
 	1    6300 4100
 	1    0    0    -1  
@@ -60,7 +60,7 @@ AR Path="/60AAC605/60ACF622" Ref="TP?"  Part="1"
 AR Path="/60AAEC6C/60ACF622" Ref="TP10"  Part="1" 
 F 0 "TP10" H 5058 4118 50  0000 L CNN
 F 1 "TestPoint" H 5058 4027 50  0001 L CNN
-F 2 "" H 5200 4000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 5200 4000 50  0001 C CNN
 F 3 "~" H 5200 4000 50  0001 C CNN
 	1    5000 4000
 	1    0    0    -1  

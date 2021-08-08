@@ -58,6 +58,28 @@ F 3 "~" H 3350 4000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
+L furnace_230V-rescue:R-Device R8
+U 1 1 60ABF950
+P 7000 3800
+F 0 "R8" H 7070 3846 50  0000 L CNN
+F 1 "33 1W" H 7070 3755 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal" V 6930 3800 50  0001 C CNN
+F 3 "~" H 7000 3800 50  0001 C CNN
+	1    7000 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L furnace_230V-rescue:C-Device C13
+U 1 1 60ABFAB6
+P 7000 4200
+F 0 "C13" H 7115 4246 50  0000 L CNN
+F 1 "0,01 630V" H 7115 4155 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D10.5mm_W5.0mm_P10.00mm" H 7038 4050 50  0001 C CNN
+F 3 "~" H 7000 4200 50  0001 C CNN
+	1    7000 4200
+	1    0    0    -1  
+$EndComp
+$Comp
 L furnace_230V-rescue:LED-Device D3
 U 1 1 60AD0B5E
 P 3850 4000
@@ -70,9 +92,20 @@ F 3 "~" H 3850 4000 50  0001 C CNN
 $EndComp
 Text Notes 7800 2450 2    197  ~ 0
 Isolated TRIAC control circuit
-Text HLabel 7500 3500 2    50   Input ~ 0
+$Comp
+L furnace_230V-rescue:Fuse-Device F2
+U 1 1 60B1BB7E
+P 8250 4500
+F 0 "F2" V 8150 4500 50  0000 C CNN
+F 1 "10A" V 8350 4500 50  0000 C CNN
+F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Stelvio-Kontek_PTF78_Horizontal_Open" V 8180 4500 50  0001 C CNN
+F 3 "~" H 8250 4500 50  0001 C CNN
+	1    8250 4500
+	0    1    1    0   
+$EndComp
+Text HLabel 9000 3500 2    50   Input ~ 0
 AC
-Text HLabel 7500 4500 2    50   Output ~ 0
+Text HLabel 9000 4500 2    50   Output ~ 0
 LOAD
 Text HLabel 2500 4000 0    50   Input ~ 0
 +5V
@@ -96,6 +129,45 @@ Wire Wire Line
 	6000 4000 6000 3500
 Wire Wire Line
 	6000 4300 6000 4500
+Wire Wire Line
+	8400 4500 9000 4500
+Wire Wire Line
+	6000 4500 7000 4500
+Wire Wire Line
+	6000 3500 7000 3500
+Wire Wire Line
+	7000 3650 7000 3500
+Connection ~ 7000 3500
+Wire Wire Line
+	7000 3500 7750 3500
+Wire Wire Line
+	7000 3950 7000 4050
+Wire Wire Line
+	7000 4350 7000 4500
+Connection ~ 7000 4500
+$Comp
+L Device:Varistor RV1
+U 1 1 6105DA3F
+P 7750 4000
+F 0 "RV1" H 7853 4046 50  0000 L CNN
+F 1 "471KD20" H 7853 3955 50  0000 L CNN
+F 2 "Varistor:RV_Disc_D21.5mm_W6.1mm_P7.5mm" V 7680 4000 50  0001 C CNN
+F 3 "~" H 7750 4000 50  0001 C CNN
+	1    7750 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 4150 7750 4500
+Wire Wire Line
+	7000 4500 7750 4500
+Connection ~ 7750 4500
+Wire Wire Line
+	7750 4500 8100 4500
+Wire Wire Line
+	7750 3850 7750 3500
+Connection ~ 7750 3500
+Wire Wire Line
+	7750 3500 9000 3500
 $Comp
 L Mechanical:Heatsink HS1
 U 1 1 610DEB43
@@ -111,13 +183,9 @@ Wire Wire Line
 	5250 3600 5250 3500
 Wire Wire Line
 	5250 3500 6000 3500
+Connection ~ 6000 3500
 Wire Wire Line
 	5250 3900 5250 4000
 Wire Wire Line
 	5250 4000 5000 4000
-Wire Wire Line
-	6000 4500 7500 4500
-Wire Wire Line
-	7500 3500 6000 3500
-Connection ~ 6000 3500
 $EndSCHEMATC

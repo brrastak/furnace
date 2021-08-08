@@ -16,12 +16,12 @@ $EndDescr
 $Comp
 L furnace_230V-rescue:Screw_Terminal_01x02-Connector J1
 U 1 1 60AAEFEC
-P 1800 1500
-F 0 "J1" H 1880 1492 50  0000 L CNN
-F 1 " " H 1880 1401 50  0000 L CNN
-F 2 "" H 1800 1500 50  0001 C CNN
-F 3 "~" H 1800 1500 50  0001 C CNN
-	1    1800 1500
+P 1300 1500
+F 0 "J1" H 1380 1492 50  0000 L CNN
+F 1 " " H 1380 1401 50  0000 L CNN
+F 2 "furnace_230V:KF7.62-2P" H 1300 1500 50  0001 C CNN
+F 3 "~" H 1300 1500 50  0001 C CNN
+	1    1300 1500
 	-1   0    0    -1  
 $EndComp
 $Sheet
@@ -100,12 +100,12 @@ $EndSheet
 $Comp
 L furnace_230V-rescue:Screw_Terminal_01x02-Connector J2
 U 1 1 60AB629C
-P 1800 2500
-F 0 "J2" H 1880 2492 50  0000 L CNN
-F 1 " " H 1880 2401 50  0000 L CNN
-F 2 "" H 1800 2500 50  0001 C CNN
-F 3 "~" H 1800 2500 50  0001 C CNN
-	1    1800 2500
+P 1300 2500
+F 0 "J2" H 1380 2492 50  0000 L CNN
+F 1 " " H 1380 2401 50  0000 L CNN
+F 2 "furnace_230V:KF7.62-2P" H 1300 2500 50  0001 C CNN
+F 3 "~" H 1300 2500 50  0001 C CNN
+	1    1300 2500
 	-1   0    0    -1  
 $EndComp
 $Sheet
@@ -117,56 +117,36 @@ F2 "CURR" O R 4000 5100 50
 F3 "+3V3" I L 3000 5100 50 
 F4 "GND" I L 3000 5400 50 
 $EndSheet
-Text Notes 1550 1300 0    50   ~ 0
+Text Notes 1100 1300 0    50   ~ 0
 AC 230V input
 Wire Notes Line rgb(255, 0, 0)
 	8000 1500 8000 6000
 Wire Notes Line
-	1750 2600 1500 2600
+	1300 2650 1300 5250
 Wire Notes Line
-	1500 2600 1500 5250
-Wire Notes Line
-	1500 5250 3000 5250
+	1300 5250 3000 5250
 Wire Notes Line
 	7500 3250 4000 3250
 Text Notes 7850 1350 0    50   ~ 0
 Isolation
-Text Notes 650  3050 0    50   ~ 0
+Text Notes 850  3100 0    50   ~ 0
 Load wire \nshould pass throught\nthe current \ntransformer hole
 Text Notes 4200 3200 0    50   ~ 0
 Temp sensor placed \non the same heatsink\nas the TRIAC
-Text Notes 1700 2300 0    50   ~ 0
+Text Notes 1200 2300 0    50   ~ 0
 Load
 Wire Wire Line
-	6500 1500 6500 2100
-Wire Wire Line
-	6500 2100 7500 2100
-Wire Wire Line
 	7500 3100 6500 3100
-Wire Wire Line
-	6500 3100 6500 2100
-Connection ~ 6500 2100
 Wire Wire Line
 	7500 3400 6000 3400
 Wire Wire Line
 	7500 2400 6250 2400
 Wire Wire Line
-	6250 2400 6250 1600
+	6250 2400 6250 2000
 Wire Wire Line
-	2000 1500 2250 1500
+	6000 3400 6000 2600
 Wire Wire Line
-	2000 1600 2150 1600
-Wire Wire Line
-	6000 3400 6000 2500
-Wire Wire Line
-	6000 2500 2000 2500
-Wire Wire Line
-	2000 2600 2500 2600
-Wire Wire Line
-	2500 2600 2500 1600
-Connection ~ 2500 1600
-Wire Wire Line
-	2500 1600 6250 1600
+	6000 2600 1500 2600
 Text Notes 6150 1050 2    197  ~ 0
 230V
 Text Notes 10300 3000 0    50   ~ 0
@@ -267,19 +247,13 @@ Connection ~ 2500 5400
 Wire Wire Line
 	2500 5400 2500 4500
 Wire Wire Line
-	3000 4100 2250 4100
+	3000 4100 2400 4100
 Wire Wire Line
-	2250 4100 2250 1500
-Connection ~ 2250 1500
+	2400 4100 2400 2000
 Wire Wire Line
-	2250 1500 6500 1500
+	3000 4200 2300 4200
 Wire Wire Line
-	3000 4200 2150 4200
-Wire Wire Line
-	2150 4200 2150 1600
-Connection ~ 2150 1600
-Wire Wire Line
-	2150 1600 2500 1600
+	2300 4200 2300 1800
 Wire Wire Line
 	5000 5700 4750 5700
 Wire Wire Line
@@ -350,4 +324,119 @@ Wire Wire Line
 Connection ~ 9900 3300
 Wire Wire Line
 	9900 3300 9250 3300
+$Comp
+L stamp:LOGO G1
+U 1 1 610EDF1B
+P 10300 6050
+F 0 "G1" H 10300 5928 60  0001 C CNN
+F 1 "LOGO" H 10300 6172 60  0001 C CNN
+F 2 "furnace_230V:stamp" H 10300 6050 50  0001 C CNN
+F 3 "" H 10300 6050 50  0001 C CNN
+	1    10300 6050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 6110929D
+P 8500 6000
+F 0 "H1" H 8550 6150 50  0000 L CNN
+F 1 "MountingHole" H 8350 5850 50  0000 L CNN
+F 2 "furnace_230V:hole_D3.5mm" H 8500 6000 50  0001 C CNN
+F 3 "~" H 8500 6000 50  0001 C CNN
+	1    8500 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 6110B2E7
+P 8750 6000
+F 0 "H2" H 8800 6150 50  0000 L CNN
+F 1 "MountingHole" H 8600 5850 50  0001 L CNN
+F 2 "furnace_230V:hole_D3.5mm" H 8750 6000 50  0001 C CNN
+F 3 "~" H 8750 6000 50  0001 C CNN
+	1    8750 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 6110B4DC
+P 9000 6000
+F 0 "H3" H 9050 6150 50  0000 L CNN
+F 1 "MountingHole" H 8850 5850 50  0001 L CNN
+F 2 "furnace_230V:hole_D3.5mm" H 9000 6000 50  0001 C CNN
+F 3 "~" H 9000 6000 50  0001 C CNN
+	1    9000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 6110B613
+P 9250 6000
+F 0 "H4" H 9300 6150 50  0000 L CNN
+F 1 "MountingHole" H 9100 5850 50  0001 L CNN
+F 2 "furnace_230V:hole_D3.5mm" H 9250 6000 50  0001 C CNN
+F 3 "~" H 9250 6000 50  0001 C CNN
+	1    9250 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L furnace_230V-rescue:Fuse-Device F?
+U 1 1 61103E7E
+P 2150 1800
+AR Path="/60AABABA/61103E7E" Ref="F?"  Part="1" 
+AR Path="/61103E7E" Ref="F2"  Part="1" 
+F 0 "F2" V 2050 1800 50  0000 C CNN
+F 1 "0,1A" V 2250 1800 50  0000 C CNN
+F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Stelvio-Kontek_PTF78_Horizontal_Open" V 2080 1800 50  0001 C CNN
+F 3 "~" H 2150 1800 50  0001 C CNN
+	1    2150 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L furnace_230V-rescue:Fuse-Device F?
+U 1 1 61107140
+P 2150 1500
+AR Path="/60AAE0B8/61107140" Ref="F?"  Part="1" 
+AR Path="/61107140" Ref="F1"  Part="1" 
+F 0 "F1" V 2050 1500 50  0000 C CNN
+F 1 "10A" V 2250 1500 50  0000 C CNN
+F 2 "Fuse:Fuseholder_Cylinder-5x20mm_Stelvio-Kontek_PTF78_Horizontal_Open" V 2080 1500 50  0001 C CNN
+F 3 "~" H 2150 1500 50  0001 C CNN
+	1    2150 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 1500 6500 3100
+Wire Wire Line
+	1500 2500 1600 2500
+Wire Wire Line
+	1600 2500 1600 2000
+Wire Wire Line
+	1600 1600 1500 1600
+Wire Wire Line
+	6250 2000 2400 2000
+Connection ~ 1600 2000
+Wire Wire Line
+	1600 2000 1600 1600
+Connection ~ 2400 2000
+Wire Wire Line
+	2400 2000 1600 2000
+Wire Wire Line
+	1500 1500 1900 1500
+Wire Wire Line
+	2000 1800 1900 1800
+Wire Wire Line
+	1900 1800 1900 1500
+Connection ~ 1900 1500
+Wire Wire Line
+	1900 1500 2000 1500
+Wire Wire Line
+	2300 1500 6500 1500
+Wire Wire Line
+	2300 1800 7000 1800
+Wire Wire Line
+	7000 1800 7000 2100
+Wire Wire Line
+	7000 2100 7500 2100
+Connection ~ 2300 1800
 $EndSCHEMATC

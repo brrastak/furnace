@@ -37,10 +37,10 @@ AR Path="/609CA6A8/60A0A922/60AC6956" Ref="C?"  Part="1"
 AR Path="/609CA6A8/60AC6956" Ref="C?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AC6956" Ref="C?"  Part="1" 
 AR Path="/60AAC605/60AC6956" Ref="C?"  Part="1" 
-AR Path="/60AAE178/60AC6956" Ref="C13"  Part="1" 
-F 0 "C13" H 5115 3696 50  0000 L CNN
+AR Path="/60AAE178/60AC6956" Ref="C14"  Part="1" 
+F 0 "C14" H 5115 3696 50  0000 L CNN
 F 1 "0,1" H 5115 3605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5038 3500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5038 3500 50  0001 C CNN
 F 3 "~" H 5000 3650 50  0001 C CNN
 	1    5000 3650
 	1    0    0    -1  
@@ -53,10 +53,10 @@ AR Path="/60AC70EB" Ref="R?"  Part="1"
 AR Path="/609CA6A8/60AC70EB" Ref="R?"  Part="1" 
 AR Path="/609CA6A8/60AE5653/60AC70EB" Ref="R?"  Part="1" 
 AR Path="/60AAC605/60AC70EB" Ref="R?"  Part="1" 
-AR Path="/60AAE178/60AC70EB" Ref="R8"  Part="1" 
-F 0 "R8" H 6570 3696 50  0000 L CNN
+AR Path="/60AAE178/60AC70EB" Ref="R9"  Part="1" 
+F 0 "R9" H 6570 3696 50  0000 L CNN
 F 1 "4,7k" H 6570 3605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6430 3650 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6430 3650 50  0001 C CNN
 F 3 "~" H 6500 3650 50  0001 C CNN
 	1    6500 3650
 	1    0    0    -1  
@@ -71,7 +71,7 @@ AR Path="/60AAC605/60ACF1AA" Ref="TP?"  Part="1"
 AR Path="/60AAE178/60ACF1AA" Ref="TP6"  Part="1" 
 F 0 "TP6" H 7058 4618 50  0000 L CNN
 F 1 "TestPoint" H 7058 4527 50  0001 L CNN
-F 2 "furnace_230V:TP" H 7200 4500 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 7200 4500 50  0001 C CNN
 F 3 "~" H 7200 4500 50  0001 C CNN
 	1    7000 4500
 	1    0    0    -1  

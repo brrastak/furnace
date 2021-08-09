@@ -19,7 +19,7 @@ U 1 1 60AACB00
 P 6300 4300
 F 0 "U1" H 6850 4800 50  0000 C CNN
 F 1 "STM8S001J3M" H 7000 4700 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6350 4850 50  0001 L CNN
+F 2 "Package_SO:SO-8_3.9x4.9mm_P1.27mm" H 6350 4850 50  0001 L CNN
 F 3 "https://www.st.com/resource/en/datasheet/stm8s001j3.pdf" H 6200 4400 50  0001 C CNN
 	1    6300 4300
 	1    0    0    -1  
@@ -40,7 +40,7 @@ AR Path="/60AAC605/60ACBC6E" Ref="C?"  Part="1"
 AR Path="/60AABDBE/60ACBC6E" Ref="C7"  Part="1" 
 F 0 "C7" H 5615 4696 50  0000 L CNN
 F 1 "1u" H 5615 4605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5538 4500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5538 4500 50  0001 C CNN
 F 3 "~" H 5500 4650 50  0001 C CNN
 	1    5500 4650
 	1    0    0    -1  
@@ -61,7 +61,7 @@ AR Path="/60AAC605/60ACBEC0" Ref="C?"  Part="1"
 AR Path="/60AABDBE/60ACBEC0" Ref="C6"  Part="1" 
 F 0 "C6" H 5615 3696 50  0000 L CNN
 F 1 "0,1" H 5615 3605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5538 3500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5538 3500 50  0001 C CNN
 F 3 "~" H 5500 3650 50  0001 C CNN
 	1    5500 3650
 	1    0    0    -1  
@@ -89,7 +89,7 @@ AR Path="/60AAE4BD/60B590E5" Ref="TP?"  Part="1"
 AR Path="/60AABDBE/60B590E5" Ref="TP3"  Part="1" 
 F 0 "TP3" V 4558 4118 50  0000 L CNN
 F 1 "TestPoint" H 4558 4027 50  0001 L CNN
-F 2 "furnace_230V:TP" H 4700 4000 50  0001 C CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom" H 4700 4000 50  0001 C CNN
 F 3 "~" H 4700 4000 50  0001 C CNN
 	1    4500 4000
 	0    -1   -1   0   

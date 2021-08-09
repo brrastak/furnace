@@ -1,4 +1,4 @@
-(module B_S-1WR3 (layer F.Cu) (tedit 610EC620)
+(module B_S-1WR3 (layer F.Cu) (tedit 610D3AB7)
   (descr "DC/DC converter isolated")
   (fp_text reference REF** (at 0.508 -6.096) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -25,9 +25,4 @@
   (pad 2 thru_hole circle (at -1.27 0) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask))
   (pad 3 thru_hole circle (at 1.27 0) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask))
   (pad 4 thru_hole circle (at 3.81 0) (size 1.6 1.6) (drill 1) (layers *.Cu *.Mask))
-  (model "${KIPRJMOD}/furnace_230V.pretty/User Library-B0505S.step"
-    (offset (xyz -6 5 10))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 -90 180))
-  )
 )

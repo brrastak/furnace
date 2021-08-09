@@ -1,4 +1,4 @@
-(module ZMCT103C (layer F.Cu) (tedit 610D39AE)
+(module ZMCT103C (layer F.Cu) (tedit 610EC776)
   (descr "Current transformer")
   (fp_text reference REF** (at 0 -6.096) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -23,4 +23,9 @@
   )
   (pad 1 thru_hole trapezoid (at -5.9 0) (size 1.8 2.7) (drill 1.2) (layers *.Cu *.Mask))
   (pad 2 thru_hole oval (at 5.9 0) (size 1.8 2.7) (drill 1.2) (layers *.Cu *.Mask))
+  (model ${KIPRJMOD}/furnace_230V.pretty/zmct103c.stp
+    (offset (xyz 0 0 10))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 90))
+  )
 )

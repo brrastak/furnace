@@ -1,4 +1,4 @@
-(module KF7.62-2P (layer F.Cu) (tedit 610D39B9)
+(module KF7.62-2P (layer F.Cu) (tedit 610EC684)
   (descr "Screw terminal")
   (fp_text reference REF** (at 0.254 -10.922) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
@@ -23,4 +23,9 @@
   )
   (pad 2 thru_hole oval (at 3.81 0) (size 2 3) (drill 1.5) (layers *.Cu *.Mask))
   (pad 1 thru_hole trapezoid (at -3.81 0) (size 2 3) (drill 1.5) (layers *.Cu *.Mask))
+  (model "${KIPRJMOD}/furnace_230V.pretty/User Library-KF7 2 pinos-1.step"
+    (offset (xyz 7.5 -2 0))
+    (scale (xyz 1 1 1))
+    (rotate (xyz 0 0 0))
+  )
 )

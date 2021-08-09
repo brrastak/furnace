@@ -1,4 +1,4 @@
-19222577424476269
+19229092411626428
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -83048,6 +83048,20 @@ Screw terminal
 2
 2
 furnace_230V
+L_CommonMode_PLA10
+Wuerth, WE-CMB, Bauform XXL,
+CommonModeChoke Gleichtaktdrossel 
+0
+4
+4
+furnace_230V
+TP
+
+
+0
+1
+1
+furnace_230V
 TRIAC
 
 TO-220-3 Horizontal RM 2.54mm
@@ -83056,11 +83070,11 @@ TO-220-3 Horizontal RM 2.54mm
 3
 furnace_230V
 WX-DC12003
-Current transformer
+DC-DC convertor isolated
 
 0
-2
-2
+8
+4
 furnace_230V
 ZMCT103C
 Current transformer
@@ -83068,3 +83082,17 @@ Current transformer
 0
 2
 2
+furnace_230V
+hole_D3.5mm
+
+
+0
+0
+0
+furnace_230V
+stamp
+
+
+0
+0
+0

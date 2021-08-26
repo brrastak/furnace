@@ -468,7 +468,7 @@ Wire Wire Line
 	4700 2850 5300 2850
 Text Notes 3150 4650 0    50   ~ 0
 Programming
-Text Label 3600 5400 0    50   ~ 0
+Text Label 3600 5300 0    50   ~ 0
 NRST
 Text Label 3600 5200 0    50   ~ 0
 SWDIO
@@ -477,15 +477,15 @@ SWCLK
 $Comp
 L power:GND #PWR?
 U 1 1 60A6ADB8
-P 3600 5500
+P 3600 5400
 AR Path="/60A6ADB8" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60A6ADB8" Ref="#PWR05"  Part="1" 
 AR Path="/60B42F62/60A6ADB8" Ref="#PWR?"  Part="1" 
-F 0 "#PWR05" H 3600 5250 50  0001 C CNN
-F 1 "GND" H 3605 5327 50  0000 C CNN
-F 2 "" H 3600 5500 50  0001 C CNN
-F 3 "" H 3600 5500 50  0001 C CNN
-	1    3600 5500
+F 0 "#PWR05" H 3600 5150 50  0001 C CNN
+F 1 "GND" H 3605 5227 50  0000 C CNN
+F 2 "" H 3600 5400 50  0001 C CNN
+F 3 "" H 3600 5400 50  0001 C CNN
+	1    3600 5400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -502,25 +502,6 @@ F 3 "" H 3600 5000 50  0001 C CNN
 	1    3600 5000
 	1    0    0    -1  
 $EndComp
-Text Label 5300 4400 2    50   ~ 0
-SWO
-Wire Wire Line
-	5300 4400 5400 4400
-Text Label 3600 5300 0    50   ~ 0
-SWO
-$Comp
-L Connector:Conn_01x06_Male J7
-U 1 1 60A6D6DF
-P 3300 5200
-AR Path="/609C9D41/60A6D6DF" Ref="J7"  Part="1" 
-AR Path="/60B42F62/60A6D6DF" Ref="J?"  Part="1" 
-F 0 "J7" H 3408 5581 50  0000 C CNN
-F 1 "PLS-6" H 3408 5490 50  0000 C CNN
-F 2 "" H 3300 5200 50  0001 C CNN
-F 3 "~" H 3300 5200 50  0001 C CNN
-	1    3300 5200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3600 5000 3500 5000
 Wire Wire Line
@@ -531,8 +512,6 @@ Wire Wire Line
 	3600 5300 3500 5300
 Wire Wire Line
 	3600 5400 3500 5400
-Wire Wire Line
-	3600 5500 3500 5500
 Text Label 6800 4700 0    50   ~ 0
 SPI1_SCK
 Text Label 6800 4800 0    50   ~ 0
@@ -986,6 +965,18 @@ Text Label 9750 4200 2    50   ~ 0
 KYBD9
 Text Label 1700 2500 0    50   ~ 0
 ~TEMP_CS[0..4]
+$Comp
+L Connector:Conn_01x05_Male J7
+U 1 1 6127CB85
+P 3300 5200
+F 0 "J7" H 3408 5581 50  0000 C CNN
+F 1 "PLS-5" H 3408 5490 50  0000 C CNN
+F 2 "" H 3300 5200 50  0001 C CNN
+F 3 "~" H 3300 5200 50  0001 C CNN
+	1    3300 5200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5400 4400
 Wire Bus Line
 	1500 2500 3500 2500
 Wire Bus Line

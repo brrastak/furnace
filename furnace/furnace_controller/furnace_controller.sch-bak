@@ -373,10 +373,6 @@ Wire Wire Line
 Connection ~ 4100 1600
 Wire Wire Line
 	4100 1600 7500 1600
-Wire Bus Line
-	2000 3650 2000 6000
-Wire Bus Line
-	2500 3850 2500 6100
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 61277120
@@ -436,4 +432,8 @@ Text Label 2200 3650 0    50   ~ 0
 TC+[0..4]
 Text Label 2550 3850 0    50   ~ 0
 TC-[0..4]
+Wire Bus Line
+	2000 3650 2000 6000
+Wire Bus Line
+	2500 3850 2500 6100
 $EndSCHEMATC

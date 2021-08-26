@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 9
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Furnace 230V"
+Date "2021-08-26"
+Rev "1.0"
+Comp "Brastak"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -297,10 +297,10 @@ Connection ~ 5250 4500
 Wire Wire Line
 	5250 4500 5500 4500
 $Comp
-L power:PWR_FLAG #FLG?
+L power:PWR_FLAG #FLG0103
 U 1 1 61281158
 P 9500 4000
-F 0 "#FLG?" H 9500 4075 50  0001 C CNN
+F 0 "#FLG0103" H 9500 4075 50  0001 C CNN
 F 1 "PWR_FLAG" H 9500 4173 50  0000 C CNN
 F 2 "" H 9500 4000 50  0001 C CNN
 F 3 "~" H 9500 4000 50  0001 C CNN

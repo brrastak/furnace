@@ -265,8 +265,6 @@ Text HLabel 9050 3500 2    50   Output ~ 0
 Text HLabel 9050 4500 2    50   Output ~ 0
 GND_ISO
 Wire Wire Line
-	9050 4500 8550 4500
-Wire Wire Line
 	8550 4500 8550 4200
 Wire Wire Line
 	8550 4200 8100 4200
@@ -318,4 +316,6 @@ Connection ~ 8100 3500
 Wire Wire Line
 	8550 3500 9050 3500
 Connection ~ 8550 3500
+Wire Wire Line
+	8550 4500 9050 4500
 $EndSCHEMATC

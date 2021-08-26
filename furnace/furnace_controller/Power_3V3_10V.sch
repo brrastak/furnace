@@ -470,7 +470,7 @@ Text HLabel 3500 2500 0    50   Input ~ 0
 +5V_IN
 Connection ~ 6000 2500
 Wire Wire Line
-	6000 2500 6500 2500
+	6000 2500 6250 2500
 Wire Wire Line
 	6500 2400 6500 2500
 Connection ~ 6500 2500
@@ -507,14 +507,14 @@ Connection ~ 7400 4400
 Wire Wire Line
 	8450 3900 8900 3900
 Wire Wire Line
-	6000 3000 6500 3000
+	6000 3000 6250 3000
 Connection ~ 6000 3000
 Connection ~ 6500 3000
 Wire Wire Line
 	8250 2500 8500 2500
 Connection ~ 8250 2500
 Wire Wire Line
-	8450 3900 7700 3900
+	8450 3900 8000 3900
 Connection ~ 8450 3900
 Text HLabel 3500 3000 0    50   Input ~ 0
 GND_IN
@@ -726,12 +726,8 @@ Wire Wire Line
 	5550 2900 5550 3000
 Connection ~ 5550 3000
 Wire Wire Line
-	5550 3000 6000 3000
-Wire Wire Line
 	5550 2600 5550 2500
 Connection ~ 5550 2500
-Wire Wire Line
-	5550 2500 6000 2500
 Wire Wire Line
 	7000 2600 7000 2500
 Connection ~ 7000 2500
@@ -762,4 +758,50 @@ Wire Wire Line
 Connection ~ 8500 2500
 Wire Wire Line
 	8500 2900 8500 3000
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 6127C7A9
+P 8000 3900
+F 0 "#FLG0101" H 8000 3975 50  0001 C CNN
+F 1 "PWR_FLAG" H 8000 4073 50  0000 C CNN
+F 2 "" H 8000 3900 50  0001 C CNN
+F 3 "~" H 8000 3900 50  0001 C CNN
+	1    8000 3900
+	1    0    0    -1  
+$EndComp
+Connection ~ 8000 3900
+Wire Wire Line
+	8000 3900 7700 3900
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 612826C0
+P 6250 3000
+F 0 "#FLG0102" H 6250 3075 50  0001 C CNN
+F 1 "PWR_FLAG" H 6250 2950 50  0000 C CNN
+F 2 "" H 6250 3000 50  0001 C CNN
+F 3 "~" H 6250 3000 50  0001 C CNN
+	1    6250 3000
+	1    0    0    -1  
+$EndComp
+Connection ~ 6250 3000
+Wire Wire Line
+	6250 3000 6500 3000
+Wire Wire Line
+	5550 3000 6000 3000
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 61282069
+P 6250 2500
+F 0 "#FLG0103" H 6250 2575 50  0001 C CNN
+F 1 "PWR_FLAG" H 6300 2450 50  0000 C CNN
+F 2 "" H 6250 2500 50  0001 C CNN
+F 3 "~" H 6250 2500 50  0001 C CNN
+	1    6250 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 2500 6000 2500
+Connection ~ 6250 2500
+Wire Wire Line
+	6250 2500 6500 2500
 $EndSCHEMATC

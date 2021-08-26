@@ -984,10 +984,10 @@ Text Label 9150 4200 2    50   ~ 0
 KYBD7
 Text Label 9750 4200 2    50   ~ 0
 KYBD9
-Wire Bus Line
-	8500 4000 10000 4000
-Wire Bus Line
-	1500 2500 3500 2500
 Text Label 1700 2500 0    50   ~ 0
 ~TEMP_CS[0..4]
+Wire Bus Line
+	1500 2500 3500 2500
+Wire Bus Line
+	8500 4000 10000 4000
 $EndSCHEMATC

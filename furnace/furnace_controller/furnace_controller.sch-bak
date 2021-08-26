@@ -24,17 +24,6 @@ F 3 "~" H 1300 4000 50  0001 C CNN
 	1    1300 4000
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x04 J6
-U 1 1 609C016E
-P 3800 1700
-F 0 "J6" H 3880 1692 50  0000 L CNN
-F 1 "CWF-4R" H 3880 1601 50  0000 L CNN
-F 2 "" H 3800 1700 50  0001 C CNN
-F 3 "~" H 3800 1700 50  0001 C CNN
-	1    3800 1700
-	-1   0    0    -1  
-$EndComp
 $Sheet
 S 7500 1500 1000 500 
 U 609FED99
@@ -200,17 +189,17 @@ TC-3
 Text Label 1600 6100 0    50   ~ 0
 TC-4
 Wire Wire Line
-	4000 1600 7500 1600
+	4000 1600 4100 1600
 Wire Wire Line
-	4000 1900 6500 1900
+	4000 1900 4100 1900
 Wire Wire Line
 	6500 1900 6500 1700
 Wire Wire Line
 	6500 1700 7500 1700
 Wire Wire Line
-	4000 1700 4500 1700
+	4000 1800 4500 1800
 Wire Wire Line
-	4500 1700 4500 3100
+	4500 1800 4500 3100
 Wire Wire Line
 	4500 3100 5000 3100
 Wire Wire Line
@@ -220,9 +209,9 @@ Wire Wire Line
 Wire Wire Line
 	6750 2500 4250 2500
 Wire Wire Line
-	4250 2500 4250 1800
+	4250 2500 4250 1700
 Wire Wire Line
-	4250 1800 4000 1800
+	4250 1700 4000 1700
 Wire Wire Line
 	7000 1900 7500 1900
 Wire Wire Line
@@ -317,13 +306,13 @@ Wire Wire Line
 	7850 3700 7850 3800
 Text Notes 6750 1050 2    197  ~ 0
 Controller
-Text Notes 3000 1650 0    50   ~ 0
+Text Notes 3350 1650 0    50   ~ 0
 +5V
-Text Notes 3000 1950 0    50   ~ 0
+Text Notes 3350 1950 0    50   ~ 0
 GND
-Text Notes 3000 1750 0    50   ~ 0
+Text Notes 3350 1850 0    50   ~ 0
 UART_RX
-Text Notes 3000 1850 0    50   ~ 0
+Text Notes 3350 1750 0    50   ~ 0
 Heater
 Text Notes 950  1300 0    50   ~ 0
 This board\n1. Mesures furnace temperature\n2. Controls load throught the 230V board\n3. Provides user interface (display + keyboard)
@@ -359,8 +348,92 @@ Wire Wire Line
 	4750 3900 4750 3700
 Wire Wire Line
 	4000 3900 4750 3900
+$Comp
+L Connector_Generic:Conn_01x06 J6
+U 1 1 61277CE9
+P 3800 1700
+F 0 "J6" H 3718 2117 50  0000 C CNN
+F 1 "IDC-6" H 3718 2026 50  0000 C CNN
+F 2 "" H 3800 1700 50  0001 C CNN
+F 3 "~" H 3800 1700 50  0001 C CNN
+	1    3800 1700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2000 4100 2000
+Wire Wire Line
+	4100 2000 4100 1900
+Connection ~ 4100 1900
+Wire Wire Line
+	4100 1900 6500 1900
+Wire Wire Line
+	4000 1500 4100 1500
+Wire Wire Line
+	4100 1500 4100 1600
+Connection ~ 4100 1600
+Wire Wire Line
+	4100 1600 7500 1600
 Wire Bus Line
 	2000 3650 2000 6000
 Wire Bus Line
 	2500 3850 2500 6100
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 61277120
+P 3500 6500
+F 0 "H1" H 3600 6546 50  0000 L CNN
+F 1 "MountingHole" H 3300 6350 50  0000 L CNN
+F 2 "" H 3500 6500 50  0001 C CNN
+F 3 "~" H 3500 6500 50  0001 C CNN
+	1    3500 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 61277A32
+P 4000 6500
+F 0 "H2" H 4100 6550 50  0000 L CNN
+F 1 "MountingHole" H 4100 6455 50  0001 L CNN
+F 2 "" H 4000 6500 50  0001 C CNN
+F 3 "~" H 4000 6500 50  0001 C CNN
+	1    4000 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 61277C70
+P 4500 6500
+F 0 "H3" H 4600 6550 50  0000 L CNN
+F 1 "MountingHole" H 4600 6455 50  0001 L CNN
+F 2 "" H 4500 6500 50  0001 C CNN
+F 3 "~" H 4500 6500 50  0001 C CNN
+	1    4500 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 61277FF7
+P 5000 6500
+F 0 "H4" H 5100 6550 50  0000 L CNN
+F 1 "MountingHole" H 5100 6455 50  0001 L CNN
+F 2 "" H 5000 6500 50  0001 C CNN
+F 3 "~" H 5000 6500 50  0001 C CNN
+	1    5000 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L stamp:LOGO G1
+U 1 1 61279019
+P 5800 6950
+F 0 "G1" H 5800 6828 60  0001 C CNN
+F 1 "LOGO" H 5800 7072 60  0001 C CNN
+F 2 "" H 5800 6950 50  0001 C CNN
+F 3 "" H 5800 6950 50  0001 C CNN
+	1    5800 6950
+	1    0    0    -1  
+$EndComp
+Text Label 2200 3650 0    50   ~ 0
+TC+[0..4]
+Text Label 2550 3850 0    50   ~ 0
+TC-[0..4]
 $EndSCHEMATC

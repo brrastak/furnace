@@ -3,4 +3,5 @@
   (lib (name adum1301)(type Legacy)(uri ${KIPRJMOD}/adum1301.lib)(options "")(descr ""))
   (lib (name furnace_controller-rescue)(type Legacy)(uri ${KIPRJMOD}/furnace_controller-rescue.lib)(options "")(descr ""))
   (lib (name lm317l_so8)(type Legacy)(uri ${KIPRJMOD}/lm317l_so8.lib)(options "")(descr ""))
+  (lib (name stamp)(type Legacy)(uri ${KIPRJMOD}/stamp.lib)(options "")(descr ""))
 )

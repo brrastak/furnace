@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 17 18
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Furnace controller"
+Date "2021-08-26"
+Rev "1.0"
+Comp "Yuriy Volkov"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -22,7 +22,7 @@ AR Path="/60B4354B" Ref="J?"  Part="1"
 AR Path="/60B3D5E3/60B4354B" Ref="J14"  Part="1" 
 F 0 "J14" H 7808 4381 50  0000 C CNN
 F 1 "PLS-4R" H 7808 4290 50  0000 C CNN
-F 2 "" H 7700 4100 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal" H 7700 4100 50  0001 C CNN
 F 3 "~" H 7700 4100 50  0001 C CNN
 	1    7700 4100
 	-1   0    0    -1  
@@ -67,7 +67,7 @@ AR Path="/60B43562" Ref="JP?"  Part="1"
 AR Path="/60B3D5E3/60B43562" Ref="JP1"  Part="1" 
 F 0 "JP1" H 5500 3147 50  0000 C CNN
 F 1 "Jumper_NC_Dual" H 5500 3148 50  0001 C CNN
-F 2 "" H 5500 3000 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5500 3000 50  0001 C CNN
 F 3 "~" H 5500 3000 50  0001 C CNN
 	1    5500 3000
 	1    0    0    -1  
@@ -95,7 +95,7 @@ AR Path="/60A364EE/60B4356E" Ref="R?"  Part="1"
 AR Path="/60B3D5E3/60B4356E" Ref="R54"  Part="1" 
 F 0 "R54" H 6070 3696 50  0000 L CNN
 F 1 "4,7k" H 6070 3605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5930 3650 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5930 3650 50  0001 C CNN
 F 3 "~" H 6000 3650 50  0001 C CNN
 	1    6000 3650
 	1    0    0    -1  
@@ -109,7 +109,7 @@ AR Path="/60A364EE/60B43574" Ref="R?"  Part="1"
 AR Path="/60B3D5E3/60B43574" Ref="R55"  Part="1" 
 F 0 "R55" H 6570 3696 50  0000 L CNN
 F 1 "4,7k" H 6570 3605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 6430 3650 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 6430 3650 50  0001 C CNN
 F 3 "~" H 6500 3650 50  0001 C CNN
 	1    6500 3650
 	1    0    0    -1  

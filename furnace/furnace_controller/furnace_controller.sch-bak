@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 18
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Furnace controller"
+Date "2021-08-26"
+Rev "1.0"
+Comp "Yuriy Volkov"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -354,7 +354,7 @@ U 1 1 61277CE9
 P 3800 1700
 F 0 "J6" H 3718 2117 50  0000 C CNN
 F 1 "IDC-6" H 3718 2026 50  0000 C CNN
-F 2 "" H 3800 1700 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x06_P2.54mm_Vertical" H 3800 1700 50  0001 C CNN
 F 3 "~" H 3800 1700 50  0001 C CNN
 	1    3800 1700
 	-1   0    0    -1  
@@ -379,7 +379,7 @@ U 1 1 61277120
 P 3500 6500
 F 0 "H1" H 3600 6546 50  0000 L CNN
 F 1 "MountingHole" H 3300 6350 50  0000 L CNN
-F 2 "" H 3500 6500 50  0001 C CNN
+F 2 "furnace_controller:hole_D3.5mm" H 3500 6500 50  0001 C CNN
 F 3 "~" H 3500 6500 50  0001 C CNN
 	1    3500 6500
 	1    0    0    -1  
@@ -390,7 +390,7 @@ U 1 1 61277A32
 P 4000 6500
 F 0 "H2" H 4100 6550 50  0000 L CNN
 F 1 "MountingHole" H 4100 6455 50  0001 L CNN
-F 2 "" H 4000 6500 50  0001 C CNN
+F 2 "furnace_controller:hole_D3.5mm" H 4000 6500 50  0001 C CNN
 F 3 "~" H 4000 6500 50  0001 C CNN
 	1    4000 6500
 	1    0    0    -1  
@@ -401,7 +401,7 @@ U 1 1 61277C70
 P 4500 6500
 F 0 "H3" H 4600 6550 50  0000 L CNN
 F 1 "MountingHole" H 4600 6455 50  0001 L CNN
-F 2 "" H 4500 6500 50  0001 C CNN
+F 2 "furnace_controller:hole_D3.5mm" H 4500 6500 50  0001 C CNN
 F 3 "~" H 4500 6500 50  0001 C CNN
 	1    4500 6500
 	1    0    0    -1  
@@ -412,7 +412,7 @@ U 1 1 61277FF7
 P 5000 6500
 F 0 "H4" H 5100 6550 50  0000 L CNN
 F 1 "MountingHole" H 5100 6455 50  0001 L CNN
-F 2 "" H 5000 6500 50  0001 C CNN
+F 2 "furnace_controller:hole_D3.5mm" H 5000 6500 50  0001 C CNN
 F 3 "~" H 5000 6500 50  0001 C CNN
 	1    5000 6500
 	1    0    0    -1  
@@ -420,12 +420,12 @@ $EndComp
 $Comp
 L stamp:LOGO G1
 U 1 1 61279019
-P 5800 6950
-F 0 "G1" H 5800 6828 60  0001 C CNN
-F 1 "LOGO" H 5800 7072 60  0001 C CNN
-F 2 "" H 5800 6950 50  0001 C CNN
-F 3 "" H 5800 6950 50  0001 C CNN
-	1    5800 6950
+P 10650 6100
+F 0 "G1" H 10650 5978 60  0001 C CNN
+F 1 "LOGO" H 10650 6222 60  0001 C CNN
+F 2 "furnace_controller:stamp" H 10650 6100 50  0001 C CNN
+F 3 "" H 10650 6100 50  0001 C CNN
+	1    10650 6100
 	1    0    0    -1  
 $EndComp
 Text Label 2200 3650 0    50   ~ 0

@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 6 18
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Furnace controller"
+Date "2021-08-26"
+Rev "1.0"
+Comp "Yuriy Volkov"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -76,7 +76,7 @@ AR Path="/609CA6A8/60B108D6/609F3008" Ref="C37"  Part="1"
 AR Path="/609CA6A8/60B118F2/609F3008" Ref="C39"  Part="1" 
 F 0 "C24" H 5565 3696 50  0000 L CNN
 F 1 "0,1" H 5565 3605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5488 3500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5488 3500 50  0001 C CNN
 F 3 "~" H 5450 3650 50  0001 C CNN
 	1    5450 3650
 	1    0    0    -1  
@@ -129,7 +129,7 @@ AR Path="/609CA6A8/60B108D6/60A063BF" Ref="C36"  Part="1"
 AR Path="/609CA6A8/60B118F2/60A063BF" Ref="C38"  Part="1" 
 F 0 "C23" H 5315 4246 50  0000 L CNN
 F 1 "0,01" H 5315 4155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5238 4050 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5238 4050 50  0001 C CNN
 F 3 "~" H 5200 4200 50  0001 C CNN
 	1    5200 4200
 	1    0    0    -1  

@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name furnace_controller)(type KiCad)(uri ${KIPRJMOD}/furnace_controller.pretty)(options "")(descr ""))
+)

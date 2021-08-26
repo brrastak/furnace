@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 5 18
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Furnace controller"
+Date "2021-08-26"
+Rev "1.0"
+Comp "Yuriy Volkov"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -764,8 +764,8 @@ P 9900 4400
 AR Path="/60A364EE/60A4EC11" Ref="J?"  Part="1" 
 AR Path="/609CA6A8/60A4EC11" Ref="J11"  Part="1" 
 F 0 "J11" H 10008 4681 50  0000 C CNN
-F 1 "Conn_01x03_Male" H 10008 4590 50  0000 C CNN
-F 2 "" H 9900 4400 50  0001 C CNN
+F 1 "PLS-3" H 10008 4590 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9900 4400 50  0001 C CNN
 F 3 "~" H 9900 4400 50  0001 C CNN
 	1    9900 4400
 	-1   0    0    -1  

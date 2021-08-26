@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 7 18
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Furnace controller"
+Date "2021-08-26"
+Rev "1.0"
+Comp "Yuriy Volkov"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -37,7 +37,7 @@ AR Path="/609CA6A8/60B14815/60ADC0E5" Ref="C40"  Part="1"
 AR Path="/609CA6A8/60B180E1/60ADC0E5" Ref="C42"  Part="1" 
 F 0 "C25" H 5215 3496 50  0000 L CNN
 F 1 "0,1" H 5215 3405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5138 3300 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5138 3300 50  0001 C CNN
 F 3 "~" H 5100 3450 50  0001 C CNN
 	1    5100 3450
 	1    0    0    -1  
@@ -66,7 +66,7 @@ AR Path="/609CA6A8/60B14815/60ADC0EB" Ref="C41"  Part="1"
 AR Path="/609CA6A8/60B180E1/60ADC0EB" Ref="C43"  Part="1" 
 F 0 "C26" H 6815 3496 50  0000 L CNN
 F 1 "0,1" H 6815 3405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6738 3300 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6738 3300 50  0001 C CNN
 F 3 "~" H 6700 3450 50  0001 C CNN
 	1    6700 3450
 	1    0    0    -1  
@@ -116,7 +116,7 @@ AR Path="/609CA6A8/60B14815/60ADC102" Ref="U10"  Part="1"
 AR Path="/609CA6A8/60B180E1/60ADC102" Ref="U11"  Part="1" 
 F 0 "U4" H 5900 4267 50  0000 C CNN
 F 1 "ADuM1301" H 5900 4176 50  0000 C CNN
-F 2 "" H 5900 3350 50  0001 C CIN
+F 2 "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm" H 5900 3350 50  0001 C CIN
 F 3 "" H 5900 3600 50  0001 C CNN
 	1    5900 3800
 	-1   0    0    -1  

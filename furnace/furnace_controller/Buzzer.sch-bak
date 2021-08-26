@@ -3,11 +3,11 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 17 18
-Title ""
-Date ""
-Rev ""
-Comp ""
+Sheet 16 18
+Title "Furnace controller"
+Date "2021-08-26"
+Rev "1.0"
+Comp "Yuriy Volkov"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -21,7 +21,7 @@ AR Path="/609C9D41/60B3B2EE" Ref="BZ?"  Part="1"
 AR Path="/60B39FE1/60B3B2EE" Ref="BZ1"  Part="1" 
 F 0 "BZ1" H 6752 3929 50  0000 L CNN
 F 1 "Buzzer" H 6752 3838 50  0000 L CNN
-F 2 "" V 6575 4000 50  0001 C CNN
+F 2 "Buzzer_Beeper:Buzzer_12x9.5RM7.6" V 6575 4000 50  0001 C CNN
 F 3 "~" V 6575 4000 50  0001 C CNN
 	1    6600 3900
 	1    0    0    -1  
@@ -47,7 +47,7 @@ AR Path="/60B3B65C" Ref="R?"  Part="1"
 AR Path="/60B39FE1/60B3B65C" Ref="R53"  Part="1" 
 F 0 "R53" H 6070 4796 50  0000 L CNN
 F 1 "56k" H 6070 4705 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5930 4750 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5930 4750 50  0001 C CNN
 F 3 "~" H 6000 4750 50  0001 C CNN
 	1    6000 4750
 	1    0    0    -1  
@@ -77,7 +77,7 @@ AR Path="/60B3CA8D" Ref="R?"  Part="1"
 AR Path="/60B39FE1/60B3CA8D" Ref="R52"  Part="1" 
 F 0 "R52" V 5750 4450 50  0000 L CNN
 F 1 "3,3k" V 5550 4400 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 5580 4500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5580 4500 50  0001 C CNN
 F 3 "~" H 5650 4500 50  0001 C CNN
 	1    5650 4500
 	0    -1   -1   0   

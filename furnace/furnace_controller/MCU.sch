@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 18 18
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Furnace controller"
+Date "2021-08-26"
+Rev "1.0"
+Comp "Yuriy Volkov"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -35,7 +35,7 @@ AR Path="/609C9D41/60B5D67E" Ref="J8"  Part="1"
 AR Path="/60B42F62/60B5D67E" Ref="J?"  Part="1" 
 F 0 "J8" H 8308 5481 50  0000 C CNN
 F 1 "PLS-3" H 8308 5390 50  0000 C CNN
-F 2 "" H 8200 5200 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8200 5200 50  0001 C CNN
 F 3 "~" H 8200 5200 50  0001 C CNN
 	1    8200 5200
 	-1   0    0    -1  
@@ -51,7 +51,7 @@ AR Path="/609C9D41/60B4CB82" Ref="R4"  Part="1"
 AR Path="/60B42F62/60B4CB82" Ref="R?"  Part="1" 
 F 0 "R4" H 4770 2696 50  0000 L CNN
 F 1 "10k" H 4770 2605 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4630 2650 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4630 2650 50  0001 C CNN
 F 3 "~" H 4700 2650 50  0001 C CNN
 	1    4700 2650
 	1    0    0    -1  
@@ -79,7 +79,7 @@ AR Path="/609C9D41/60B4CB8E" Ref="C5"  Part="1"
 AR Path="/60B42F62/60B4CB8E" Ref="C?"  Part="1" 
 F 0 "C5" H 6665 2196 50  0000 L CNN
 F 1 "0,1" H 6665 2105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6588 2000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6588 2000 50  0001 C CNN
 F 3 "~" H 6550 2150 50  0001 C CNN
 	1    6550 2150
 	1    0    0    -1  
@@ -115,7 +115,7 @@ AR Path="/609C9D41/60B4F8D6" Ref="C9"  Part="1"
 AR Path="/60B42F62/60B4F8D6" Ref="C?"  Part="1" 
 F 0 "C9" H 7865 2196 50  0000 L CNN
 F 1 "4,7" H 7865 2105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 7788 2000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 7788 2000 50  0001 C CNN
 F 3 "~" H 7750 2150 50  0001 C CNN
 	1    7750 2150
 	1    0    0    -1  
@@ -140,7 +140,7 @@ AR Path="/609C9D41/60A4CF16" Ref="C6"  Part="1"
 AR Path="/60B42F62/60A4CF16" Ref="C?"  Part="1" 
 F 0 "C6" H 7065 2196 50  0000 L CNN
 F 1 "0,1" H 7065 2105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6988 2000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6988 2000 50  0001 C CNN
 F 3 "~" H 6950 2150 50  0001 C CNN
 	1    6950 2150
 	1    0    0    -1  
@@ -154,7 +154,7 @@ AR Path="/609C9D41/60A4D090" Ref="C7"  Part="1"
 AR Path="/60B42F62/60A4D090" Ref="C?"  Part="1" 
 F 0 "C7" H 7465 2196 50  0000 L CNN
 F 1 "0,1" H 7465 2105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7388 2000 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7388 2000 50  0001 C CNN
 F 3 "~" H 7350 2150 50  0001 C CNN
 	1    7350 2150
 	1    0    0    -1  
@@ -168,7 +168,7 @@ AR Path="/609C9D41/60A4D2CE" Ref="C8"  Part="1"
 AR Path="/60B42F62/60A4D2CE" Ref="C?"  Part="1" 
 F 0 "C8" H 7465 3096 50  0000 L CNN
 F 1 "0,01" H 7465 3005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7388 2900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7388 2900 50  0001 C CNN
 F 3 "~" H 7350 3050 50  0001 C CNN
 	1    7350 3050
 	1    0    0    -1  
@@ -182,7 +182,7 @@ AR Path="/609C9D41/60A4D379" Ref="C10"  Part="1"
 AR Path="/60B42F62/60A4D379" Ref="C?"  Part="1" 
 F 0 "C10" H 7865 3096 50  0000 L CNN
 F 1 "1u" H 7865 3005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7788 2900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7788 2900 50  0001 C CNN
 F 3 "~" H 7750 3050 50  0001 C CNN
 	1    7750 3050
 	1    0    0    -1  
@@ -245,7 +245,7 @@ AR Path="/609C9D41/60A55C72" Ref="C2"  Part="1"
 AR Path="/60B42F62/60A55C72" Ref="C?"  Part="1" 
 F 0 "C2" H 3115 3796 50  0000 L CNN
 F 1 "10p" H 3115 3705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3038 3600 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3038 3600 50  0001 C CNN
 F 3 "~" H 3000 3750 50  0001 C CNN
 	1    3000 3750
 	1    0    0    -1  
@@ -259,7 +259,7 @@ AR Path="/609C9D41/60A56506" Ref="C3"  Part="1"
 AR Path="/60B42F62/60A56506" Ref="C?"  Part="1" 
 F 0 "C3" H 3715 3796 50  0000 L CNN
 F 1 "10p" H 3715 3705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3638 3600 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3638 3600 50  0001 C CNN
 F 3 "~" H 3600 3750 50  0001 C CNN
 	1    3600 3750
 	1    0    0    -1  
@@ -297,7 +297,7 @@ AR Path="/609C9D41/60A5E844" Ref="R3"  Part="1"
 AR Path="/60B42F62/60A5E844" Ref="R?"  Part="1" 
 F 0 "R3" V 4150 3550 50  0000 L CNN
 F 1 "0" V 3950 3600 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 3980 3600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 3980 3600 50  0001 C CNN
 F 3 "~" H 4050 3600 50  0001 C CNN
 	1    4050 3600
 	0    -1   -1   0   
@@ -318,7 +318,7 @@ AR Path="/609C9D41/60A7599F" Ref="C4"  Part="1"
 AR Path="/60B42F62/60A7599F" Ref="C?"  Part="1" 
 F 0 "C4" H 4815 3096 50  0000 L CNN
 F 1 "0,1" H 4815 3005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4738 2900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4738 2900 50  0001 C CNN
 F 3 "~" H 4700 3050 50  0001 C CNN
 	1    4700 3050
 	1    0    0    -1  
@@ -737,7 +737,7 @@ AR Path="/609C9D41/60ACA8BC" Ref="R1"  Part="1"
 AR Path="/60B42F62/60ACA8BC" Ref="R?"  Part="1" 
 F 0 "R1" H 2070 1596 50  0000 L CNN
 F 1 "3,3k" H 2070 1505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 1930 1550 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 1930 1550 50  0001 C CNN
 F 3 "~" H 2000 1550 50  0001 C CNN
 	1    2000 1550
 	1    0    0    -1  
@@ -774,7 +774,7 @@ AR Path="/609C9D41/60AF6532" Ref="R2"  Part="1"
 AR Path="/60B42F62/60AF6532" Ref="R?"  Part="1" 
 F 0 "R2" V 2750 1200 50  0000 L CNN
 F 1 "1k" V 2550 1200 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2580 1250 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2580 1250 50  0001 C CNN
 F 3 "~" H 2650 1250 50  0001 C CNN
 	1    2650 1250
 	0    -1   -1   0   
@@ -788,7 +788,7 @@ AR Path="/609C9D41/60AFB0FE" Ref="C1"  Part="1"
 AR Path="/60B42F62/60AFB0FE" Ref="C?"  Part="1" 
 F 0 "C1" H 3115 1446 50  0000 L CNN
 F 1 "0,01" H 3115 1355 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 3038 1250 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3038 1250 50  0001 C CNN
 F 3 "~" H 3000 1400 50  0001 C CNN
 	1    3000 1400
 	1    0    0    -1  
@@ -821,7 +821,7 @@ AR Path="/609C9D41/60B10008" Ref="R5"  Part="1"
 AR Path="/60B42F62/60B10008" Ref="R?"  Part="1" 
 F 0 "R5" V 8450 1150 50  0000 L CNN
 F 1 "3,3k" V 8250 1150 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8280 1200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 8280 1200 50  0001 C CNN
 F 3 "~" H 8350 1200 50  0001 C CNN
 	1    8350 1200
 	0    -1   -1   0   
@@ -852,7 +852,7 @@ AR Path="/609C9D41/60AE8C55" Ref="R7"  Part="1"
 AR Path="/60B42F62/60AE8C55" Ref="R?"  Part="1" 
 F 0 "R7" V 9450 950 50  0000 L CNN
 F 1 "150" V 9250 950 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 9280 1000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9280 1000 50  0001 C CNN
 F 3 "~" H 9350 1000 50  0001 C CNN
 	1    9350 1000
 	0    -1   -1   0   
@@ -866,7 +866,7 @@ AR Path="/609C9D41/60AF1C85" Ref="R6"  Part="1"
 AR Path="/60B42F62/60AF1C85" Ref="R?"  Part="1" 
 F 0 "R6" H 8670 1396 50  0000 L CNN
 F 1 "56k" H 8670 1305 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 8530 1350 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 8530 1350 50  0001 C CNN
 F 3 "~" H 8600 1350 50  0001 C CNN
 	1    8600 1350
 	1    0    0    -1  
@@ -971,7 +971,7 @@ U 1 1 6127CB85
 P 3300 5200
 F 0 "J7" H 3408 5581 50  0000 C CNN
 F 1 "PLS-5" H 3408 5490 50  0000 C CNN
-F 2 "" H 3300 5200 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 3300 5200 50  0001 C CNN
 F 3 "~" H 3300 5200 50  0001 C CNN
 	1    3300 5200
 	1    0    0    -1  

@@ -3,11 +3,11 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 16 18
-Title ""
-Date ""
-Rev ""
-Comp ""
+Sheet 15 18
+Title "Furnace controller"
+Date "2021-08-26"
+Rev "1.0"
+Comp "Yuriy Volkov"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -36,7 +36,7 @@ AR Path="/609C9D41/60B1D1D1" Ref="R?"  Part="1"
 AR Path="/60B1951B/60B1D1D1" Ref="R51"  Part="1" 
 F 0 "R51" H 5070 3946 50  0000 L CNN
 F 1 "10k" H 5070 3855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4930 3900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4930 3900 50  0001 C CNN
 F 3 "~" H 5000 3900 50  0001 C CNN
 	1    5000 3900
 	1    0    0    -1  
@@ -64,7 +64,7 @@ AR Path="/609C9D41/60B1D1DD" Ref="C?"  Part="1"
 AR Path="/60B1951B/60B1D1DD" Ref="C44"  Part="1" 
 F 0 "C44" H 5915 3696 50  0000 L CNN
 F 1 "0,1" H 5915 3605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 5838 3500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5838 3500 50  0001 C CNN
 F 3 "~" H 5800 3650 50  0001 C CNN
 	1    5800 3650
 	1    0    0    -1  
@@ -148,7 +148,7 @@ AR Path="/609C9D41/60B1D208" Ref="R?"  Part="1"
 AR Path="/60B1951B/60B1D208" Ref="R50"  Part="1" 
 F 0 "R50" H 4770 3946 50  0000 L CNN
 F 1 "10k" H 4770 3855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4630 3900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4630 3900 50  0001 C CNN
 F 3 "~" H 4700 3900 50  0001 C CNN
 	1    4700 3900
 	1    0    0    -1  
@@ -162,7 +162,7 @@ AR Path="/609C9D41/60B1D20E" Ref="R?"  Part="1"
 AR Path="/60B1951B/60B1D20E" Ref="R49"  Part="1" 
 F 0 "R49" H 4470 3946 50  0000 L CNN
 F 1 "10k" H 4470 3855 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4330 3900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 4330 3900 50  0001 C CNN
 F 3 "~" H 4400 3900 50  0001 C CNN
 	1    4400 3900
 	1    0    0    -1  
@@ -202,7 +202,7 @@ AR Path="/609C9D41/60B1D21E" Ref="C?"  Part="1"
 AR Path="/60B1951B/60B1D21E" Ref="C45"  Part="1" 
 F 0 "C45" H 6315 3696 50  0000 L CNN
 F 1 "10u" H 6315 3605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6238 3500 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 6238 3500 50  0001 C CNN
 F 3 "~" H 6200 3650 50  0001 C CNN
 	1    6200 3650
 	1    0    0    -1  
@@ -239,8 +239,8 @@ L Connector:Conn_01x05_Male J12
 U 1 1 60B35003
 P 5200 5700
 F 0 "J12" H 5172 5724 50  0000 R CNN
-F 1 "Conn_01x05_Male" H 5172 5633 50  0000 R CNN
-F 2 "" H 5200 5700 50  0001 C CNN
+F 1 "PLS-5" H 5172 5633 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 5200 5700 50  0001 C CNN
 F 3 "~" H 5200 5700 50  0001 C CNN
 	1    5200 5700
 	-1   0    0    -1  

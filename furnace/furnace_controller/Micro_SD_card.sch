@@ -21,7 +21,7 @@ AR Path="/60B1D1CB" Ref="J?"  Part="1"
 AR Path="/609C9D41/60B1D1CB" Ref="J?"  Part="1" 
 AR Path="/60B1951B/60B1D1CB" Ref="J13"  Part="1" 
 F 0 "J13" H 7150 5317 50  0000 C CNN
-F 1 "Micro_SD_Card" H 7150 5226 50  0000 C CNN
+F 1 "CTF-11081-P" H 7150 5226 50  0000 C CNN
 F 2 "" H 8350 4900 50  0001 C CNN
 F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 7200 4600 50  0001 C CNN
 	1    7200 4600

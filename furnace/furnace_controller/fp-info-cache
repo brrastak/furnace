@@ -1,4 +1,4 @@
-19222588029775391
+19218750115526921
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -83035,18 +83035,25 @@ DC/DC converter isolated
 4
 furnace_controller
 CTF-11081-P
-
+Micro SD CTF-11081-P
 Micro SD CTF-11081-P
 0
-12
-9
+13
+10
 furnace_controller
-KF141R-2.54-2P
-KF141R-2.54-2P
-KF141R-2.54-2P
+DG141R-2.54-02P
+Terminal block DG141R-2.54-02P
+DG141R-2.54-02P
 0
 4
 2
+furnace_controller
+Hirose_FH12-24S-0.5SH_1x24-1MP_P0.50mm_Horizontal
+Hirose FH12, FFC/FPC connector, FH12-24S-0.5SH, 24 Pins per row (https://www.hirose.com/product/en/products/FH12/FH12-24S-0.5SH(55)/), generated with kicad-footprint-generator
+connector Hirose FH12 horizontal
+0
+26
+25
 furnace_controller
 TP
 

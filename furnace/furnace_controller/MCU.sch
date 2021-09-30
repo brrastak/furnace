@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 17 18
 Title "Furnace controller"
-Date "2021-09-24"
+Date "2021-09-30"
 Rev "1.0"
 Comp "Yuriy Volkov"
 Comment1 ""
@@ -27,19 +27,6 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    6100 4400
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x03_Male J12
-U 1 1 60B5D67E
-P 8200 5200
-AR Path="/609C9D41/60B5D67E" Ref="J12"  Part="1" 
-AR Path="/60B42F62/60B5D67E" Ref="J?"  Part="1" 
-F 0 "J12" H 8308 5481 50  0000 C CNN
-F 1 "PLS-3" H 8308 5390 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 8200 5200 50  0001 C CNN
-F 3 "~" H 8200 5200 50  0001 C CNN
-	1    8200 5200
-	-1   0    0    -1  
-$EndComp
 Text Notes 6300 1100 2    197  ~ 0
 MCU\n
 $Comp
@@ -59,15 +46,15 @@ $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 60B4CB88
-P 6200 6000
+P 6200 6100
 AR Path="/60B4CB88" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60B4CB88" Ref="#PWR050"  Part="1" 
 AR Path="/60B42F62/60B4CB88" Ref="#PWR?"  Part="1" 
-F 0 "#PWR050" H 6200 5750 50  0001 C CNN
-F 1 "GND" H 6205 5827 50  0000 C CNN
-F 2 "" H 6200 6000 50  0001 C CNN
-F 3 "" H 6200 6000 50  0001 C CNN
-	1    6200 6000
+F 0 "#PWR050" H 6200 5850 50  0001 C CNN
+F 1 "GND" H 6205 5927 50  0000 C CNN
+F 2 "" H 6200 6100 50  0001 C CNN
+F 3 "" H 6200 6100 50  0001 C CNN
+	1    6200 6100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -121,16 +108,7 @@ F 3 "~" H 7750 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5900 5900 6000 5900
-Wire Wire Line
 	6200 5900 6200 6000
-Connection ~ 6200 5900
-Connection ~ 6000 5900
-Wire Wire Line
-	6000 5900 6100 5900
-Connection ~ 6100 5900
-Wire Wire Line
-	6100 5900 6200 5900
 $Comp
 L Device:C C?
 U 1 1 60A4CF16
@@ -215,11 +193,6 @@ F 3 "" H 7750 3200 50  0001 C CNN
 	1    7750 3200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6200 2900 6100 2900
-Connection ~ 6100 2900
-Wire Wire Line
-	6100 2900 6000 2900
 Connection ~ 7750 3200
 Wire Wire Line
 	7350 3200 7750 3200
@@ -381,8 +354,7 @@ $EndComp
 Wire Wire Line
 	6300 2900 7350 2900
 Wire Wire Line
-	6000 2900 6000 2000
-Connection ~ 6000 2900
+	6000 2900 6000 2800
 Wire Wire Line
 	6550 2300 6950 2300
 Connection ~ 7750 2300
@@ -439,12 +411,12 @@ SD_SPI_MISO
 Text HLabel 1500 1000 0    50   Input ~ 0
 EXT_UART_RX
 Wire Wire Line
-	6700 5500 6800 5500
-Text Label 6800 5500 0    50   ~ 0
+	6700 5500 7300 5500
+Text Label 7300 5500 2    50   ~ 0
 SWDIO
 Wire Wire Line
-	6700 5600 6800 5600
-Text Label 6800 5600 0    50   ~ 0
+	6700 5600 7300 5600
+Text Label 7300 5600 2    50   ~ 0
 SWCLK
 Text Label 4650 2850 0    50   ~ 0
 NRST
@@ -452,11 +424,11 @@ Wire Wire Line
 	5000 2950 5300 2950
 Text Notes 3150 4650 0    50   ~ 0
 Programming
-Text Label 3600 5300 0    50   ~ 0
+Text Label 4000 5300 2    50   ~ 0
 NRST
-Text Label 3600 5200 0    50   ~ 0
+Text Label 4000 5200 2    50   ~ 0
 SWDIO
-Text Label 3600 5100 0    50   ~ 0
+Text Label 4000 5100 2    50   ~ 0
 SWCLK
 $Comp
 L power:GND #PWR?
@@ -489,159 +461,139 @@ $EndComp
 Wire Wire Line
 	3600 5000 3500 5000
 Wire Wire Line
-	3600 5100 3500 5100
+	4000 5100 3500 5100
 Wire Wire Line
-	3600 5200 3500 5200
+	4000 5200 3500 5200
 Wire Wire Line
-	3600 5300 3500 5300
+	4000 5300 3500 5300
 Wire Wire Line
 	3600 5400 3500 5400
-Text Label 6800 4700 0    50   ~ 0
-SPI1_SCK
-Text Label 6800 4800 0    50   ~ 0
-SPI1_MISO
-Text Label 6800 4200 0    50   ~ 0
+Text Label 4700 5200 0    50   ~ 0
 ~TEMP_CS0
-Text Label 6800 4300 0    50   ~ 0
+Text Label 4700 5300 0    50   ~ 0
 ~TEMP_CS1
-Text Label 6800 4400 0    50   ~ 0
+Text Label 4700 4300 0    50   ~ 0
 ~TEMP_CS2
-Text Label 6800 4500 0    50   ~ 0
+Text Label 4700 4400 0    50   ~ 0
 ~TEMP_CS3
-Text Label 6800 4600 0    50   ~ 0
+Text Label 4700 5700 0    50   ~ 0
 ~TEMP_CS4
 Wire Wire Line
-	6800 4200 6700 4200
+	7300 4200 6700 4200
 Wire Wire Line
-	6800 4300 6700 4300
+	7300 4300 6700 4300
 Wire Wire Line
-	6800 4400 6700 4400
+	7300 4600 6700 4600
 Wire Wire Line
-	6800 4500 6700 4500
+	7300 4700 6700 4700
 Wire Wire Line
-	6800 4600 6700 4600
-Wire Wire Line
-	6800 4700 6700 4700
-Wire Wire Line
-	6800 4800 6700 4800
-Text Label 5300 4200 2    50   ~ 0
+	7300 4800 6700 4800
+Text Label 7300 5700 2    50   ~ 0
 BZ_EN
 Wire Wire Line
-	5300 4200 5400 4200
-Text Label 5300 5600 2    50   ~ 0
-SPI2_MISO
-Text Label 5300 5400 2    50   ~ 0
-~SPI2__CS
-Text Label 5300 5500 2    50   ~ 0
-SPI2_SCK
-Text Label 5300 5700 2    50   ~ 0
-SPI2_MOSI
+	4700 4200 5400 4200
 Wire Wire Line
-	5300 5400 5400 5400
+	4700 5400 5400 5400
 Wire Wire Line
-	5300 5500 5400 5500
+	4700 5500 5400 5500
 Wire Wire Line
-	5300 5600 5400 5600
+	4700 5600 5400 5600
 Wire Wire Line
-	5300 5700 5400 5700
-Text Label 5300 4800 2    50   ~ 0
+	4700 5700 5400 5700
+Text Label 4700 4800 0    50   ~ 0
 I2C1_SCK
-Text Label 5300 4900 2    50   ~ 0
+Text Label 4700 4900 0    50   ~ 0
 I2C1_SDA
 Wire Wire Line
-	5300 4800 5400 4800
+	4700 4800 5400 4800
 Wire Wire Line
-	5300 4900 5400 4900
-Text Label 6800 5100 0    50   ~ 0
-UART1_TX
-Text Label 6800 5200 0    50   ~ 0
-UART1_RX
-Text Notes 7850 4750 0    50   ~ 0
+	4700 4900 5400 4900
+Text Label 7300 4400 2    50   ~ 0
+UART2_TX
+Text Label 7300 4500 2    50   ~ 0
+UART2_RX
+Text Notes 7600 4050 0    50   ~ 0
 Debug_UART
 $Comp
 L power:GND #PWR?
 U 1 1 60AA9C84
-P 7900 5300
+P 7650 4600
 AR Path="/60AA9C84" Ref="#PWR?"  Part="1" 
 AR Path="/609C9D41/60AA9C84" Ref="#PWR055"  Part="1" 
 AR Path="/60B42F62/60AA9C84" Ref="#PWR?"  Part="1" 
-F 0 "#PWR055" H 7900 5050 50  0001 C CNN
-F 1 "GND" H 7905 5127 50  0000 C CNN
-F 2 "" H 7900 5300 50  0001 C CNN
-F 3 "" H 7900 5300 50  0001 C CNN
-	1    7900 5300
+F 0 "#PWR055" H 7650 4350 50  0001 C CNN
+F 1 "GND" H 7655 4427 50  0000 C CNN
+F 2 "" H 7650 4600 50  0001 C CNN
+F 3 "" H 7650 4600 50  0001 C CNN
+	1    7650 4600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6700 5100 8000 5100
-Wire Wire Line
-	6700 5200 8000 5200
-Wire Wire Line
-	7900 5300 8000 5300
-Text Label 5300 5000 2    50   ~ 0
+	7650 4600 7750 4600
+Text Label 4700 5000 0    50   ~ 0
 DPY_PWR_EN
-Text Label 6800 5000 0    50   ~ 0
-CHARGE_PUMP_CLK
+Text Label 7300 4300 2    50   ~ 0
+CHG_PUMP_CLK
 Wire Wire Line
-	5300 5000 5400 5000
-Text Label 6800 5400 0    50   ~ 0
+	4700 5000 5400 5000
+Text Label 4700 5400 0    50   ~ 0
 KYBD0
-Text Label 6800 5300 0    50   ~ 0
+Text Label 7300 5000 2    50   ~ 0
 KYBD1
-Text Label 6800 4900 0    50   ~ 0
+Text Label 7300 5100 2    50   ~ 0
 KYBD2
-Text Label 6800 5700 0    50   ~ 0
+Text Label 7300 5200 2    50   ~ 0
 KYBD3
-Text Label 5200 5300 2    50   ~ 0
+Text Label 7300 5300 2    50   ~ 0
 KYBD4
-Text Label 5200 5200 2    50   ~ 0
+Text Label 7300 5400 2    50   ~ 0
 KYBD5
-Text Label 5200 5100 2    50   ~ 0
+Text Label 7300 4200 2    50   ~ 0
 KYBD6
-Text Label 5300 4600 2    50   ~ 0
+Text Label 4700 5100 0    50   ~ 0
 KYBD7
-Text Label 5300 4500 2    50   ~ 0
+Text Label 4700 4700 0    50   ~ 0
 KYBD8
-Text Label 5300 4300 2    50   ~ 0
+Text Label 4700 4600 0    50   ~ 0
 KYBD9
 Wire Wire Line
-	5300 4500 5400 4500
+	4700 4500 5400 4500
 Wire Wire Line
-	5300 4600 5400 4600
+	4700 4600 5400 4600
 Wire Wire Line
-	5300 4700 5400 4700
+	4700 4700 5400 4700
 Wire Wire Line
-	5200 5100 5400 5100
+	4700 5100 5400 5100
 Wire Wire Line
-	5200 5200 5400 5200
+	4700 5200 5400 5200
 Wire Wire Line
-	5200 5300 5400 5300
+	4700 5300 5400 5300
 Wire Wire Line
-	6700 5700 6800 5700
+	6700 5700 7300 5700
 Wire Wire Line
-	6700 4900 6800 4900
+	6700 4900 7300 4900
 Wire Wire Line
-	6700 5300 6800 5300
+	6700 5300 7300 5300
 Wire Wire Line
-	6700 5400 6800 5400
+	6700 5400 7300 5400
 Wire Wire Line
-	6700 5000 6800 5000
-Text Label 8000 1200 2    50   ~ 0
-UART1_TX
-Text Label 3500 1250 0    50   ~ 0
-UART1_RX
-Text Label 9500 5750 2    50   ~ 0
-SPI2_MISO
-Text Label 9500 5000 2    50   ~ 0
-~SPI2__CS
-Text Label 9500 5250 2    50   ~ 0
-SPI2_SCK
-Text Label 9500 5500 2    50   ~ 0
-SPI2_MOSI
-Text Label 2000 3000 0    50   ~ 0
-SPI1_SCK
-Text Label 2000 3250 0    50   ~ 0
+	6700 5000 7300 5000
+Text Label 7500 1200 0    50   ~ 0
+UART2_TX
+Text Label 3500 1250 2    50   ~ 0
+UART2_RX
+Text Label 9000 5750 0    50   ~ 0
 SPI1_MISO
+Text Label 9000 5000 0    50   ~ 0
+~SPI1__CS
+Text Label 9000 5250 0    50   ~ 0
+SPI1_SCK
+Text Label 9000 5500 0    50   ~ 0
+SPI1_MOSI
+Text Label 2000 3000 2    50   ~ 0
+SPI2_SCK
+Text Label 2000 3250 2    50   ~ 0
+SPI2_MISO
 Text Label 2150 2700 0    50   ~ 0
 ~TEMP_CS1
 Text Label 2600 2700 0    50   ~ 0
@@ -670,21 +622,15 @@ Wire Wire Line
 	3050 2700 3050 2600
 Wire Wire Line
 	3500 2700 3500 2600
-Text Label 9500 2000 2    50   ~ 0
-CHARGE_PUMP_CLK
-Text Label 9500 3000 2    50   ~ 0
+Text Label 9000 3000 0    50   ~ 0
 I2C1_SCK
-Text Label 9500 3250 2    50   ~ 0
-I2C1_SDA
-Text Label 9500 2500 2    50   ~ 0
+Text Label 9000 2500 0    50   ~ 0
 DPY_PWR_EN
 Wire Wire Line
-	5300 4300 5400 4300
-Text Label 5300 4700 2    50   ~ 0
+	4700 4300 5400 4300
+Text Label 4700 4500 0    50   ~ 0
 ~DPY_RST
-Text Label 9500 2750 2    50   ~ 0
-~DPY_RST
-Text Label 9500 4500 2    50   ~ 0
+Text Label 9000 4500 0    50   ~ 0
 BZ_EN
 Wire Wire Line
 	1500 1000 2000 1000
@@ -693,25 +639,25 @@ Wire Wire Line
 Wire Wire Line
 	1500 3250 2000 3250
 Wire Wire Line
-	9500 2000 10000 2000
+	9000 2000 10000 2000
 Wire Wire Line
-	9500 2500 10000 2500
+	9000 2500 10000 2500
 Wire Wire Line
-	9500 2750 10000 2750
+	9000 2750 10000 2750
 Wire Wire Line
-	9500 3000 10000 3000
+	9000 3000 10000 3000
 Wire Wire Line
-	9500 3250 10000 3250
+	9000 3250 10000 3250
 Wire Wire Line
-	9500 4500 10000 4500
+	9000 4500 10000 4500
 Wire Wire Line
-	9500 5000 10000 5000
+	9000 5000 10000 5000
 Wire Wire Line
-	9500 5250 10000 5250
+	9000 5250 10000 5250
 Wire Wire Line
-	9500 5500 10000 5500
+	9000 5500 10000 5500
 Wire Wire Line
-	9500 5750 10000 5750
+	9000 5750 10000 5750
 $Comp
 L Device:R R?
 U 1 1 60ACA8BC
@@ -811,7 +757,7 @@ F 3 "~" H 8350 1200 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	8000 1200 8200 1200
+	7500 1200 8200 1200
 $Comp
 L Transistor_BJT:BC847 Q7
 U 1 1 60AE3B9E
@@ -962,14 +908,14 @@ F 3 "~" H 3300 5200 50  0001 C CNN
 $EndComp
 Text HLabel 10000 6000 2    50   Input ~ 0
 SD_CARD_DET
-Text Label 9500 6000 2    50   ~ 0
+Text Label 9000 6000 0    50   ~ 0
 SD_CARD_DET
-Text Label 5300 4400 2    50   ~ 0
+Text Label 7300 4600 2    50   ~ 0
 SD_CARD_DET
 Wire Wire Line
-	5300 4400 5400 4400
+	4700 4400 5400 4400
 Wire Wire Line
-	9500 6000 10000 6000
+	9000 6000 10000 6000
 $Comp
 L Device:C C?
 U 1 1 60A7599F
@@ -989,6 +935,74 @@ Wire Wire Line
 Connection ~ 5000 2850
 Wire Wire Line
 	5000 2850 5000 2950
+Text Label 9000 2750 0    50   ~ 0
+~DPY_RST
+Text Label 9000 3250 0    50   ~ 0
+I2C1_SDA
+Text Label 9000 2000 0    50   ~ 0
+CHG_PUMP_CLK
+$Comp
+L Connector:Conn_01x03_Male J12
+U 1 1 60B5D67E
+P 7950 4500
+AR Path="/609C9D41/60B5D67E" Ref="J12"  Part="1" 
+AR Path="/60B42F62/60B5D67E" Ref="J?"  Part="1" 
+F 0 "J12" H 8058 4781 50  0000 C CNN
+F 1 "PLS-3" H 8058 4690 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7950 4500 50  0001 C CNN
+F 3 "~" H 7950 4500 50  0001 C CNN
+	1    7950 4500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4400 7750 4400
+Wire Wire Line
+	6700 4500 7750 4500
+Text Label 4700 4200 0    50   ~ 0
+~SPI1__CS
+Text Label 7300 4700 2    50   ~ 0
+SPI1_SCK
+Text Label 7300 4900 2    50   ~ 0
+SPI1_MOSI
+Text Label 7300 4800 2    50   ~ 0
+SPI1_MISO
+Wire Wire Line
+	5900 5900 5900 6000
+Wire Wire Line
+	5900 6000 6000 6000
+Connection ~ 6200 6000
+Wire Wire Line
+	6200 6000 6200 6100
+Wire Wire Line
+	6000 5900 6000 6000
+Connection ~ 6000 6000
+Wire Wire Line
+	6000 6000 6100 6000
+Wire Wire Line
+	6100 5900 6100 6000
+Connection ~ 6100 6000
+Wire Wire Line
+	6100 6000 6200 6000
+Wire Wire Line
+	6200 2900 6200 2800
+Wire Wire Line
+	6200 2800 6100 2800
+Connection ~ 6000 2800
+Wire Wire Line
+	6000 2800 6000 2000
+Wire Wire Line
+	6100 2900 6100 2800
+Connection ~ 6100 2800
+Wire Wire Line
+	6100 2800 6000 2800
+Text Label 4700 5500 0    50   ~ 0
+SPI2_SCK
+Text Label 4700 5600 0    50   ~ 0
+SPI2_MISO
+Wire Wire Line
+	7300 5100 6700 5100
+Wire Wire Line
+	7300 5200 6700 5200
 Wire Bus Line
 	1500 2500 3500 2500
 Wire Bus Line

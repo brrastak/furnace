@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 18
 Title "Furnace controller"
-Date "2021-09-11"
+Date "2021-09-24"
 Rev "1.0"
 Comp "Yuriy Volkov"
 Comment1 ""
@@ -19,7 +19,7 @@ U 1 1 60A3891A
 P 9700 3200
 F 0 "J8" H 9808 3781 50  0000 C CNN
 F 1 "PLS-10R" H 9808 3690 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Horizontal" H 9700 3200 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 9700 3200 50  0001 C CNN
 F 3 "~" H 9700 3200 50  0001 C CNN
 	1    9700 3200
 	-1   0    0    -1  

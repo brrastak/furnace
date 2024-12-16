@@ -1,0 +1,20 @@
+[package]
+name = "furnace_230v"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+nobcd = "0.2.0"
+panic-halt = "1.0.0"
+stm8s-hal = {git = "https://github.com/brrastak/stm8s-hal.git"}
+switch-hal = {git = "https://github.com/rubberduck203/switch-hal.git", rev = "refs/pull/12/head"}
+
+[profile.release]
+codegen-units = 1
+incremental = false
+debug = true
+lto = true
+opt-level = "s"

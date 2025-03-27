@@ -1,0 +1,1 @@
+.model IRLML2402 VDMOS(Rg=4.09017 Vto=1.38167 Rd=0.0384327 Rs=0.0902493 Rb=0.09 Kp=5.87916 Cgdmax=1.7n Cgdmin=1.1n Cgs=.41n LAMBDA=0.0033669 Cjo=9.18187e-11 Is=1.66436n RDS=1.6e+07 N=1.5 TT=9.99845e-05 mfg=International_Rectifier Vds=20 Ron=250m Qg=2.6n ksubthres=.1)

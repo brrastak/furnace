@@ -2595,7 +2595,7 @@
 				)
 			)
 		)
-		(property "Value" "1.2k"
+		(property "Value" "51"
 			(at 152.4 93.98 90)
 			(effects
 				(font
@@ -2734,7 +2734,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330"
+		(property "Value" "680"
 			(at 123.19 69.8499 0)
 			(effects
 				(font
@@ -2802,7 +2802,7 @@
 				)
 			)
 		)
-		(property "Value" "680"
+		(property "Value" "5.1k"
 			(at 152.4 85.344 90)
 			(effects
 				(font
@@ -2847,6 +2847,110 @@
 			(project "charge_pump_simulation"
 				(path "/598be1a0-ca1b-471b-9bdc-3f62a20c50cf"
 					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 139.7 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2f6b4b6b-ef91-433e-898a-228ee992abf3")
+		(property "Reference" "D4"
+			(at 139.7 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT54S"
+			(at 139.7 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 139.7 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Diode"
+			(at 139.7 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 139.7 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 139.7 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Library" "models/bat54s.lib"
+			(at 139.7 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Name" "BAT54"
+			(at 139.7 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4397ac9d-9715-41e4-a2dc-42579f1c5c65")
+		)
+		(pin "1"
+			(uuid "1a8d35a5-67ba-48eb-a8ff-6b3594780a1c")
+		)
+		(instances
+			(project "charge_pump_simulation"
+				(path "/598be1a0-ca1b-471b-9bdc-3f62a20c50cf"
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -3235,110 +3339,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D")
-		(at 139.7 97.79 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5ebfe074-9434-48af-a34e-2715fd13259f")
-		(property "Reference" "D4"
-			(at 139.7 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BAT54S"
-			(at 139.7 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 139.7 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 139.7 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode"
-			(at 139.7 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 139.7 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 139.7 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Library" "models/bat54s.lib"
-			(at 139.7 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Name" "BAT54"
-			(at 139.7 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "bd8e4691-ee73-42f3-a8f1-a5a81d179c8e")
-		)
-		(pin "1"
-			(uuid "14665a75-7cde-4036-aab3-668f66a6dbd9")
-		)
-		(instances
-			(project "charge_pump_simulation"
-				(path "/598be1a0-ca1b-471b-9bdc-3f62a20c50cf"
-					(reference "D4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 234.95 80.01 0)
 		(unit 1)
@@ -3496,7 +3496,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "0"
 			(at 152.4 71.12 90)
 			(effects
 				(font
@@ -3563,7 +3563,7 @@
 				)
 			)
 		)
-		(property "Value" "1.2k"
+		(property "Value" "6.8k"
 			(at 152.4 108.204 90)
 			(effects
 				(font
@@ -3695,7 +3695,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "y1=0 y2=3 td=0 tr=2u tf=2u tw=50u per=100u"
+		(property "Sim.Params" "y1=0 y2=3 td=0 tr=2u tf=2u tw=30u per=100u"
 			(at 44.704 126.238 0)
 			(effects
 				(font

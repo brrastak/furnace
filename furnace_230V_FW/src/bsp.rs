@@ -1,4 +1,96 @@
 
+use stm8s_hal::{
+        clk::*,
+        prelude::*,
+    };
+
+use crate::ds18b20::Ds18b20;
+
+
+/// Calculates current in 0.1A from ADC value
+pub fn adc_to_current(value: u16) -> u16 {
+    
+    let value_mv = 
+        value as u32
+        * AdcConfig::ReferenceVoltageMv as u32
+        / AdcConfig::MaxValue as u32;
+    let value_ma =
+        value_mv
+        * AdcConfig::CoilNumber as u32
+        / AdcConfig::CurrentResistor as u32;
+
+    (value_ma / 100) as u16
+}
+
+/// Calculates voltage in V from ADC value
+pub fn adc_to_voltage(value: u16) -> u16 {
+    
+    let value_mv = 
+        value as u32
+        * AdcConfig::ReferenceVoltageMv as u32
+        / AdcConfig::MaxValue as u32;
+    let value_v = value_mv
+        * (AdcConfig::DividerUpper as u32 + AdcConfig::DividerLower as u32)
+        / AdcConfig::DividerLower as u32
+        / 1000;
+    
+    value_v as u16
+}
+
+impl Board {
+    
+    pub fn new() -> Self {
+
+        let p = stm8s_hal::take_peripherals();
+
+        // Internal clock -> 16 MHz
+        let clk_config = Config::hsi(Prescaler::NotDivided);
+        let clk = p.CLK.freeze(clk_config);
+        
+        let mut timer = Timer::new(p.TIM1, &clk);
+        let uart_timer = Timer::new(p.TIM2, &clk);
+
+        timer.delay_ms(500);
+        let one_wire_timer = timer;
+
+        let gpioa = p.PORTA.split();
+        let gpiob = p.PORTB.split();
+        let gpioc = p.PORTC.split();
+        let gpiod = p.PORTD.split();
+
+        let voltage_pin = gpioc.pc4.into_floating_input();
+        let current_pin = gpiod.pd6.into_floating_input();
+        let adc = Adc::new(p.ADC1, &clk);
+
+        let one_wire_pin = gpiob.pb4.into_open_drain_output();
+        let one_wire = OneWire::new(one_wire_pin).unwrap();
+        let temp_sensor: Ds18b20<stm8s_hal::gpio::PB4<stm8s_hal::gpio::Output<stm8s_hal::gpio::OpenDrain>>, Timer<stm8s_hal::pac::TIM1>> = Ds18b20::new(one_wire, one_wire_timer).unwrap();
+
+        let uart_pin = gpioa.pa3.into_push_pull_output();
+        let mut uart_pin = uart_pin.into_active_low_switch();
+        uart_pin.on().ok();
+        let uart: BitbangUart<Switch<stm8s_hal::gpio::PA3<stm8s_hal::gpio::Output<stm8s_hal::gpio::PushPull>>, ActiveLow>, Timer<stm8s_hal::pac::TIM2>> = BitbangUart::new(
+            uart_pin, 
+            uart_timer,
+            BaudRate::Baud9600,
+            &clk
+        );
+
+        let watchdog = Iwdg::new(p.IWDG, 250);
+
+        Self { voltage_pin, current_pin, adc, temp_sensor, uart, watchdog }
+    }
+}
+
+pub struct Board {
+    pub voltage_pin: stm8s_hal::gpio::PC4<stm8s_hal::gpio::Input<stm8s_hal::gpio::Floating>>,
+    pub current_pin: stm8s_hal::gpio::PD6<stm8s_hal::gpio::Input<stm8s_hal::gpio::Floating>>,
+    pub adc: Adc<stm8s_hal::pac::ADC1>,
+    pub temp_sensor: Ds18b20<stm8s_hal::gpio::PB4<stm8s_hal::gpio::Output<stm8s_hal::gpio::OpenDrain>>, Timer<stm8s_hal::pac::TIM1>>,
+    pub uart: BitbangUart<Switch<stm8s_hal::gpio::PA3<stm8s_hal::gpio::Output<stm8s_hal::gpio::PushPull>>, ActiveLow>, Timer<stm8s_hal::pac::TIM2>>,
+    pub watchdog: Iwdg,
+}
+
 enum AdcConfig {
 
     // 10 bit
@@ -15,36 +107,6 @@ enum AdcConfig {
     // Current transformer
     CoilNumber = 1000,
     CurrentResistor = 160,
-}
-
-// Calculates current in 0.1A from ADC value
-pub fn adc_to_current(value: u16) -> u16 {
-    
-    let value_mv = 
-        value as u32
-        * AdcConfig::ReferenceVoltageMv as u32
-        / AdcConfig::MaxValue as u32;
-    let value_ma =
-        value_mv
-        * AdcConfig::CoilNumber as u32
-        / AdcConfig::CurrentResistor as u32;
-
-    (value_ma / 100) as u16
-}
-
-// Calculates voltage in V from ADC value
-pub fn adc_to_voltage(value: u16) -> u16 {
-    
-    let value_mv = 
-        value as u32
-        * AdcConfig::ReferenceVoltageMv as u32
-        / AdcConfig::MaxValue as u32;
-    let value_v = value_mv
-        * (AdcConfig::DividerUpper as u32 + AdcConfig::DividerLower as u32)
-        / AdcConfig::DividerLower as u32
-        / 1000;
-    
-    value_v as u16
 }
 
 #[cfg(test)]
@@ -75,97 +137,4 @@ mod tests {
     }
 
 }
-
-
-// use display_interface_i2c::I2CInterface;
-// pub use stm32f1xx_hal as hal;
-// pub use hal:: {
-//         prelude::*,
-//         rcc::*,
-//         gpio::*,
-//         i2c::{BlockingI2c, DutyCycle, Mode},
-//         pac::Peripherals,
-//         time::ms,
-//         timer::{Channel, Timer, Tim2NoRemap},
-//     };
-// pub use ssd1309::{prelude::*, Builder};
-// pub use switch_hal::{self, ActiveHigh, ActiveLow, IntoSwitch, Switch, OutputSwitch};
-
-
-// pub type OledDisplay =  GraphicsMode<I2CInterface<BlockingI2c<hal::pac::I2C1, (Pin<'B', 6, Alternate<OpenDrain>>, Pin<'B', 7, Alternate<OpenDrain>>)>>>;
-
-// pub struct Board {
-//     pub clocks: Clocks,
-//     pub heater_control: Switch<ErasedPin<Output>, ActiveHigh>,
-//     pub oled: OledDisplay,
-// }
-
-// impl Board {
-
-//     pub fn new(p: Peripherals) -> Self {
-
-//         let mut flash = p.FLASH.constrain();
-//         let rcc = p.RCC.constrain();
-//         let mut afio = p.AFIO.constrain();
-
-//         let clocks = rcc
-//             .cfgr
-//             .use_hse(8.MHz())
-//             .sysclk(72.MHz())
-//             .pclk1(36.MHz())
-//             .pclk2(72.MHz())
-//             .freeze(&mut flash.acr);
-
-//         let mut gpioa = p.GPIOA.split();
-//         let mut gpiob = p.GPIOB.split();
-
-//         let (_pa15, pb3, _pb4) = afio.mapr.disable_jtag(gpioa.pa15, gpiob.pb3, gpiob.pb4);
-
-//         let heater_control_pin = gpioa.pa2.into_push_pull_output_with_state(&mut gpioa.crl, PinState::Low).erase();
-//         let display_power_en_pin = gpiob.pb8.into_push_pull_output(&mut gpiob.crh).erase();
-//         let mut display_reset_pin = pb3.into_push_pull_output(&mut gpiob.crl);
-//         let display_i2c_clk_pin = gpiob.pb6.into_alternate_open_drain(&mut gpiob.crl);
-//         let display_i2c_sda_pin = gpiob.pb7.into_alternate_open_drain(&mut gpiob.crl);
-//         let charge_pump_clk_pin = gpioa.pa1.into_alternate_push_pull(&mut gpioa.crl);
-
-//         let heater_control = heater_control_pin.into_active_high_switch();
-//         let mut display_power_en = display_power_en_pin.into_active_high_switch();
-
-//         // Charge pump clock
-//         let mut pwm = p.TIM2
-//             .pwm_hz::<Tim2NoRemap, _, _>(charge_pump_clk_pin, &mut afio.mapr, 10.kHz(), &clocks);
-//         pwm.enable(Channel::C2);
-//         pwm.set_duty(Channel::C2, pwm.get_max_duty() / 3);
-
-//         // OLED display
-//         display_power_en.on().ok();
-//         let mut display_delay = p.TIM4.delay_us(&clocks);
-//         let display_i2c = BlockingI2c::i2c1(
-//             p.I2C1,
-//             (display_i2c_clk_pin, display_i2c_sda_pin),
-//             &mut afio.mapr,
-//             Mode::Fast {
-//                 frequency: 100u32.kHz(),
-//                 duty_cycle: DutyCycle::Ratio2to1,
-//             },
-//             clocks,
-//             1000,
-//             10,
-//             1000,
-//             1000,
-//         );
-//         let i2c_interface = I2CInterface::new(display_i2c, 0x3C, 0x40);
-//         let mut oled: GraphicsMode<_> = Builder::new()
-//             .connect(i2c_interface)
-//             .into();
-//         oled.reset(&mut display_reset_pin, &mut display_delay).unwrap();
-
-//         Board {
-
-//             clocks,
-//             heater_control,
-//             oled,
-//         }
-//     }
-// }
 

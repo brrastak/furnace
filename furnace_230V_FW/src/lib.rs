@@ -1,19 +1,22 @@
 #![no_std]
 
 
+mod bsp;
+mod utils;
+
 pub mod app {
 
     use hal::{
-        adc,
         clk::*,
         prelude::*,
     };
-    use nobcd::BcdNumber;
+    #[cfg(not(test))]
     use panic_halt as _;
     use stm8s_hal as hal;
     use switch_hal::*;
 
-    type Bcd = BcdNumber<4>;
+    use crate::bsp;
+    use crate::utils;
 
 
     #[no_mangle]
@@ -27,6 +30,7 @@ pub mod app {
         
         let gpioa = p.PORTA.split();
         let gpiob = p.PORTB.split();
+        let gpioc = p.PORTC.split();
         let gpiod = p.PORTD.split();
 
         let led_pin = gpiob.pb5.into_push_pull_output();
@@ -34,7 +38,7 @@ pub mod app {
         led.off().ok();
 
         let bitbang_uart_pin = gpioa.pa3.into_push_pull_output();
-        let mut bitbang_uart_pin = bitbang_uart_pin.into_active_high_switch();
+        let mut bitbang_uart_pin = bitbang_uart_pin.into_active_low_switch();
         bitbang_uart_pin.on().ok();
 
         let mut timer = Timer::new(p.TIM1, &clk);
@@ -47,38 +51,36 @@ pub mod app {
             &clk
         );
 
-        let uart_pin = gpiod.pd5.into_push_pull_output();
-        let mut uart = Uart::new(
-            p.UART1, 
-            uart_pin, 
-            BaudRate::Baud9600, 
-            &clk
-        );
-
-        let _gnd = gpiod.pd2.into_push_pull_output_in_state(PinState::Low);
-        let _vcc = gpiod.pd3.into_push_pull_output_in_state(PinState::High);
-        let adc_pin = gpiod.pd6.into_floating_input();
+        let current_pin = gpiod.pd6.into_floating_input();
+        let voltage_pin = gpioc.pc4.into_floating_input();
         let adc = Adc::new(p.ADC1, &clk);
 
         timer.delay_ms(1000);
 
-        // let buf = [(value >> 8) as u8, value as u8];
-        // uart.write(&buf).ok();
-
         // let watchdog = Iwdg::new(p.IWDG, 250);
+        let mut buf= [0u8; 23];
+        buf[0] = 'U' as u8;
+        buf[1] = ':' as u8;
+        buf[5] = 'V' as u8;
+        buf[6] = '/' as u8;
+        buf[7] = 'I' as u8;
+        buf[8] = ':' as u8;
+        buf[11] = '.' as u8;
+        buf[13] = 'A' as u8;
+        buf[14] = '/' as u8;
+        buf[15] = 'T' as u8;
+        buf[16] = ':' as u8;
+        buf[20] = 'C' as u8;
 
         loop {
             
             led.toggle().ok();
 
-            // let value = adc.read_pin(&adc_pin);
-            // let value = adc.read(adc::reference_channel());
-            let value = 12345678;
-            let bcd = Bcd::new(value).unwrap();
-            let buf = bcd_to_char(bcd);
-            // let buf = [1];
+            let value = bsp::adc_to_voltage(adc.read_pin(&voltage_pin));
+            (buf[2], buf[3], buf[4]) = utils::u16_to_char(value);
 
-            uart.write(&buf).ok();
+            let value = bsp::adc_to_current(adc.read_pin(&current_pin));
+            (buf[9], buf[10], buf[12]) = utils::u16_to_char(value);
 
             bitbang_uart.write(&buf).ok();
 
@@ -87,23 +89,6 @@ pub mod app {
         }
     }
 
-    fn bcd_to_char(bcd: Bcd) -> [u8; 8] {
-
-        let mut res = [0u8; 8];
-        let bytes = bcd.bcd_bytes();
-
-        for index in 0..res.len() {
-            res[index] = '0' as u8 + index as u8;
-        }
-        for index in 0..bytes.len() {
-            // Low nibble
-            res[index*2 + 1] = '0' as u8 + (bytes[index] & 0x0F);
-            // High nibble
-            res[index*2] = '0' as u8 + ((bytes[index] & 0xF0) >> 4);
-        }
-
-        res
-    }
     
 }
 

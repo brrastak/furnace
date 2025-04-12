@@ -2,6 +2,7 @@
 
 
 mod bsp;
+mod ds18b20;
 mod utils;
 
 pub mod app {
@@ -16,6 +17,7 @@ pub mod app {
     use switch_hal::*;
 
     use crate::bsp;
+    use crate::ds18b20::Ds18b20;
     use crate::utils;
 
 
@@ -41,8 +43,16 @@ pub mod app {
         let mut bitbang_uart_pin = bitbang_uart_pin.into_active_low_switch();
         bitbang_uart_pin.on().ok();
 
-        let mut timer = Timer::new(p.TIM1, &clk);
+        let timer = Timer::new(p.TIM1, &clk);
         let uart_timer = Timer::new(p.TIM2, &clk);
+
+        led.toggle().ok();
+
+        let one_wire_pin = gpiob.pb4.into_open_drain_output();
+        let one_wire = OneWire::new(one_wire_pin).unwrap();
+        let mut temp_sensor = Ds18b20::new(one_wire, timer).unwrap();
+
+        led.toggle().ok();
 
         let mut bitbang_uart = BitbangUart::new(
             bitbang_uart_pin, 
@@ -55,7 +65,7 @@ pub mod app {
         let voltage_pin = gpioc.pc4.into_floating_input();
         let adc = Adc::new(p.ADC1, &clk);
 
-        timer.delay_ms(1000);
+        // timer.delay_ms(1000);
 
         // let watchdog = Iwdg::new(p.IWDG, 250);
         let mut buf= [0u8; 23];
@@ -72,6 +82,8 @@ pub mod app {
         buf[16] = ':' as u8;
         buf[20] = 'C' as u8;
 
+        led.toggle().ok();
+
         loop {
             
             led.toggle().ok();
@@ -82,9 +94,12 @@ pub mod app {
             let value = bsp::adc_to_current(adc.read_pin(&current_pin));
             (buf[9], buf[10], buf[12]) = utils::u16_to_char(value);
 
+            let value = temp_sensor.read().unwrap();
+            (buf[17], buf[18], buf[19]) = utils::u16_to_char(value);
+
             bitbang_uart.write(&buf).ok();
 
-            timer.delay_ms(2000);
+            // timer.delay_ms(2000);
             // watchdog.refresh();
         }
     }

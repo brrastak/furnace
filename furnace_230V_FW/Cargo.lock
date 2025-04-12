@@ -3,15 +3,6 @@
 version = 4
 
 [[package]]
-name = "ds18b20"
-version = "0.1.1"
-source = "git+https://github.com/tsauvajon/ds18b20.git#a83a19c77ca9399475f7a72c7cfef17be3abaefa"
-dependencies = [
- "embedded-hal",
- "one-wire-bus",
-]
-
-[[package]]
 name = "embedded-hal"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -36,7 +27,7 @@ dependencies = [
 name = "furnace_230v"
 version = "0.1.0"
 dependencies = [
- "ds18b20",
+ "embedded-hal",
  "panic-halt",
  "stm8s-hal",
  "switch-hal",
@@ -49,14 +40,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1d758ba1b47b00caf47f24925c0074ecb20d6dfcffe7f6d53395c0465674841a"
 
 [[package]]
-name = "one-wire-bus"
-version = "0.2.0"
-source = "git+https://github.com/daniel-larsen/one-wire-bus.git#7170d31323efe6fad2705f9bb5f47e907b427e44"
-dependencies = [
- "embedded-hal",
-]
-
-[[package]]
 name = "panic-halt"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -65,7 +48,7 @@ checksum = "a513e167849a384b7f9b746e517604398518590a9142f4846a32e3c2a4de7b11"
 [[package]]
 name = "stm8s-hal"
 version = "0.1.0"
-source = "git+https://github.com/brrastak/stm8s-hal.git#93119a20c59c5c9219d5741392fca77f28ee997b"
+source = "git+https://github.com/brrastak/stm8s-hal.git#8497464c87f37e2d21bcab8c40c702ccc28aa252"
 dependencies = [
  "embedded-hal",
  "embedded-io",
@@ -77,7 +60,7 @@ dependencies = [
 [[package]]
 name = "stm8s-pac"
 version = "0.1.0"
-source = "git+https://github.com/brrastak/stm8s-hal.git#93119a20c59c5c9219d5741392fca77f28ee997b"
+source = "git+https://github.com/brrastak/stm8s-hal.git#8497464c87f37e2d21bcab8c40c702ccc28aa252"
 dependencies = [
  "vcell",
 ]

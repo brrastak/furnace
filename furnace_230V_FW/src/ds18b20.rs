@@ -26,7 +26,7 @@ where
         Ok(Ds18b20 {one_wire, timer})
     }
 
-    pub fn read(&mut self) -> OneWireResult<u16, E> {
+    pub fn read(&mut self) -> OneWireResult<i16, E> {
 
         // Initiate temperature convertion
         self.one_wire.send_command(Command::ConvertT as u8, &mut self.timer)?;
@@ -40,7 +40,7 @@ where
         check_crc8(&data)?;
 
         // Convert data
-        let raw_temp = u16::from_le_bytes([data[0], data[1]]);
+        let raw_temp = i16::from_le_bytes([data[0], data[1]]);
         let temperature = raw_temp / 16;
 
         Ok(temperature)

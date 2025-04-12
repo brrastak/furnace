@@ -213,12 +213,11 @@ static void init_func_types(void) {
   func_types[2] = wasm_rt_register_func_type(0, 0);
 }
 
-static void w2c__ZN12embedded_hal5delay7DelayNs8delay_us17hc9cdc09d8c5da0c4E(u32);
-static void w2c__ZN83__LT_stm8s_hal__timer__Timer_LT_TIM_GT__u20_as_u20_embedded_hal__delay__DelayNs_GT_8delay_ns17h03f1f60a6972934eE(u32);
-static void w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(u32);
-static void w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h864b0ec852c68c06E(u32);
-static u32 w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he8b8f26729942202E(u32);
-static u32 w2c__ZN12furnace_230v5utils11u16_to_char17hdf3e9f4768672dbfE(u32);
+static void w2c__ZN12embedded_hal5delay7DelayNs8delay_us17h900273c7f7bdb844E(u32);
+static void w2c__ZN83__LT_stm8s_hal__timer__Timer_LT_TIM_GT__u20_as_u20_embedded_hal__delay__DelayNs_GT_8delay_ns17h04eb114913a92cf5E(u32);
+static void w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(u32);
+static void w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h81f40adecc57c4c2E(u32);
+static u32 w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he12d3fe51fc08a43E(u32);
 static void w2c_app(void);
 static u32 w2c__ZN9stm8s_hal3adc26Adc_LT_stm8s_pac__ADC1_GT_4read17hda6c234840b1e9e2E(u32);
 static void w2c__ZN4core6result13unwrap_failed17h4ec8ebc0cd29f54bE(u32);
@@ -232,14 +231,14 @@ static u32 w2c___heap_base;
 
 static void init_globals(void) {
   w2c___stack_pointer = 1048576u;
-  w2c_DEVICE_PERIPHERALS = 1048576u;
-  w2c___data_end = 1048577u;
-  w2c___heap_base = 1048592u;
+  w2c_DEVICE_PERIPHERALS = 1048844u;
+  w2c___data_end = 1048845u;
+  w2c___heap_base = 1048848u;
 }
 
 static wasm_rt_memory_t w2c_memory;
 
-static void w2c__ZN12embedded_hal5delay7DelayNs8delay_us17hc9cdc09d8c5da0c4E(u32 w2c_p0) {
+static void w2c__ZN12embedded_hal5delay7DelayNs8delay_us17h900273c7f7bdb844E(u32 w2c_p0) {
   FUNC_PROLOGUE;
   u32 w2c_i0, w2c_i1, w2c_i2;
   w2c_i0 = 0u;
@@ -300,7 +299,7 @@ static void w2c__ZN12embedded_hal5delay7DelayNs8delay_us17hc9cdc09d8c5da0c4E(u32
   FUNC_EPILOGUE;
 }
 
-static void w2c__ZN83__LT_stm8s_hal__timer__Timer_LT_TIM_GT__u20_as_u20_embedded_hal__delay__DelayNs_GT_8delay_ns17h03f1f60a6972934eE(u32 w2c_p0) {
+static void w2c__ZN83__LT_stm8s_hal__timer__Timer_LT_TIM_GT__u20_as_u20_embedded_hal__delay__DelayNs_GT_8delay_ns17h04eb114913a92cf5E(u32 w2c_p0) {
   u32 w2c_l1 = 0;
   FUNC_PROLOGUE;
   u32 w2c_i0, w2c_i1;
@@ -314,7 +313,7 @@ static void w2c__ZN83__LT_stm8s_hal__timer__Timer_LT_TIM_GT__u20_as_u20_embedded
   if (w2c_i0) {goto w2c_B0;}
   w2c_L1: 
     w2c_i0 = 65535u;
-    w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(w2c_i0);
+    w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(w2c_i0);
     w2c_i0 = w2c_l1;
     w2c_i1 = 4294901761u;
     w2c_i0 += w2c_i1;
@@ -324,11 +323,11 @@ static void w2c__ZN83__LT_stm8s_hal__timer__Timer_LT_TIM_GT__u20_as_u20_embedded
     if (w2c_i0) {goto w2c_L1;}
   w2c_B0:;
   w2c_i0 = w2c_l1;
-  w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(w2c_i0);
+  w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(w2c_i0);
   FUNC_EPILOGUE;
 }
 
-static void w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(u32 w2c_p0) {
+static void w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(u32 w2c_p0) {
   FUNC_PROLOGUE;
   u32 w2c_i0, w2c_i1, w2c_i2;
   w2c_i0 = 0u;
@@ -391,7 +390,7 @@ static void w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa1
   FUNC_EPILOGUE;
 }
 
-static void w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h864b0ec852c68c06E(u32 w2c_p0) {
+static void w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h81f40adecc57c4c2E(u32 w2c_p0) {
   u32 w2c_l1 = 0, w2c_l2 = 0;
   FUNC_PROLOGUE;
   u32 w2c_i0, w2c_i1, w2c_i2, w2c_i3;
@@ -411,7 +410,7 @@ static void w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h864b0ec
     w2c_i2 &= w2c_i3;
     w2c_l2 = w2c_i2;
     w2c_i0 = w2c_i2 ? w2c_i0 : w2c_i1;
-    w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(w2c_i0);
+    w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(w2c_i0);
     w2c_i0 = 0u;
     w2c_i1 = 0u;
     w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20485u);
@@ -422,7 +421,7 @@ static void w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h864b0ec
     w2c_i1 = 2000u;
     w2c_i2 = w2c_l2;
     w2c_i0 = w2c_i2 ? w2c_i0 : w2c_i1;
-    w2c__ZN83__LT_stm8s_hal__timer__Timer_LT_TIM_GT__u20_as_u20_embedded_hal__delay__DelayNs_GT_8delay_ns17h03f1f60a6972934eE(w2c_i0);
+    w2c__ZN83__LT_stm8s_hal__timer__Timer_LT_TIM_GT__u20_as_u20_embedded_hal__delay__DelayNs_GT_8delay_ns17h04eb114913a92cf5E(w2c_i0);
     w2c_i0 = w2c_p0;
     w2c_i1 = 254u;
     w2c_i0 &= w2c_i1;
@@ -437,7 +436,7 @@ static void w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h864b0ec
   FUNC_EPILOGUE;
 }
 
-static u32 w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he8b8f26729942202E(u32 w2c_p0) {
+static u32 w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he12d3fe51fc08a43E(u32 w2c_p0) {
   u32 w2c_l1 = 0;
   FUNC_PROLOGUE;
   u32 w2c_i0, w2c_i1, w2c_i2;
@@ -450,7 +449,7 @@ static u32 w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he8b8f2
     w2c_i0 &= w2c_i1;
     if (w2c_i0) {goto w2c_B0;}
     w2c_i0 = 2u;
-    w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(w2c_i0);
+    w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(w2c_i0);
     w2c_i0 = w2c_l1;
     w2c_i1 = 4294967295u;
     w2c_i0 += w2c_i1;
@@ -466,7 +465,7 @@ static u32 w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he8b8f2
   w2c_i1 &= w2c_i2;
   i32_store8((&w2c_memory), (u64)(w2c_i0) + 20485, w2c_i1);
   w2c_i0 = 480u;
-  w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(w2c_i0);
+  w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(w2c_i0);
   w2c_i0 = 0u;
   w2c_i1 = 0u;
   w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20485u);
@@ -474,90 +473,25 @@ static u32 w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he8b8f2
   w2c_i1 |= w2c_i2;
   i32_store8((&w2c_memory), (u64)(w2c_i0) + 20485, w2c_i1);
   w2c_i0 = 70u;
-  w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(w2c_i0);
+  w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(w2c_i0);
   w2c_i0 = 0u;
   w2c_i0 = i32_load8_u((&w2c_memory), (u64)(w2c_i0) + 20486u);
   w2c_l1 = w2c_i0;
   w2c_i0 = 410u;
-  w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(w2c_i0);
+  w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(w2c_i0);
   w2c_i0 = 204u;
-  w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h864b0ec852c68c06E(w2c_i0);
+  w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h81f40adecc57c4c2E(w2c_i0);
   w2c_i0 = w2c_p0;
-  w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h864b0ec852c68c06E(w2c_i0);
+  w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h81f40adecc57c4c2E(w2c_i0);
   w2c_i0 = 6u;
   w2c_Bfunc:;
   FUNC_EPILOGUE;
   return w2c_i0;
 }
 
-static u32 w2c__ZN12furnace_230v5utils11u16_to_char17hdf3e9f4768672dbfE(u32 w2c_p0) {
-  u32 w2c_l1 = 0, w2c_l2 = 0, w2c_l3 = 0, w2c_l4 = 0;
-  FUNC_PROLOGUE;
-  u32 w2c_i0, w2c_i1, w2c_i2;
-  w2c_i0 = w2c_p0;
-  w2c_i1 = 65535u;
-  w2c_i0 &= w2c_i1;
-  w2c_i1 = 100u;
-  w2c_i0 = DIV_U(w2c_i0, w2c_i1);
-  w2c_l1 = w2c_i0;
-  w2c_i1 = 156u;
-  w2c_i0 *= w2c_i1;
-  w2c_i1 = w2c_p0;
-  w2c_i0 += w2c_i1;
-  w2c_l2 = w2c_i0;
-  w2c_i1 = 255u;
-  w2c_i0 &= w2c_i1;
-  w2c_l3 = w2c_i0;
-  w2c_i1 = 10u;
-  w2c_i0 = DIV_U(w2c_i0, w2c_i1);
-  w2c_p0 = w2c_i0;
-  w2c_i0 = w2c_l1;
-  w2c_i1 = 255u;
-  w2c_i0 &= w2c_i1;
-  if (w2c_i0) {goto w2c_B2;}
-  w2c_i0 = 32u;
-  w2c_l4 = w2c_i0;
-  w2c_i0 = 32u;
-  w2c_l1 = w2c_i0;
-  w2c_i0 = w2c_l3;
-  w2c_i1 = 10u;
-  w2c_i0 = w2c_i0 >= w2c_i1;
-  if (w2c_i0) {goto w2c_B1;}
-  goto w2c_B0;
-  w2c_B2:;
-  w2c_i0 = w2c_l1;
-  w2c_i1 = 48u;
-  w2c_i0 += w2c_i1;
-  w2c_l4 = w2c_i0;
-  w2c_B1:;
-  w2c_i0 = w2c_p0;
-  w2c_i1 = 48u;
-  w2c_i0 |= w2c_i1;
-  w2c_l1 = w2c_i0;
-  w2c_B0:;
-  w2c_i0 = w2c_p0;
-  w2c_i1 = 4294967286u;
-  w2c_i0 *= w2c_i1;
-  w2c_i1 = w2c_l2;
-  w2c_i0 += w2c_i1;
-  w2c_i1 = 16u;
-  w2c_i0 <<= (w2c_i1 & 31);
-  w2c_i1 = w2c_l1;
-  w2c_i2 = 8u;
-  w2c_i1 <<= (w2c_i2 & 31);
-  w2c_i0 |= w2c_i1;
-  w2c_i1 = w2c_l4;
-  w2c_i2 = 255u;
-  w2c_i1 &= w2c_i2;
-  w2c_i0 |= w2c_i1;
-  w2c_i1 = 3145728u;
-  w2c_i0 |= w2c_i1;
-  FUNC_EPILOGUE;
-  return w2c_i0;
-}
-
 static void w2c_app(void) {
-  u32 w2c_l0 = 0, w2c_l1 = 0, w2c_l2 = 0, w2c_l3 = 0, w2c_l4 = 0, w2c_l5 = 0, w2c_l6 = 0;
+  u32 w2c_l0 = 0, w2c_l1 = 0, w2c_l2 = 0, w2c_l3 = 0, w2c_l4 = 0, w2c_l5 = 0, w2c_l6 = 0, w2c_l7 = 0, 
+      w2c_l8 = 0, w2c_l9 = 0;
   FUNC_PROLOGUE;
   u32 w2c_i0, w2c_i1, w2c_i2, w2c_i3;
   u64 w2c_j1;
@@ -568,7 +502,7 @@ static void w2c_app(void) {
   w2c___stack_pointer = w2c_i0;
   w2c_i0 = 0u;
   w2c_i1 = 1u;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 1048576, w2c_i1);
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 1048844, w2c_i1);
   w2c_i0 = 0u;
   w2c_i1 = 0u;
   w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20678u);
@@ -583,54 +517,6 @@ static void w2c_app(void) {
   i32_store8((&w2c_memory), (u64)(w2c_i0) + 20678, w2c_i1);
   w2c_i0 = 0u;
   w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20487u);
-  w2c_i2 = 32u;
-  w2c_i1 |= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20487, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20488u);
-  w2c_i2 = 32u;
-  w2c_i1 |= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20488, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20489u);
-  w2c_i2 = 32u;
-  w2c_i1 |= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20489, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20485u);
-  w2c_i2 = 32u;
-  w2c_i1 |= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20485, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20482u);
-  w2c_i2 = 8u;
-  w2c_i1 |= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20482, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20483u);
-  w2c_i2 = 8u;
-  w2c_i1 |= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20483, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20484u);
-  w2c_i2 = 8u;
-  w2c_i1 |= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20484, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20480u);
-  w2c_i2 = 247u;
-  w2c_i1 &= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20480, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
   i32_store8((&w2c_memory), (u64)(w2c_i0) + 21088, w2c_i1);
   w2c_i0 = 0u;
   w2c_i1 = 15u;
@@ -638,21 +524,64 @@ static void w2c_app(void) {
   w2c_i0 = 0u;
   w2c_i1 = 4u;
   i32_store8((&w2c_memory), (u64)(w2c_i0) + 21262, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i0 = i32_load8_u((&w2c_memory), (u64)(w2c_i0) + 20485u);
-  w2c_l1 = w2c_i0;
+  w2c_i0 = 500000000u;
+  w2c__ZN83__LT_stm8s_hal__timer__Timer_LT_TIM_GT__u20_as_u20_embedded_hal__delay__DelayNs_GT_8delay_ns17h04eb114913a92cf5E(w2c_i0);
   w2c_i0 = 0u;
   w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20485u);
-  w2c_i2 = 223u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20492u);
+  w2c_i2 = 239u;
   w2c_i1 &= w2c_i2;
-  w2c_i2 = w2c_l1;
-  w2c_i3 = 32u;
-  w2c_i2 &= w2c_i3;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20492, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 0u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20493u);
+  w2c_i2 = 239u;
+  w2c_i1 &= w2c_i2;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20493, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 0u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20494u);
+  w2c_i2 = 239u;
+  w2c_i1 &= w2c_i2;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20494, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 0u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20497u);
+  w2c_i2 = 191u;
+  w2c_i1 &= w2c_i2;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20497, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 0u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20498u);
+  w2c_i2 = 191u;
+  w2c_i1 &= w2c_i2;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20498, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 0u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20499u);
+  w2c_i2 = 191u;
+  w2c_i1 &= w2c_i2;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20499, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 0u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 21505u);
+  w2c_i2 = 143u;
+  w2c_i1 &= w2c_i2;
+  w2c_i2 = 64u;
   w2c_i1 |= w2c_i2;
-  w2c_i2 = 32u;
-  w2c_i1 ^= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20485, w2c_i1);
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 21505, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 0u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 21506u);
+  w2c_i2 = 8u;
+  w2c_i1 |= w2c_i2;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 21506, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 0u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 21505u);
+  w2c_i2 = 1u;
+  w2c_i1 |= w2c_i2;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 21505, w2c_i1);
   w2c_i0 = 0u;
   w2c_i1 = 0u;
   w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20487u);
@@ -678,234 +607,120 @@ static void w2c_app(void) {
   w2c_i1 |= w2c_i2;
   i32_store8((&w2c_memory), (u64)(w2c_i0) + 20485, w2c_i1);
   w2c_i0 = 78u;
-  w2c_i0 = w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he8b8f26729942202E(w2c_i0);
+  w2c_i0 = w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he12d3fe51fc08a43E(w2c_i0);
   w2c_i1 = 255u;
   w2c_i0 &= w2c_i1;
   w2c_i1 = 6u;
   w2c_i0 = w2c_i0 != w2c_i1;
   if (w2c_i0) {goto w2c_B0;}
   w2c_i0 = 127u;
-  w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h864b0ec852c68c06E(w2c_i0);
+  w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h81f40adecc57c4c2E(w2c_i0);
   w2c_i0 = 128u;
-  w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h864b0ec852c68c06E(w2c_i0);
+  w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h81f40adecc57c4c2E(w2c_i0);
   w2c_i0 = 31u;
-  w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h864b0ec852c68c06E(w2c_i0);
-  w2c_i0 = 0u;
-  w2c_i0 = i32_load8_u((&w2c_memory), (u64)(w2c_i0) + 20485u);
-  w2c_l1 = w2c_i0;
+  w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_10write_byte17h81f40adecc57c4c2E(w2c_i0);
   w2c_i0 = 0u;
   w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20485u);
-  w2c_i2 = 223u;
-  w2c_i1 &= w2c_i2;
-  w2c_i2 = w2c_l1;
-  w2c_i3 = 32u;
-  w2c_i2 &= w2c_i3;
-  w2c_i1 |= w2c_i2;
-  w2c_i2 = 32u;
-  w2c_i1 ^= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20485, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20497u);
-  w2c_i2 = 191u;
-  w2c_i1 &= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20497, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20498u);
-  w2c_i2 = 191u;
-  w2c_i1 &= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20498, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20499u);
-  w2c_i2 = 191u;
-  w2c_i1 &= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20499, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20492u);
-  w2c_i2 = 239u;
-  w2c_i1 &= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20492, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20493u);
-  w2c_i2 = 239u;
-  w2c_i1 &= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20493, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20494u);
-  w2c_i2 = 239u;
-  w2c_i1 &= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20494, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 21505u);
-  w2c_i2 = 143u;
-  w2c_i1 &= w2c_i2;
-  w2c_i2 = 64u;
-  w2c_i1 |= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 21505, w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 21506u);
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20482u);
   w2c_i2 = 8u;
   w2c_i1 |= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 21506, w2c_i1);
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20482, w2c_i1);
   w2c_i0 = 0u;
   w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 21505u);
-  w2c_i2 = 1u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20483u);
+  w2c_i2 = 8u;
   w2c_i1 |= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 21505, w2c_i1);
-  w2c_i0 = w2c_l0;
-  w2c_i1 = 9u;
-  w2c_i0 += w2c_i1;
-  w2c_i1 = 15u;
-  w2c_i0 += w2c_i1;
-  w2c_l1 = w2c_i0;
-  w2c_j1 = 0ull;
-  i64_store((&w2c_memory), (u64)(w2c_i0), w2c_j1);
-  w2c_i0 = w2c_l0;
-  w2c_j1 = 0ull;
-  i64_store((&w2c_memory), (u64)(w2c_i0) + 19, w2c_j1);
-  w2c_i0 = w2c_l1;
-  w2c_i1 = 14932u;
-  i32_store16((&w2c_memory), (u64)(w2c_i0), w2c_i1);
-  w2c_i0 = 0u;
-  w2c_i0 = i32_load8_u((&w2c_memory), (u64)(w2c_i0) + 20485u);
-  w2c_l1 = w2c_i0;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20483, w2c_i1);
   w2c_i0 = 0u;
   w2c_i1 = 0u;
-  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20485u);
-  w2c_i2 = 223u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20484u);
+  w2c_i2 = 8u;
+  w2c_i1 |= w2c_i2;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20484, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 0u;
+  w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20480u);
+  w2c_i2 = 247u;
   w2c_i1 &= w2c_i2;
-  w2c_i2 = w2c_l1;
-  w2c_i3 = 32u;
-  w2c_i2 &= w2c_i3;
-  w2c_i1 |= w2c_i2;
-  w2c_i2 = 32u;
-  w2c_i1 ^= w2c_i2;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20485, w2c_i1);
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20480, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 204u;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20704, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 85u;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20704, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 4u;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20705, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 250u;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20706, w2c_i1);
+  w2c_i0 = 0u;
+  w2c_i1 = 170u;
+  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20704, w2c_i1);
   w2c_i0 = w2c_l0;
-  w2c_i1 = 977874774u;
-  i32_store((&w2c_memory), (u64)(w2c_i0) + 14, w2c_i1);
-  w2c_i0 = w2c_l0;
-  w2c_i1 = 14933u;
-  i32_store16((&w2c_memory), (u64)(w2c_i0) + 9, w2c_i1);
-  w2c_i0 = w2c_l0;
-  w2c_i1 = 67u;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 29, w2c_i1);
-  w2c_i0 = w2c_l0;
-  w2c_i1 = 12097u;
-  i32_store16((&w2c_memory), (u64)(w2c_i0) + 22, w2c_i1);
-  w2c_i0 = w2c_l0;
-  w2c_i1 = 46u;
-  i32_store8((&w2c_memory), (u64)(w2c_i0) + 20, w2c_i1);
-  w2c_L1: 
-    w2c_i0 = 0u;
-    w2c_l1 = w2c_i0;
-    w2c_i0 = 0u;
-    w2c_i0 = i32_load8_u((&w2c_memory), (u64)(w2c_i0) + 20485u);
+  w2c_i1 = 41u;
+  w2c_i0 += w2c_i1;
+  w2c_l1 = w2c_i0;
+  w2c_L2: 
+    w2c_i0 = 2u;
+    w2c_i0 = w2c__ZN9stm8s_hal3adc26Adc_LT_stm8s_pac__ADC1_GT_4read17hda6c234840b1e9e2E(w2c_i0);
     w2c_l2 = w2c_i0;
-    w2c_i0 = 0u;
-    w2c_i1 = 0u;
-    w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20485u);
-    w2c_i2 = 223u;
-    w2c_i1 &= w2c_i2;
-    w2c_i2 = w2c_l2;
-    w2c_i3 = 32u;
-    w2c_i2 &= w2c_i3;
-    w2c_i1 |= w2c_i2;
-    w2c_i2 = 32u;
-    w2c_i1 ^= w2c_i2;
-    i32_store8((&w2c_memory), (u64)(w2c_i0) + 20485, w2c_i1);
-    w2c_i0 = w2c_l0;
-    w2c_i1 = 2u;
-    w2c_i1 = w2c__ZN9stm8s_hal3adc26Adc_LT_stm8s_pac__ADC1_GT_4read17hda6c234840b1e9e2E(w2c_i1);
-    w2c_i2 = 65535u;
-    w2c_i1 &= w2c_i2;
-    w2c_i2 = 3300u;
-    w2c_i1 *= w2c_i2;
-    w2c_i2 = 1023u;
-    w2c_i1 = DIV_U(w2c_i1, w2c_i2);
-    w2c_i2 = 3633u;
-    w2c_i1 *= w2c_i2;
-    w2c_i2 = 33000u;
-    w2c_i1 = DIV_U(w2c_i1, w2c_i2);
-    w2c_i1 = w2c__ZN12furnace_230v5utils11u16_to_char17hdf3e9f4768672dbfE(w2c_i1);
-    w2c_l2 = w2c_i1;
-    i32_store8((&w2c_memory), (u64)(w2c_i0) + 11, w2c_i1);
-    w2c_i0 = w2c_l0;
-    w2c_i1 = w2c_l2;
-    w2c_i2 = 16u;
-    w2c_i1 >>= (w2c_i2 & 31);
-    i32_store8((&w2c_memory), (u64)(w2c_i0) + 13, w2c_i1);
-    w2c_i0 = w2c_l0;
-    w2c_i1 = w2c_l2;
-    w2c_i2 = 8u;
-    w2c_i1 >>= (w2c_i2 & 31);
-    i32_store8((&w2c_memory), (u64)(w2c_i0) + 12, w2c_i1);
-    w2c_i0 = w2c_l0;
-    w2c_i1 = 6u;
-    w2c_i1 = w2c__ZN9stm8s_hal3adc26Adc_LT_stm8s_pac__ADC1_GT_4read17hda6c234840b1e9e2E(w2c_i1);
-    w2c_i2 = 65535u;
-    w2c_i1 &= w2c_i2;
-    w2c_i2 = 3300u;
-    w2c_i1 *= w2c_i2;
-    w2c_i2 = 16368u;
-    w2c_i1 = DIV_U(w2c_i1, w2c_i2);
-    w2c_i1 = w2c__ZN12furnace_230v5utils11u16_to_char17hdf3e9f4768672dbfE(w2c_i1);
-    w2c_l2 = w2c_i1;
-    i32_store8((&w2c_memory), (u64)(w2c_i0) + 18, w2c_i1);
-    w2c_i0 = w2c_l0;
-    w2c_i1 = w2c_l2;
-    w2c_i2 = 16u;
-    w2c_i1 >>= (w2c_i2 & 31);
-    i32_store8((&w2c_memory), (u64)(w2c_i0) + 21, w2c_i1);
-    w2c_i0 = w2c_l0;
-    w2c_i1 = w2c_l2;
-    w2c_i2 = 8u;
-    w2c_i1 >>= (w2c_i2 & 31);
-    i32_store8((&w2c_memory), (u64)(w2c_i0) + 19, w2c_i1);
-    w2c_i0 = 1u;
+    w2c_i0 = 6u;
+    w2c_i0 = w2c__ZN9stm8s_hal3adc26Adc_LT_stm8s_pac__ADC1_GT_4read17hda6c234840b1e9e2E(w2c_i0);
+    w2c_i1 = 65535u;
+    w2c_i0 &= w2c_i1;
+    w2c_i1 = 3300u;
+    w2c_i0 *= w2c_i1;
+    w2c_i1 = 16368u;
+    w2c_i0 = DIV_U(w2c_i0, w2c_i1);
     w2c_l3 = w2c_i0;
-    w2c_i0 = 68u;
-    w2c_i0 = w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he8b8f26729942202E(w2c_i0);
-    w2c_i1 = 255u;
+    w2c_i0 = w2c_l2;
+    w2c_i1 = 65535u;
     w2c_i0 &= w2c_i1;
-    w2c_i1 = 6u;
-    w2c_i0 = w2c_i0 != w2c_i1;
-    if (w2c_i0) {goto w2c_B2;}
-    w2c_i0 = 94000000u;
-    w2c__ZN83__LT_stm8s_hal__timer__Timer_LT_TIM_GT__u20_as_u20_embedded_hal__delay__DelayNs_GT_8delay_ns17h03f1f60a6972934eE(w2c_i0);
-    w2c_i0 = 190u;
-    w2c_i0 = w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he8b8f26729942202E(w2c_i0);
-    w2c_i1 = 255u;
-    w2c_i0 &= w2c_i1;
-    w2c_i1 = 6u;
-    w2c_i0 = w2c_i0 != w2c_i1;
-    if (w2c_i0) {goto w2c_B2;}
-    w2c_i0 = 0u;
+    w2c_i1 = 3300u;
+    w2c_i0 *= w2c_i1;
+    w2c_i1 = 1023u;
+    w2c_i0 = DIV_U(w2c_i0, w2c_i1);
+    w2c_i1 = 3633u;
+    w2c_i0 *= w2c_i1;
+    w2c_i1 = 33000u;
+    w2c_i0 = DIV_U(w2c_i0, w2c_i1);
     w2c_l4 = w2c_i0;
+    w2c_i0 = 68u;
+    w2c_i0 = w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he12d3fe51fc08a43E(w2c_i0);
+    w2c_i1 = 255u;
+    w2c_i0 &= w2c_i1;
+    w2c_i1 = 6u;
+    w2c_i0 = w2c_i0 != w2c_i1;
+    if (w2c_i0) {goto w2c_B1;}
+    w2c_i0 = 94000000u;
+    w2c__ZN83__LT_stm8s_hal__timer__Timer_LT_TIM_GT__u20_as_u20_embedded_hal__delay__DelayNs_GT_8delay_ns17h04eb114913a92cf5E(w2c_i0);
+    w2c_i0 = 190u;
+    w2c_i0 = w2c__ZN9stm8s_hal8one_wire18OneWire_LT_Pin_GT_12send_command17he12d3fe51fc08a43E(w2c_i0);
+    w2c_i1 = 255u;
+    w2c_i0 &= w2c_i1;
+    w2c_i1 = 6u;
+    w2c_i0 = w2c_i0 != w2c_i1;
+    if (w2c_i0) {goto w2c_B1;}
+    w2c_i0 = 0u;
+    w2c_l5 = w2c_i0;
     w2c_i0 = w2c_l0;
-    w2c_i1 = 32u;
+    w2c_i1 = 24u;
     w2c_i0 += w2c_i1;
     w2c_i1 = 8u;
     w2c_i0 += w2c_i1;
+    w2c_l6 = w2c_i0;
     w2c_i1 = 0u;
     i32_store8((&w2c_memory), (u64)(w2c_i0), w2c_i1);
     w2c_i0 = w2c_l0;
     w2c_j1 = 0ull;
-    i64_store((&w2c_memory), (u64)(w2c_i0) + 32, w2c_j1);
+    i64_store((&w2c_memory), (u64)(w2c_i0) + 24, w2c_j1);
     w2c_L3: 
       w2c_i0 = 8u;
-      w2c_l2 = w2c_i0;
+      w2c_l7 = w2c_i0;
       w2c_i0 = 0u;
-      w2c_l1 = w2c_i0;
+      w2c_l2 = w2c_i0;
       w2c_L4: 
         w2c_i0 = 0u;
         w2c_i1 = 0u;
@@ -914,7 +729,7 @@ static void w2c_app(void) {
         w2c_i1 &= w2c_i2;
         i32_store8((&w2c_memory), (u64)(w2c_i0) + 20485, w2c_i1);
         w2c_i0 = 1u;
-        w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(w2c_i0);
+        w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(w2c_i0);
         w2c_i0 = 0u;
         w2c_i1 = 0u;
         w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20485u);
@@ -922,141 +737,298 @@ static void w2c_app(void) {
         w2c_i1 |= w2c_i2;
         i32_store8((&w2c_memory), (u64)(w2c_i0) + 20485, w2c_i1);
         w2c_i0 = 1u;
-        w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(w2c_i0);
+        w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(w2c_i0);
         w2c_i0 = 0u;
         w2c_i0 = i32_load8_u((&w2c_memory), (u64)(w2c_i0) + 20486u);
-        w2c_l5 = w2c_i0;
+        w2c_l8 = w2c_i0;
         w2c_i0 = 47u;
-        w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17he8e7c90927fa19f5E(w2c_i0);
-        w2c_i0 = w2c_l5;
+        w2c__ZN9stm8s_hal5timer9TimerBase17internal_delay_us17h3192457b653ed6f6E(w2c_i0);
+        w2c_i0 = w2c_l8;
         w2c_i1 = 3u;
         w2c_i0 <<= (w2c_i1 & 31);
         w2c_i1 = 4294967168u;
         w2c_i0 &= w2c_i1;
-        w2c_i1 = w2c_l1;
+        w2c_i1 = w2c_l2;
         w2c_i2 = 254u;
         w2c_i1 &= w2c_i2;
         w2c_i2 = 1u;
         w2c_i1 >>= (w2c_i2 & 31);
         w2c_i0 |= w2c_i1;
-        w2c_l1 = w2c_i0;
-        w2c_i0 = w2c_l2;
+        w2c_l2 = w2c_i0;
+        w2c_i0 = w2c_l7;
         w2c_i1 = 4294967295u;
         w2c_i0 += w2c_i1;
-        w2c_l2 = w2c_i0;
+        w2c_l7 = w2c_i0;
         if (w2c_i0) {goto w2c_L4;}
       w2c_i0 = w2c_l0;
-      w2c_i1 = 32u;
+      w2c_i1 = 24u;
       w2c_i0 += w2c_i1;
-      w2c_i1 = w2c_l4;
+      w2c_i1 = w2c_l5;
       w2c_i0 += w2c_i1;
-      w2c_i1 = w2c_l1;
+      w2c_i1 = w2c_l2;
       i32_store8((&w2c_memory), (u64)(w2c_i0), w2c_i1);
-      w2c_i0 = w2c_l4;
+      w2c_i0 = w2c_l5;
       w2c_i1 = 1u;
       w2c_i0 += w2c_i1;
-      w2c_l4 = w2c_i0;
+      w2c_l5 = w2c_i0;
       w2c_i1 = 9u;
       w2c_i0 = w2c_i0 != w2c_i1;
       if (w2c_i0) {goto w2c_L3;}
     w2c_i0 = 0u;
-    w2c_l2 = w2c_i0;
+    w2c_l7 = w2c_i0;
     w2c_i0 = 0u;
-    w2c_l6 = w2c_i0;
+    w2c_l9 = w2c_i0;
     w2c_L5: 
       w2c_i0 = w2c_l0;
-      w2c_i1 = 32u;
+      w2c_i1 = 24u;
       w2c_i0 += w2c_i1;
-      w2c_i1 = w2c_l6;
+      w2c_i1 = w2c_l9;
       w2c_i0 += w2c_i1;
       w2c_i0 = i32_load8_u((&w2c_memory), (u64)(w2c_i0));
-      w2c_l1 = w2c_i0;
+      w2c_l2 = w2c_i0;
       w2c_i0 = 8u;
-      w2c_l5 = w2c_i0;
+      w2c_l8 = w2c_i0;
       w2c_L6: 
-        w2c_i0 = w2c_l2;
+        w2c_i0 = w2c_l7;
         w2c_i1 = 1u;
         w2c_i0 >>= (w2c_i1 & 31);
         w2c_i1 = 127u;
         w2c_i0 &= w2c_i1;
-        w2c_l4 = w2c_i0;
+        w2c_l5 = w2c_i0;
         w2c_i1 = 4294967180u;
         w2c_i0 ^= w2c_i1;
-        w2c_i1 = w2c_l4;
-        w2c_i2 = w2c_l1;
-        w2c_i3 = w2c_l2;
+        w2c_i1 = w2c_l5;
+        w2c_i2 = w2c_l2;
+        w2c_i3 = w2c_l7;
         w2c_i2 ^= w2c_i3;
         w2c_i3 = 1u;
         w2c_i2 &= w2c_i3;
         w2c_i0 = w2c_i2 ? w2c_i0 : w2c_i1;
-        w2c_l2 = w2c_i0;
-        w2c_i0 = w2c_l1;
+        w2c_l7 = w2c_i0;
+        w2c_i0 = w2c_l2;
         w2c_i1 = 254u;
         w2c_i0 &= w2c_i1;
         w2c_i1 = 1u;
         w2c_i0 >>= (w2c_i1 & 31);
-        w2c_l1 = w2c_i0;
-        w2c_i0 = w2c_l5;
+        w2c_l2 = w2c_i0;
+        w2c_i0 = w2c_l8;
         w2c_i1 = 4294967295u;
         w2c_i0 += w2c_i1;
-        w2c_l5 = w2c_i0;
+        w2c_l8 = w2c_i0;
         if (w2c_i0) {goto w2c_L6;}
-      w2c_i0 = w2c_l6;
+      w2c_i0 = w2c_l9;
       w2c_i1 = 1u;
       w2c_i0 += w2c_i1;
-      w2c_l6 = w2c_i0;
+      w2c_l9 = w2c_i0;
       w2c_i1 = 9u;
       w2c_i0 = w2c_i0 != w2c_i1;
       if (w2c_i0) {goto w2c_L5;}
-    w2c_i0 = w2c_l2;
-    if (w2c_i0) {goto w2c_B7;}
+    w2c_i0 = w2c_l7;
+    if (w2c_i0) {goto w2c_B1;}
     w2c_i0 = w2c_l0;
-    w2c_i0 = i32_load8_u((&w2c_memory), (u64)(w2c_i0) + 33u);
-    w2c_i1 = 20u;
-    w2c_i0 <<= (w2c_i1 & 31);
-    w2c_i1 = w2c_l0;
-    w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 32u);
-    w2c_i2 = 12u;
-    w2c_i1 <<= (w2c_i2 & 31);
-    w2c_i2 = 983040u;
-    w2c_i1 &= w2c_i2;
-    w2c_i0 |= w2c_i1;
-    w2c_l1 = w2c_i0;
-    w2c_i0 = 0u;
-    w2c_l3 = w2c_i0;
-    goto w2c_B2;
-    w2c_B7:;
-    w2c_i0 = 1024u;
-    w2c_l1 = w2c_i0;
-    w2c_B2:;
+    w2c_i0 = i32_load16_s((&w2c_memory), (u64)(w2c_i0) + 24u);
+    w2c_l2 = w2c_i0;
     w2c_i0 = w2c_l1;
-    w2c_i1 = w2c_l3;
-    w2c_i0 |= w2c_i1;
-    w2c_i1 = 1u;
-    w2c_i0 &= w2c_i1;
-    if (w2c_i0) {goto w2c_B8;}
+    w2c_i1 = 4u;
+    w2c_i0 += w2c_i1;
+    w2c_i1 = 0u;
+    i32_store8((&w2c_memory), (u64)(w2c_i0), w2c_i1);
+    w2c_i0 = w2c_l1;
+    w2c_i1 = 0u;
+    i32_store((&w2c_memory), (u64)(w2c_i0), w2c_i1);
     w2c_i0 = w2c_l0;
-    w2c_i1 = w2c_l1;
-    w2c_i2 = 16u;
-    w2c_i1 >>= (w2c_i2 & 31);
-    w2c_i1 = w2c__ZN12furnace_230v5utils11u16_to_char17hdf3e9f4768672dbfE(w2c_i1);
-    w2c_l1 = w2c_i1;
+    w2c_i1 = 978591809u;
+    i32_store((&w2c_memory), (u64)(w2c_i0) + 37, w2c_i1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = 46u;
+    i32_store8((&w2c_memory), (u64)(w2c_i0) + 35, w2c_i1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = 977870934u;
+    i32_store((&w2c_memory), (u64)(w2c_i0) + 29, w2c_i1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = 14933u;
+    i32_store16((&w2c_memory), (u64)(w2c_i0) + 24, w2c_i1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = w2c_l3;
+    w2c_i2 = 100u;
+    w2c_i1 = DIV_U(w2c_i1, w2c_i2);
+    w2c_l7 = w2c_i1;
+    w2c_i2 = 48u;
+    w2c_i1 += w2c_i2;
+    i32_store8((&w2c_memory), (u64)(w2c_i0) + 33, w2c_i1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = w2c_l4;
+    w2c_i2 = 100u;
+    w2c_i1 = DIV_U(w2c_i1, w2c_i2);
+    w2c_l8 = w2c_i1;
+    w2c_i2 = 48u;
+    w2c_i1 += w2c_i2;
     i32_store8((&w2c_memory), (u64)(w2c_i0) + 26, w2c_i1);
     w2c_i0 = w2c_l0;
-    w2c_i1 = w2c_l1;
-    w2c_i2 = 16u;
-    w2c_i1 >>= (w2c_i2 & 31);
+    w2c_i1 = 67u;
+    i32_store8((&w2c_memory), (u64)(w2c_i0) + 44, w2c_i1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = w2c_l8;
+    w2c_i2 = 156u;
+    w2c_i1 *= w2c_i2;
+    w2c_i2 = w2c_l4;
+    w2c_i1 += w2c_i2;
+    w2c_l8 = w2c_i1;
+    w2c_i2 = 255u;
+    w2c_i1 &= w2c_i2;
+    w2c_i2 = 10u;
+    w2c_i1 = DIV_U(w2c_i1, w2c_i2);
+    w2c_l5 = w2c_i1;
+    w2c_i2 = 48u;
+    w2c_i1 |= w2c_i2;
+    i32_store8((&w2c_memory), (u64)(w2c_i0) + 27, w2c_i1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = w2c_l7;
+    w2c_i2 = 156u;
+    w2c_i1 *= w2c_i2;
+    w2c_i2 = w2c_l3;
+    w2c_i1 += w2c_i2;
+    w2c_l7 = w2c_i1;
+    w2c_i2 = 255u;
+    w2c_i1 &= w2c_i2;
+    w2c_i2 = 10u;
+    w2c_i1 = DIV_U(w2c_i1, w2c_i2);
+    w2c_l9 = w2c_i1;
+    w2c_i2 = 48u;
+    w2c_i1 |= w2c_i2;
+    i32_store8((&w2c_memory), (u64)(w2c_i0) + 34, w2c_i1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = w2c_l5;
+    w2c_i2 = 4294967286u;
+    w2c_i1 *= w2c_i2;
+    w2c_i2 = w2c_l8;
+    w2c_i1 += w2c_i2;
+    w2c_i2 = 48u;
+    w2c_i1 |= w2c_i2;
     i32_store8((&w2c_memory), (u64)(w2c_i0) + 28, w2c_i1);
     w2c_i0 = w2c_l0;
-    w2c_i1 = w2c_l1;
-    w2c_i2 = 8u;
-    w2c_i1 >>= (w2c_i2 & 31);
-    i32_store8((&w2c_memory), (u64)(w2c_i0) + 27, w2c_i1);
+    w2c_i1 = w2c_l9;
+    w2c_i2 = 4294967286u;
+    w2c_i1 *= w2c_i2;
+    w2c_i2 = w2c_l7;
+    w2c_i1 += w2c_i2;
+    w2c_i2 = 48u;
+    w2c_i1 |= w2c_i2;
+    i32_store8((&w2c_memory), (u64)(w2c_i0) + 36, w2c_i1);
+    w2c_i0 = w2c_l2;
+    w2c_i1 = 16u;
+    w2c_i0 = I32_DIV_S(w2c_i0, w2c_i1);
+    w2c_l7 = w2c_i0;
+    w2c_i0 = w2c_l2;
+    w2c_i1 = 4294967280u;
+    w2c_i0 = (u32)((s32)w2c_i0 > (s32)w2c_i1);
+    if (w2c_i0) {goto w2c_B8;}
     w2c_i0 = 0u;
-    w2c_l5 = w2c_i0;
+    w2c_i1 = w2c_l7;
+    w2c_i0 -= w2c_i1;
+    w2c_i1 = 65535u;
+    w2c_i0 &= w2c_i1;
+    w2c_i1 = 100u;
+    w2c_i0 = REM_U(w2c_i0, w2c_i1);
+    w2c_l2 = w2c_i0;
+    w2c_i0 = 45u;
+    w2c_l8 = w2c_i0;
+    goto w2c_B7;
+    w2c_B8:;
+    w2c_i0 = w2c_l7;
+    w2c_i1 = 65535u;
+    w2c_i0 &= w2c_i1;
+    w2c_i1 = 100u;
+    w2c_i0 = DIV_U(w2c_i0, w2c_i1);
+    w2c_l2 = w2c_i0;
+    w2c_i1 = 48u;
+    w2c_i0 += w2c_i1;
+    w2c_l8 = w2c_i0;
+    w2c_i0 = w2c_l2;
+    w2c_i1 = 156u;
+    w2c_i0 *= w2c_i1;
+    w2c_i1 = w2c_l7;
+    w2c_i0 += w2c_i1;
+    w2c_l2 = w2c_i0;
+    w2c_B7:;
+    w2c_i0 = w2c_l0;
+    w2c_i1 = w2c_l8;
+    i32_store8((&w2c_memory), (u64)(w2c_i0) + 41, w2c_i1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = w2c_l2;
+    w2c_i2 = 255u;
+    w2c_i1 &= w2c_i2;
+    w2c_i2 = 10u;
+    w2c_i1 = DIV_U(w2c_i1, w2c_i2);
+    w2c_l7 = w2c_i1;
+    w2c_i2 = 48u;
+    w2c_i1 |= w2c_i2;
+    i32_store8((&w2c_memory), (u64)(w2c_i0) + 42, w2c_i1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = w2c_l7;
+    w2c_i2 = 4294967286u;
+    w2c_i1 *= w2c_i2;
+    w2c_i2 = w2c_l2;
+    w2c_i1 += w2c_i2;
+    w2c_i2 = 48u;
+    w2c_i1 |= w2c_i2;
+    i32_store8((&w2c_memory), (u64)(w2c_i0) + 43, w2c_i1);
+    w2c_i0 = 0u;
+    w2c_l7 = w2c_i0;
+    w2c_i0 = 0u;
+    w2c_l2 = w2c_i0;
     w2c_L9: 
-      w2c_i0 = 8u;
+      w2c_i0 = w2c_l0;
+      w2c_i1 = 24u;
+      w2c_i0 += w2c_i1;
+      w2c_i1 = w2c_l2;
+      w2c_i0 += w2c_i1;
+      w2c_i0 = i32_load8_u((&w2c_memory), (u64)(w2c_i0));
+      w2c_i1 = w2c_l7;
+      w2c_i2 = 255u;
+      w2c_i1 &= w2c_i2;
+      w2c_i0 ^= w2c_i1;
+      w2c_i1 = 1048588u;
+      w2c_i0 += w2c_i1;
+      w2c_i0 = i32_load8_u((&w2c_memory), (u64)(w2c_i0));
+      w2c_l7 = w2c_i0;
+      w2c_i0 = w2c_l2;
+      w2c_i1 = 1u;
+      w2c_i0 += w2c_i1;
+      w2c_l8 = w2c_i0;
       w2c_l2 = w2c_i0;
+      w2c_i0 = w2c_l8;
+      w2c_i1 = 21u;
+      w2c_i0 = w2c_i0 != w2c_i1;
+      if (w2c_i0) {goto w2c_L9;}
+    w2c_i0 = w2c_l0;
+    w2c_i1 = 8u;
+    w2c_i0 += w2c_i1;
+    w2c_i1 = w2c_l6;
+    w2c_j1 = i64_load((&w2c_memory), (u64)(w2c_i1));
+    i64_store((&w2c_memory), (u64)(w2c_i0), w2c_j1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = w2c_l7;
+    i32_store8((&w2c_memory), (u64)(w2c_i0) + 45, w2c_i1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = 14u;
+    w2c_i0 += w2c_i1;
+    w2c_i1 = w2c_l0;
+    w2c_i2 = 24u;
+    w2c_i1 += w2c_i2;
+    w2c_i2 = 14u;
+    w2c_i1 += w2c_i2;
+    w2c_j1 = i64_load((&w2c_memory), (u64)(w2c_i1));
+    i64_store((&w2c_memory), (u64)(w2c_i0), w2c_j1);
+    w2c_i0 = w2c_l0;
+    w2c_i1 = w2c_l0;
+    w2c_j1 = i64_load((&w2c_memory), (u64)(w2c_i1) + 24u);
+    i64_store((&w2c_memory), (u64)(w2c_i0), w2c_j1);
+    w2c_i0 = 0u;
+    w2c_l8 = w2c_i0;
+    w2c_L10: 
+      w2c_i0 = 8u;
+      w2c_l7 = w2c_i0;
       w2c_i0 = 0u;
       w2c_i1 = 0u;
       w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20480u);
@@ -1064,21 +1036,19 @@ static void w2c_app(void) {
       w2c_i1 |= w2c_i2;
       i32_store8((&w2c_memory), (u64)(w2c_i0) + 20480, w2c_i1);
       w2c_i0 = w2c_l0;
-      w2c_i1 = 9u;
-      w2c_i0 += w2c_i1;
-      w2c_i1 = w2c_l5;
+      w2c_i1 = w2c_l8;
       w2c_i0 += w2c_i1;
       w2c_i0 = i32_load8_u((&w2c_memory), (u64)(w2c_i0));
-      w2c_l1 = w2c_i0;
+      w2c_l2 = w2c_i0;
       w2c_i0 = 96u;
-      w2c__ZN12embedded_hal5delay7DelayNs8delay_us17hc9cdc09d8c5da0c4E(w2c_i0);
-      w2c_L10: 
+      w2c__ZN12embedded_hal5delay7DelayNs8delay_us17h900273c7f7bdb844E(w2c_i0);
+      w2c_L11: 
         w2c_i0 = 0u;
         w2c_i1 = 0u;
         w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20480u);
         w2c_i2 = 247u;
         w2c_i1 &= w2c_i2;
-        w2c_i2 = w2c_l1;
+        w2c_i2 = w2c_l2;
         w2c_i3 = 3u;
         w2c_i2 <<= (w2c_i3 & 31);
         w2c_i3 = 8u;
@@ -1088,18 +1058,18 @@ static void w2c_app(void) {
         w2c_i1 ^= w2c_i2;
         i32_store8((&w2c_memory), (u64)(w2c_i0) + 20480, w2c_i1);
         w2c_i0 = 96u;
-        w2c__ZN12embedded_hal5delay7DelayNs8delay_us17hc9cdc09d8c5da0c4E(w2c_i0);
-        w2c_i0 = w2c_l1;
+        w2c__ZN12embedded_hal5delay7DelayNs8delay_us17h900273c7f7bdb844E(w2c_i0);
+        w2c_i0 = w2c_l2;
         w2c_i1 = 254u;
         w2c_i0 &= w2c_i1;
         w2c_i1 = 1u;
         w2c_i0 >>= (w2c_i1 & 31);
-        w2c_l1 = w2c_i0;
-        w2c_i0 = w2c_l2;
+        w2c_l2 = w2c_i0;
+        w2c_i0 = w2c_l7;
         w2c_i1 = 4294967295u;
         w2c_i0 += w2c_i1;
-        w2c_l2 = w2c_i0;
-        if (w2c_i0) {goto w2c_L10;}
+        w2c_l7 = w2c_i0;
+        if (w2c_i0) {goto w2c_L11;}
       w2c_i0 = 0u;
       w2c_i1 = 0u;
       w2c_i1 = i32_load8_u((&w2c_memory), (u64)(w2c_i1) + 20480u);
@@ -1107,24 +1077,27 @@ static void w2c_app(void) {
       w2c_i1 &= w2c_i2;
       i32_store8((&w2c_memory), (u64)(w2c_i0) + 20480, w2c_i1);
       w2c_i0 = 96u;
-      w2c__ZN12embedded_hal5delay7DelayNs8delay_us17hc9cdc09d8c5da0c4E(w2c_i0);
-      w2c_i0 = w2c_l5;
+      w2c__ZN12embedded_hal5delay7DelayNs8delay_us17h900273c7f7bdb844E(w2c_i0);
+      w2c_i0 = w2c_l8;
       w2c_i1 = 1u;
       w2c_i0 += w2c_i1;
-      w2c_l5 = w2c_i0;
-      w2c_i1 = 23u;
-      w2c_i0 = w2c_i0 == w2c_i1;
-      if (w2c_i0) {goto w2c_L1;}
-      goto w2c_L9;
-    w2c_B8:;
+      w2c_l8 = w2c_i0;
+      w2c_i1 = 22u;
+      w2c_i0 = w2c_i0 != w2c_i1;
+      if (w2c_i0) {goto w2c_L10;}
+    w2c_i0 = 0u;
+    w2c_i1 = 170u;
+    i32_store8((&w2c_memory), (u64)(w2c_i0) + 20704, w2c_i1);
+    goto w2c_L2;
+  w2c_B1:;
   w2c_i0 = w2c_l0;
-  w2c_i1 = 32u;
+  w2c_i1 = 24u;
   w2c_i0 += w2c_i1;
   w2c__ZN4core6result13unwrap_failed17h4ec8ebc0cd29f54bE(w2c_i0);
   UNREACHABLE;
   w2c_B0:;
   w2c_i0 = w2c_l0;
-  w2c_i1 = 9u;
+  w2c_i1 = 24u;
   w2c_i0 += w2c_i1;
   w2c__ZN4core6result13unwrap_failed17h4ec8ebc0cd29f54bE(w2c_i0);
   UNREACHABLE;
@@ -1197,9 +1170,35 @@ static void w2c_rust_begin_unwind(void) {
   FUNC_EPILOGUE;
 }
 
+static const u8 data_segment_data_0[] = {
+  0x01, 0x01, 0x08, 0x1d, 0x00, 0x00, 0xf4, 0x00, 0x00, 0x00, 0x10, 0x00, 
+  0x00, 0x64, 0xc8, 0xac, 0xe1, 0x85, 0x29, 0x4d, 0xb3, 0xd7, 0x7b, 0x1f, 
+  0x52, 0x36, 0x9a, 0xfe, 0x17, 0x73, 0xdf, 0xbb, 0xf6, 0x92, 0x3e, 0x5a, 
+  0xa4, 0xc0, 0x6c, 0x08, 0x45, 0x21, 0x8d, 0xe9, 0x2e, 0x4a, 0xe6, 0x82, 
+  0xcf, 0xab, 0x07, 0x63, 0x9d, 0xf9, 0x55, 0x31, 0x7c, 0x18, 0xb4, 0xd0, 
+  0x39, 0x5d, 0xf1, 0x95, 0xd8, 0xbc, 0x10, 0x74, 0x8a, 0xee, 0x42, 0x26, 
+  0x6b, 0x0f, 0xa3, 0xc7, 0x5c, 0x38, 0x94, 0xf0, 0xbd, 0xd9, 0x75, 0x11, 
+  0xef, 0x8b, 0x27, 0x43, 0x0e, 0x6a, 0xc6, 0xa2, 0x4b, 0x2f, 0x83, 0xe7, 
+  0xaa, 0xce, 0x62, 0x06, 0xf8, 0x9c, 0x30, 0x54, 0x19, 0x7d, 0xd1, 0xb5, 
+  0x72, 0x16, 0xba, 0xde, 0x93, 0xf7, 0x5b, 0x3f, 0xc1, 0xa5, 0x09, 0x6d, 
+  0x20, 0x44, 0xe8, 0x8c, 0x65, 0x01, 0xad, 0xc9, 0x84, 0xe0, 0x4c, 0x28, 
+  0xd6, 0xb2, 0x1e, 0x7a, 0x37, 0x53, 0xff, 0x9b, 0xb8, 0xdc, 0x70, 0x14, 
+  0x59, 0x3d, 0x91, 0xf5, 0x0b, 0x6f, 0xc3, 0xa7, 0xea, 0x8e, 0x22, 0x46, 
+  0xaf, 0xcb, 0x67, 0x03, 0x4e, 0x2a, 0x86, 0xe2, 0x1c, 0x78, 0xd4, 0xb0, 
+  0xfd, 0x99, 0x35, 0x51, 0x96, 0xf2, 0x5e, 0x3a, 0x77, 0x13, 0xbf, 0xdb, 
+  0x25, 0x41, 0xed, 0x89, 0xc4, 0xa0, 0x0c, 0x68, 0x81, 0xe5, 0x49, 0x2d, 
+  0x60, 0x04, 0xa8, 0xcc, 0x32, 0x56, 0xfa, 0x9e, 0xd3, 0xb7, 0x1b, 0x7f, 
+  0xe4, 0x80, 0x2c, 0x48, 0x05, 0x61, 0xcd, 0xa9, 0x57, 0x33, 0x9f, 0xfb, 
+  0xb6, 0xd2, 0x7e, 0x1a, 0xf3, 0x97, 0x3b, 0x5f, 0x12, 0x76, 0xda, 0xbe, 
+  0x40, 0x24, 0x88, 0xec, 0xa1, 0xc5, 0x69, 0x0d, 0xca, 0xae, 0x02, 0x66, 
+  0x2b, 0x4f, 0xe3, 0x87, 0x79, 0x1d, 0xb1, 0xd5, 0x98, 0xfc, 0x50, 0x34, 
+  0xdd, 0xb9, 0x15, 0x71, 0x3c, 0x58, 0xf4, 0x90, 0x6e, 0x0a, 0xa6, 0xc2, 
+  0x8f, 0xeb, 0x47, 0x23, 
+};
 
 static void init_memory(void) {
   wasm_rt_allocate_memory((&w2c_memory), 17, 65536);
+  LOAD_DATA(w2c_memory, 1048576u, data_segment_data_0, 268);
 }
 
 static void init_table(void) {

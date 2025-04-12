@@ -7,6 +7,7 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
+crc = "3.2.1"
 embedded-hal = "1.0.0"
 panic-halt = "1.0.0"
 stm8s-hal = {git = "https://github.com/brrastak/stm8s-hal.git"}

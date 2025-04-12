@@ -112,6 +112,14 @@ inline int32_t i32_load8_s(uint64_t addr) {
     return value;
 }
 
+inline int32_t i32_load16_s(uint64_t addr) {
+    uint32_t value = *(volatile int16_t *)(addr);
+    if (addr < MAX_RAM_ADDR) {
+        value = reverse_byte_order16(value);
+    }
+    return value;
+}
+
 inline int32_t i32_load(uint64_t addr) {
     uint32_t value = *(volatile int32_t *)(addr);
     if (addr < MAX_RAM_ADDR) {

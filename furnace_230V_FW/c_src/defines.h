@@ -2,7 +2,9 @@
 
 // Imitation of WASM internal functions
 #define DIV_U(x, y)         (x) / (y)
+#define REM_U(x, y)         (x) % (y)
 #define I32_DIV_S(x, y)     (x) / (y)
+
 #define UNREACHABLE         while (1) {}
 
 
@@ -109,6 +111,14 @@ inline uint32_t i32_load8_u(uint64_t addr) {
 
 inline int32_t i32_load8_s(uint64_t addr) {
     uint32_t value = *(volatile int8_t *)(addr);
+    return value;
+}
+
+inline int32_t i32_load16_u(uint64_t addr) {
+    uint32_t value = *(volatile uint16_t *)(addr);
+    if (addr < MAX_RAM_ADDR) {
+        value = reverse_byte_order16(value);
+    }
     return value;
 }
 

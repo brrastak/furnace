@@ -37,6 +37,11 @@ pub fn adc_to_voltage(value: u16) -> u16 {
     value_v as u16
 }
 
+/// Time for a one ADC convertion + SW processing
+pub const fn processing_time_us() -> u16 {
+    180
+}
+
 impl Board {
     
     pub fn new() -> Self {
@@ -78,6 +83,11 @@ impl Board {
 
         let watchdog = Iwdg::new(p.IWDG, 250);
 
+        // let led_pin = gpiob.pb5.into_push_pull_output();
+        // let mut debug_led = led_pin.into_active_low_switch();
+        // debug_led.off().ok();
+
+        // Self { voltage_pin, current_pin, adc, temp_sensor, uart, watchdog, debug_led }
         Self { voltage_pin, current_pin, adc, temp_sensor, uart, watchdog }
     }
 }
@@ -89,6 +99,7 @@ pub struct Board {
     pub temp_sensor: Ds18b20<stm8s_hal::gpio::PB4<stm8s_hal::gpio::Output<stm8s_hal::gpio::OpenDrain>>, Timer<stm8s_hal::pac::TIM1>>,
     pub uart: BitbangUart<Switch<stm8s_hal::gpio::PA3<stm8s_hal::gpio::Output<stm8s_hal::gpio::PushPull>>, ActiveLow>, Timer<stm8s_hal::pac::TIM2>>,
     pub watchdog: Iwdg,
+    // pub debug_led: Switch<stm8s_hal::gpio::PB5<stm8s_hal::gpio::Output<stm8s_hal::gpio::PushPull>>, ActiveLow>,
 }
 
 enum AdcConfig {
@@ -96,7 +107,7 @@ enum AdcConfig {
     // 10 bit
     MaxValue = 0b11_1111_1111,
     // For ADC clock frequency = 2MHz
-    ConversionTimeUs = 7,
+    _ConversionTimeUs = 7,
     // Supply voltage
     ReferenceVoltageMv = 3300,
 

@@ -69,7 +69,8 @@ impl Board {
 
         let one_wire_pin = gpiob.pb4.into_open_drain_output();
         let one_wire = OneWire::new(one_wire_pin).unwrap();
-        let temp_sensor: Ds18b20<stm8s_hal::gpio::PB4<stm8s_hal::gpio::Output<stm8s_hal::gpio::OpenDrain>>, Timer<stm8s_hal::pac::TIM1>> = Ds18b20::new(one_wire, one_wire_timer).unwrap();
+        // Doesn't really panic even if nothing connected to the one wire pin
+        let temp_sensor = Ds18b20::new(one_wire, one_wire_timer).unwrap();
 
         let uart_pin = gpioa.pa3.into_push_pull_output();
         let mut uart_pin = uart_pin.into_active_low_switch();

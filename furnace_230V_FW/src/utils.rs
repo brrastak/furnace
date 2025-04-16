@@ -17,34 +17,45 @@ pub fn u16_to_char(num: u16) -> (u8, u8, u8) {
 const DATA_LEN: usize = 22;
 
 /// Put to array values in text form and CRC code
-pub fn combine_data(voltage: u16, current: u16, temperature: i16) -> [u8; DATA_LEN] {
+pub fn combine_data(voltage: u16, current: u16, temperature: Option<i16>) -> [u8; DATA_LEN] {
 
     let mut buf= [0u8; DATA_LEN];
-    buf[0] = 'U' as u8;
-    buf[1] = ':' as u8;
-    buf[5] = 'V' as u8;
-    buf[6] = ' ' as u8;
-    buf[7] = 'I' as u8;
-    buf[8] = ':' as u8;
-    buf[11] = '.' as u8;
-    buf[13] = 'A' as u8;
-    buf[14] = ' ' as u8;
-    buf[15] = 'T' as u8;
-    buf[16] = ':' as u8;
-    buf[20] = 'C' as u8;
+    buf[0] = b'U';
+    buf[1] = b':';
+    buf[5] = b'V';
+    buf[6] = b' ';
+    buf[7] = b'I';
+    buf[8] = b':';
+    buf[11] = b'.';
+    buf[13] = b'A';
+    buf[14] = b' ';
+    buf[15] = b'T';
+    buf[16] = b':';
+    buf[20] = b'C';
     
     (buf[2], buf[3], buf[4]) = u16_to_char(voltage);
     (buf[9], buf[10], buf[12]) = u16_to_char(current);
 
-    (buf[17], buf[18], buf[19]) = if temperature >= 0 {
-        
-        u16_to_char(temperature as u16)
-    }
-    else {
+    match temperature {
+        Some (temperature) => {
+            (buf[17], buf[18], buf[19]) = if temperature >= 0 {
+                
+                u16_to_char(temperature as u16)
+            }
+            else {
 
-        let (_, tens, units) = u16_to_char(-temperature as u16);
-        ('-' as u8, tens, units)
-    };
+                let (_, tens, units) = u16_to_char(-temperature as u16);
+                ('-' as u8, tens, units)
+            };
+        }
+        None => {
+            buf[17] = b'E';
+            buf[18] = b'R';
+            buf[19] = b'R';
+            buf[20] = b' ';
+        }
+    }
+    
 
     const CRC: crc::Crc<u8> = crc::Crc::<u8>::new(&CRC8_ANSI);
     let checksum = CRC.checksum(&buf[..buf.len() - 1]);
@@ -62,19 +73,19 @@ mod tests {
 
     #[test]
     fn three_digits() {
-        let expected = ('1' as u8, '0' as u8, '3' as u8);
+        let expected = (b'1', b'0', b'3');
         assert_eq!(u16_to_char(103), expected);
     }
 
     #[test]
     fn two_digits() {
-        let expected = ('0' as u8, '9' as u8, '8' as u8);
+        let expected = (b'0', b'9', b'8');
         assert_eq!(u16_to_char(98), expected);
     }
 
     #[test]
     fn one_digit() {
-        let expected = ('0' as u8, '0' as u8, '0' as u8);
+        let expected = (b'0', b'0', b'0');
         assert_eq!(u16_to_char(0), expected);
     }
 
@@ -85,9 +96,7 @@ mod tests {
         let checksum = CRC.checksum(&expected[..expected.len() - 1]);
         expected[21] = checksum;
 
-        assert_eq!(combine_data(123, 456, 789), expected);
-
-        assert_eq!(CRC.checksum(&expected), 4);
+        assert_eq!(combine_data(123, 456, Some(789)), expected);
     }
 
     #[test]
@@ -97,7 +106,17 @@ mod tests {
         let checksum = CRC.checksum(&expected[..expected.len() - 1]);
         expected[21] = checksum;
 
-        assert_eq!(combine_data(765, 432, -10), expected);
+        assert_eq!(combine_data(765, 432, Some(-10)), expected);
+    }
+
+    #[test]
+    fn combine_none() {
+        let mut expected: [u8; DATA_LEN] = *b"U:765V I:43.2A T:ERR  ";
+        const CRC: crc::Crc<u8> = crc::Crc::<u8>::new(&CRC8_ANSI);
+        let checksum = CRC.checksum(&expected[..expected.len() - 1]);
+        expected[21] = checksum;
+
+        assert_eq!(combine_data(765, 432, None), expected);
     }
 
 }

@@ -12,7 +12,6 @@ pub mod app {
     #[cfg(not(test))]
     use panic_halt as _;
     use stm8s_hal::bitbang_uart::Write;
-    use switch_hal::OutputSwitch;
 
     use crate::bsp::{self, Board};
     use crate::filter::Filter;
@@ -68,9 +67,9 @@ pub mod app {
             let current = bsp::adc_to_current(current as u16);
 
             // Temperature data reading takes pretty long time
-            watchdog.refresh();
+            // watchdog.refresh();
 
-            let temperature = temp_sensor.read().unwrap();
+            let temperature = temp_sensor.read().ok();
 
             let buf = combine_data(voltage, current, temperature);
 

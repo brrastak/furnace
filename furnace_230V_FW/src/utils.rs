@@ -1,6 +1,6 @@
 
-use crc;
-use crate::crc::CRC8_ANSI;
+use crc::{Crc, NoTable, CRC_8_MAXIM_DOW};
+
 
 // Bytes are returned in the following order: hundreds, tens, units
 pub fn u16_to_char(num: u16) -> (u8, u8, u8) {
@@ -56,8 +56,7 @@ pub fn combine_data(voltage: u16, current: u16, temperature: Option<i16>) -> [u8
         }
     }
     
-
-    const CRC: crc::Crc<u8> = crc::Crc::<u8>::new(&CRC8_ANSI);
+    const CRC: Crc<u8, NoTable> = Crc::<u8, NoTable>::new(&CRC_8_MAXIM_DOW);
     let checksum = CRC.checksum(&buf[..buf.len() - 1]);
     buf[21] = checksum;
 
@@ -92,7 +91,7 @@ mod tests {
     #[test]
     fn combine_pos() {
         let mut expected: [u8; DATA_LEN] = *b"U:123V I:45.6A T:789C ";
-        const CRC: crc::Crc<u8> = crc::Crc::<u8>::new(&CRC8_ANSI);
+        const CRC: Crc<u8> = Crc::<u8>::new(&CRC_8_MAXIM_DOW);
         let checksum = CRC.checksum(&expected[..expected.len() - 1]);
         expected[21] = checksum;
 
@@ -102,7 +101,7 @@ mod tests {
     #[test]
     fn combine_neg() {
         let mut expected: [u8; DATA_LEN] = *b"U:765V I:43.2A T:-10C ";
-        const CRC: crc::Crc<u8> = crc::Crc::<u8>::new(&CRC8_ANSI);
+        const CRC: Crc<u8> = Crc::<u8>::new(&CRC_8_MAXIM_DOW);
         let checksum = CRC.checksum(&expected[..expected.len() - 1]);
         expected[21] = checksum;
 
@@ -112,7 +111,7 @@ mod tests {
     #[test]
     fn combine_none() {
         let mut expected: [u8; DATA_LEN] = *b"U:765V I:43.2A T:ERR  ";
-        const CRC: crc::Crc<u8> = crc::Crc::<u8>::new(&CRC8_ANSI);
+        const CRC: Crc<u8> = Crc::<u8>::new(&CRC_8_MAXIM_DOW);
         let checksum = CRC.checksum(&expected[..expected.len() - 1]);
         expected[21] = checksum;
 

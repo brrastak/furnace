@@ -2,7 +2,6 @@
 
 
 mod bsp;
-mod crc;
 mod ds18b20;
 mod filter;
 mod utils;
@@ -65,9 +64,6 @@ pub mod app {
 
             let voltage = bsp::adc_to_voltage(voltage as u16);
             let current = bsp::adc_to_current(current as u16);
-
-            // Temperature data reading takes pretty long time
-            // watchdog.refresh();
 
             let temperature = temp_sensor.read().ok();
 

@@ -5,6 +5,7 @@
 
 pub use embedded_hal::{digital::{InputPin, OutputPin}, delay::DelayNs};
 use stm8s_hal::prelude::*;
+use crc::{Crc, NoTable, CRC_8_MAXIM_DOW};
 
 
 impl<Pin, Timer, E> Ds18b20<Pin, Timer>
@@ -15,8 +16,6 @@ where
 {
 
     pub fn new(mut one_wire: OneWire<Pin>,mut timer: Timer) -> OneWireResult<Self, E> {
-
-        // one_wire.send_command(Command::ReadRom as u8, None, timer)?;
 
         one_wire.send_command(Command::WriteScratchpad as u8, &mut timer)?;
         one_wire.write_byte(Config::TempHighNoAlarm as u8, &mut timer)?;
@@ -70,29 +69,16 @@ enum Config {
     MaxConvertionTimeMs = 94,
 }
 
-/// Calculates the crc8 of the input data.
-pub fn crc8(data: &[u8]) -> u8 {
-    let mut crc = 0;
-    for byte in data {
-        let mut byte = *byte;
-        for _ in 0..8 {
-            let x = (byte ^ crc) & 0x01;
-            crc >>= 1;
-            if x != 0 {
-                crc ^= 0x8C;
-            }
-            byte >>= 1;
-        }
-    }
-    crc
-}
-
 /// Checks to see if data (including the crc byte) passes the crc check.
 ///
 /// A nice property of this crc8 algorithm is that if you include the crc value in the data
 /// it will always return 0, so it's not needed to separate the data from the crc value
 pub fn check_crc8<E>(data: &[u8]) -> OneWireResult<(), E> {
-    if crc8(data) == 0 {
+    
+    const CRC: Crc<u8, NoTable> = Crc::<u8, NoTable>::new(&CRC_8_MAXIM_DOW);
+    let checksum = CRC.checksum(&data);
+
+    if checksum == 0 {
         Ok(())
     } else {
         Err(OneWireError::CrcMismatch)

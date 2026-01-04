@@ -18,7 +18,16 @@ use rtic_sync::{channel::*, make_channel};
 
 systick_monotonic!(Mono, 1000);
 
-use furnace_controller::bsp::{Board, DigitalOutput, hal, Key, Keyboard, KeySet, OledDisplay};
+use furnace_controller::bsp::{
+    Board,
+    DigitalOutput,
+    hal,
+    Key,
+    Keyboard,
+    KeySet,
+    OledDisplay,
+    IndependentWatchdog,
+};
 // use hal::gpio::*;
 
 
@@ -38,6 +47,7 @@ mod app {
         heater_control: DigitalOutput,
         buzzer: DigitalOutput,
         keyboard: Keyboard,
+        watchdog: IndependentWatchdog,
     }
 
     #[init]
@@ -48,6 +58,7 @@ mod app {
         let heater_control = board.heater_control;
         let mut buzzer = board.buzzer;
         let keyboard = board.keyboard;
+        let watchdog = board.watchdog;
 
         Mono::start(cx.core.SYST, board.rcc.clocks.sysclk().to_Hz());
         
@@ -64,6 +75,7 @@ mod app {
         heater::spawn().ok();
         control::spawn(keys_receiver).ok();
         keyboard::spawn(keys_sender).ok();
+        watchdog::spawn().ok();
 
 
         (
@@ -75,6 +87,7 @@ mod app {
                oled,
                buzzer,
                keyboard,
+               watchdog,
             },
         )
     }
@@ -172,6 +185,20 @@ mod app {
 
             heater_control.set_low();
             Mono::delay(1000.millis()).await;
+        }
+    }
+
+
+    #[task(local = [watchdog], priority = 1)]
+    async fn watchdog(cx: watchdog::Context) {
+
+        let watchdog::LocalResources
+            {watchdog, ..} = cx.local;
+
+        loop {
+            
+            watchdog.feed();
+            Mono::delay(2000.millis()).await;
         }
     }
 

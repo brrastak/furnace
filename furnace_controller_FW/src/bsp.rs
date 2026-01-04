@@ -9,6 +9,7 @@ pub use hal:: {
         pac::Peripherals,
         time::ms,
         timer::{Channel, Timer, Tim2NoRemap},
+        watchdog::IndependentWatchdog,
     };
 pub use ssd1309::{prelude::*, Builder};
 
@@ -24,6 +25,7 @@ pub struct Board {
     pub heater_control: DigitalOutput,
     pub buzzer: DigitalOutput,
     pub keyboard: Keyboard,
+    pub watchdog: IndependentWatchdog,
 }
 
 impl Board {
@@ -95,6 +97,9 @@ impl Board {
             .into();
         oled.reset(&mut display_reset_pin, &mut display_delay).unwrap();
 
+        let mut watchdog = IndependentWatchdog::new(p.IWDG);
+        watchdog.start(3000.millis());
+
 
         Board {
             rcc,
@@ -102,6 +107,7 @@ impl Board {
             heater_control,
             buzzer,
             keyboard,
+            watchdog,
         }
     }
 }

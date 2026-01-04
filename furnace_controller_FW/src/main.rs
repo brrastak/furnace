@@ -8,6 +8,9 @@ use embedded_graphics::{
     prelude::*,
 };
 use embedded_hal::delay::DelayNs;
+use heapless::String;
+use max31855::{Max31855, Unit};
+use micromath::F32Ext;
 // use panic_halt as _;
 // use panic_rtt_target as _;
 // use rtt_target::rtt_init_print;
@@ -27,6 +30,8 @@ use furnace_controller::bsp::{
     KeySet,
     OledDisplay,
     IndependentWatchdog,
+    TempSpi,
+    TEMP_NUM,
 };
 
 
@@ -47,6 +52,8 @@ mod app {
         buzzer: DigitalOutput,
         keyboard: Keyboard,
         watchdog: IndependentWatchdog,
+        pub temp_select: [DigitalOutput; 5],
+        pub temp_spi: TempSpi,
     }
 
     #[init]
@@ -58,6 +65,8 @@ mod app {
         let mut buzzer = board.buzzer;
         let keyboard = board.keyboard;
         let watchdog = board.watchdog;
+        let temp_select = board.temp_select;
+        let temp_spi = board.temp_spi;
 
         Mono::start(cx.core.SYST, board.rcc.clocks.sysclk().to_Hz());
         
@@ -70,9 +79,11 @@ mod app {
 
 
         let (keys_sender, keys_receiver) = make_channel!(KeySet, 1);
+        let (temp_sender, temp_receiver) = make_channel!([Option<i16>; 5], 1);
 
-        control::spawn(keys_receiver).ok();
+        control::spawn(keys_receiver, temp_receiver).ok();
         keyboard::spawn(keys_sender).ok();
+        temp::spawn(temp_sender).ok();
         watchdog::spawn().ok();
 
 
@@ -86,68 +97,72 @@ mod app {
                buzzer,
                keyboard,
                watchdog,
+               temp_select,
+               temp_spi,
             },
         )
     }
 
 
     #[task(local = [oled, buzzer, heater_control], priority = 1)]
-    async fn control(cx: control::Context, mut keys_receiver: Receiver<'static, KeySet, 1>) {
+    async fn control(cx: control::Context,
+        mut keys_receiver: Receiver<'static, KeySet, 1>,
+        mut temp_receiver: Receiver<'static, [Option<i16>; TEMP_NUM], 1>
+    ) {
 
         let control::LocalResources
             {oled, buzzer, heater_control, ..} = cx.local;
 
         let font = FontRenderer::new::<fonts::u8g2_font_synchronizer_nbp_tf>();
 
-        let message = "Key pressed: --";
-
-        font.render_aligned(
-            message,
-            oled.bounding_box().center(),
-            VerticalPosition::Center,
-            HorizontalAlignment::Center,
-            FontColor::Transparent(BinaryColor::On),
-            oled,
-        )
-        .unwrap();
-
-        oled.flush().unwrap();
-
         loop {
-            
-            let keys = keys_receiver.recv().await.unwrap();
-            buzzer.set_high();
             Mono::delay(10.millis()).await;
-            buzzer.set_low();
 
-            for key in &keys {
-                match key {
-                    Key::Number(num) => {
+            if let Ok(keys) = keys_receiver.try_recv() {
 
-                        let mut buf = [0u8; 30];
-                        let message = format_no_std::show(
-                            &mut buf,
-                            format_args!("Key pressed: {}", num))
-                            .unwrap();
+                buzzer.set_high();
+                Mono::delay(10.millis()).await;
+                buzzer.set_low();
 
-                        oled.clear();
-                        font.render_aligned(
-                            message,
-                            oled.bounding_box().center(),
-                            VerticalPosition::Center,
-                            HorizontalAlignment::Center,
-                            FontColor::Transparent(BinaryColor::On),
-                            oled,
-                        )
-                        .unwrap();
-
-                        oled.flush().unwrap();
-                    }
-                    Key::Asterisk => {
-                        heater_control.toggle();
-                    }
-                    _ => {}
+                if keys.contains(&Key::Asterisk) {
+                    heater_control.toggle();
                 }
+            }
+            
+            if let Ok(temp) = temp_receiver.try_recv() {
+
+                let mut buf = [0u8; 10];
+                let mut text: String<100> = String::new();
+                oled.clear();
+
+                for i in 0..TEMP_NUM {
+
+                    let message = match temp[i] {
+                        Some(number) => {
+                            
+
+                            let str: &str = format_no_std::show(
+                            &mut buf,
+                            format_args!("{}°C\n", 
+                            number)).unwrap();
+                            str
+                        }
+                        None => "--\n"
+                    };
+                    text.push_str(message).unwrap();
+                }
+
+                font.render_aligned(
+                    text.as_str(),
+                    oled.bounding_box().center(),
+                    VerticalPosition::Center,
+                    HorizontalAlignment::Center,
+                    FontColor::Transparent(BinaryColor::On),
+                    oled,
+                )
+                .unwrap();
+
+                oled.flush().unwrap();
             }
         }
     }
@@ -168,6 +183,29 @@ mod app {
             if !state.is_empty() {
                 keys_sender.send(state).await.ok();
             }
+        }
+    }
+
+
+    // Read thermocouples data
+    #[task(local = [temp_select, temp_spi], priority = 1)]
+    async fn temp(cx: temp::Context, mut temp_sender: Sender<'static, [Option<i16>; TEMP_NUM], 1>) {
+
+        let temp::LocalResources
+            {temp_select, temp_spi, ..} = cx.local;
+
+        let mut data = [None::<i16>; TEMP_NUM];
+
+        loop {
+            Mono::delay(1000.millis()).await;
+
+            for (chip_select, data) in temp_select.iter_mut().zip(data.iter_mut()) {
+                *data = match temp_spi.read_all(chip_select, Unit::Celsius) {
+                    Ok(result) => Some(result.thermocouple.round() as i16),
+                    Err(_) => None
+                } 
+            }
+            temp_sender.send(data).await.unwrap();
         }
     }
 

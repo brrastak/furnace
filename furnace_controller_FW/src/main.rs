@@ -8,7 +8,7 @@ use embedded_graphics::{
     prelude::*,
 };
 use embedded_hal::delay::DelayNs;
-use panic_halt as _;
+// use panic_halt as _;
 // use panic_rtt_target as _;
 // use rtt_target::rtt_init_print;
 // use rtt_target::rprintln;
@@ -28,7 +28,6 @@ use furnace_controller::bsp::{
     OledDisplay,
     IndependentWatchdog,
 };
-// use hal::gpio::*;
 
 
 
@@ -44,7 +43,7 @@ mod app {
     #[local]
     struct Local {
         oled: OledDisplay,
-        heater_control: DigitalOutput,
+        heater_control: &'static mut DigitalOutput,
         buzzer: DigitalOutput,
         keyboard: Keyboard,
         watchdog: IndependentWatchdog,
@@ -68,11 +67,10 @@ mod app {
         buzzer.set_high();
         Mono::delay_ms(&mut Mono, 1000);
         buzzer.set_low();
-        
+
 
         let (keys_sender, keys_receiver) = make_channel!(KeySet, 1);
 
-        heater::spawn().ok();
         control::spawn(keys_receiver).ok();
         keyboard::spawn(keys_sender).ok();
         watchdog::spawn().ok();
@@ -93,11 +91,11 @@ mod app {
     }
 
 
-    #[task(local = [oled, buzzer], priority = 1)]
+    #[task(local = [oled, buzzer, heater_control], priority = 1)]
     async fn control(cx: control::Context, mut keys_receiver: Receiver<'static, KeySet, 1>) {
 
         let control::LocalResources
-            {oled, buzzer, ..} = cx.local;
+            {oled, buzzer, heater_control, ..} = cx.local;
 
         let font = FontRenderer::new::<fonts::u8g2_font_synchronizer_nbp_tf>();
 
@@ -145,6 +143,9 @@ mod app {
 
                         oled.flush().unwrap();
                     }
+                    Key::Asterisk => {
+                        heater_control.toggle();
+                    }
                     _ => {}
                 }
             }
@@ -167,24 +168,6 @@ mod app {
             if !state.is_empty() {
                 keys_sender.send(state).await.ok();
             }
-        }
-    }
-
-
-    // Blink LED
-    #[task(local = [heater_control], priority = 1)]
-    async fn heater(cx: heater::Context) {
-
-        let heater::LocalResources
-            {heater_control, ..} = cx.local;
-
-        loop {
-            
-            heater_control.set_high();
-            Mono::delay(1000.millis()).await;
-
-            heater_control.set_low();
-            Mono::delay(1000.millis()).await;
         }
     }
 

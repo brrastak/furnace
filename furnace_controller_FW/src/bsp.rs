@@ -14,6 +14,7 @@ pub use hal:: {
 pub use ssd1309::{prelude::*, Builder};
 
 pub use crate::keyboard::*;
+use crate::safe_panic::copy_safe_pin;
 
 
 pub type OledDisplay =  GraphicsMode<I2CInterface<BlockingI2c<hal::pac::I2C1>>>;
@@ -22,7 +23,7 @@ pub type DigitalOutput = ErasedPin<Output>;
 pub struct Board {
     pub rcc: Rcc,
     pub oled: OledDisplay,
-    pub heater_control: DigitalOutput,
+    pub heater_control: &'static mut DigitalOutput,
     pub buzzer: DigitalOutput,
     pub keyboard: Keyboard,
     pub watchdog: IndependentWatchdog,
@@ -49,7 +50,9 @@ impl Board {
         let display_i2c_sda_pin = gpiob.pb7.into_alternate_open_drain(&mut gpiob.crl);
         let charge_pump_clk_pin = gpioa.pa1.into_alternate_push_pull(&mut gpioa.crl);
 
-        let heater_control = gpioa.pa2.into_push_pull_output_with_state(&mut gpioa.crl, PinState::Low).erase();
+        let heater_control = copy_safe_pin(
+            gpioa.pa2.into_push_pull_output_with_state(&mut gpioa.crl, PinState::Low).erase()
+        );
         let mut display_power_en = gpiob.pb8.into_push_pull_output(&mut gpiob.crh).erase();
         let buzzer = pa15.into_push_pull_output_with_state(&mut gpioa.crh, PinState::Low).erase();
 

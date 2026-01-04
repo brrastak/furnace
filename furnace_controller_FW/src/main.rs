@@ -4,21 +4,22 @@
 
 
 use embedded_graphics::{
-    mono_font::{ascii::FONT_6X10, MonoTextStyleBuilder},
     pixelcolor::BinaryColor,
     prelude::*,
-    text::{Baseline, Text},
 };
-use panic_rtt_target as _;
-use rtt_target::rtt_init_print;
+use embedded_hal::delay::DelayNs;
+use panic_halt as _;
+// use panic_rtt_target as _;
+// use rtt_target::rtt_init_print;
 // use rtt_target::rprintln;
 use rtic_monotonics::systick::prelude::*;
-// use rtic_sync::{channel::*, make_channel};
+use u8g2_fonts::{fonts, FontRenderer, types::*};
+use rtic_sync::{channel::*, make_channel};
 
 systick_monotonic!(Mono, 1000);
 
-use furnace_controller::bsp::{Board, hal, Switch, ActiveHigh, OledDisplay, OutputSwitch};
-use hal::gpio::*;
+use furnace_controller::bsp::{Board, DigitalOutput, hal, Key, Keyboard, KeySet, OledDisplay};
+// use hal::gpio::*;
 
 
 
@@ -33,23 +34,37 @@ mod app {
 
     #[local]
     struct Local {
-        heater_control: Switch<ErasedPin<Output>, ActiveHigh>,
         oled: OledDisplay,
+        heater_control: DigitalOutput,
+        buzzer: DigitalOutput,
+        keyboard: Keyboard,
     }
 
     #[init]
     fn init(cx: init::Context) -> (Shared, Local) {
 
-        rtt_init_print!();
-
         let board = Board::new(cx.device);
+        let mut oled = board.oled;
         let heater_control = board.heater_control;
-        let oled = board.oled;
+        let mut buzzer = board.buzzer;
+        let keyboard = board.keyboard;
 
-        Mono::start(cx.core.SYST, board.clocks.sysclk().to_Hz());
+        Mono::start(cx.core.SYST, board.rcc.clocks.sysclk().to_Hz());
+        
+        oled.init().unwrap();
+
+        Mono::delay_ms(&mut Mono, 1000);
+        buzzer.set_high();
+        Mono::delay_ms(&mut Mono, 1000);
+        buzzer.set_low();
+        
+
+        let (keys_sender, keys_receiver) = make_channel!(KeySet, 1);
 
         heater::spawn().ok();
-        oled::spawn().ok();
+        control::spawn(keys_receiver).ok();
+        keyboard::spawn(keys_sender).ok();
+
 
         (
             Shared {
@@ -58,9 +73,90 @@ mod app {
             Local {
                heater_control,
                oled,
+               buzzer,
+               keyboard,
             },
         )
     }
+
+
+    #[task(local = [oled, buzzer], priority = 1)]
+    async fn control(cx: control::Context, mut keys_receiver: Receiver<'static, KeySet, 1>) {
+
+        let control::LocalResources
+            {oled, buzzer, ..} = cx.local;
+
+        let font = FontRenderer::new::<fonts::u8g2_font_synchronizer_nbp_tf>();
+
+        let message = "Key pressed: --";
+
+        font.render_aligned(
+            message,
+            oled.bounding_box().center(),
+            VerticalPosition::Center,
+            HorizontalAlignment::Center,
+            FontColor::Transparent(BinaryColor::On),
+            oled,
+        )
+        .unwrap();
+
+        oled.flush().unwrap();
+
+        loop {
+            
+            let keys = keys_receiver.recv().await.unwrap();
+            buzzer.set_high();
+            Mono::delay(10.millis()).await;
+            buzzer.set_low();
+
+            for key in &keys {
+                match key {
+                    Key::Number(num) => {
+
+                        let mut buf = [0u8; 30];
+                        let message = format_no_std::show(
+                            &mut buf,
+                            format_args!("Key pressed: {}", num))
+                            .unwrap();
+
+                        oled.clear();
+                        font.render_aligned(
+                            message,
+                            oled.bounding_box().center(),
+                            VerticalPosition::Center,
+                            HorizontalAlignment::Center,
+                            FontColor::Transparent(BinaryColor::On),
+                            oled,
+                        )
+                        .unwrap();
+
+                        oled.flush().unwrap();
+                    }
+                    _ => {}
+                }
+            }
+        }
+    }
+
+
+    // Read keyboard
+    #[task(local = [keyboard], priority = 1)]
+    async fn keyboard(cx: keyboard::Context, mut keys_sender: Sender<'static, KeySet, 1>) {
+
+        let keyboard::LocalResources
+            {keyboard, ..} = cx.local;
+
+        loop {
+            Mono::delay(5.millis()).await;
+            keyboard.proceed();
+            let state = keyboard.get_pressed();
+
+            if !state.is_empty() {
+                keys_sender.send(state).await.ok();
+            }
+        }
+    }
+
 
     // Blink LED
     #[task(local = [heater_control], priority = 1)]
@@ -71,42 +167,14 @@ mod app {
 
         loop {
             
-            heater_control.on().ok();
+            heater_control.set_high();
             Mono::delay(1000.millis()).await;
 
-            heater_control.off().ok();
+            heater_control.set_low();
             Mono::delay(1000.millis()).await;
         }
     }
 
-    // Control OLED display
-    #[task(local = [oled], priority = 1)]
-    async fn oled(cx: oled::Context) {
-
-        let oled::LocalResources
-            {oled, ..} = cx.local;
-
-
-        Mono::delay(10.secs()).await;
-
-        oled.init().unwrap();
-        oled.flush().unwrap();
-
-        let text_style = MonoTextStyleBuilder::new()
-            .font(&FONT_6X10)
-            .text_color(BinaryColor::On)
-            .build();
-
-        Text::with_baseline("Hello world!", Point::zero(), text_style, Baseline::Top)
-            .draw(oled)
-            .unwrap();
-
-        Text::with_baseline("Hello Rust!", Point::new(0, 16), text_style, Baseline::Top)
-            .draw(oled)
-            .unwrap();
-
-        oled.flush().unwrap();
-    }
 
     #[idle]
     fn idle(_: idle::Context) -> ! {

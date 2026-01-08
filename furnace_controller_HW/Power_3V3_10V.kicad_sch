@@ -4660,7 +4660,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "0"
 			(at 143.51 113.03 90)
 			(effects
 				(font
@@ -5327,7 +5327,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "680"
+		(property "Value" "5,1k"
 			(at 143.51 120.65 90)
 			(effects
 				(font
@@ -5399,7 +5399,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1,2k"
+		(property "Value" "51"
 			(at 143.51 135.89 90)
 			(effects
 				(font
@@ -5471,7 +5471,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1,2k"
+		(property "Value" "6,8k"
 			(at 143.51 143.51 90)
 			(effects
 				(font
@@ -5543,7 +5543,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330"
+		(property "Value" "680"
 			(at 116.078 105.283 0)
 			(effects
 				(font

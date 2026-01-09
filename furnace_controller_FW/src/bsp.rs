@@ -11,6 +11,7 @@ pub use hal:: {
         spi::{self, Spi, Phase, Polarity},
         time::ms,
         timer::{Channel, Timer, Tim2NoRemap},
+        serial::{self, Rx},
         watchdog::IndependentWatchdog,
     };
 pub use ssd1309::{prelude::*, Builder};
@@ -21,10 +22,34 @@ use crate::safe_panic::copy_safe_pin;
 
 /// Number of thermocouples
 pub const TEMP_NUM: usize = 5;
+/// Number of bytes in each packet received from the 230V board
+pub const RX_DATA_LEN: usize = 22;
+
+/// Possible error while receiving the 230V board data
+#[derive(Debug, PartialEq)]
+pub enum Board230Error {
+    UartError,
+    CrcError,
+    ParseError,
+    NoTempValue,
+}
+
+/// Structure containing 230V board data
+#[derive(Debug, PartialEq)]
+pub struct RxData {
+    /// RMS grid voltage value in V
+    pub voltage: u16,
+    /// RMS load current value in 0.1A
+    pub current: u16,
+    /// Triac temperature value in Celsius degree
+    pub triac_temp: i16,
+}
+
 
 pub type OledDisplay =  GraphicsMode<I2CInterface<BlockingI2c<hal::pac::I2C1>>>;
 pub type DigitalOutput = ErasedPin<Output>;
 pub type TempSpi = Spi<hal::pac::SPI2, u8>;
+pub type Board230Rx = Rx<hal::pac::USART2>;
 
 pub struct Board {
     pub rcc: Rcc,
@@ -35,6 +60,7 @@ pub struct Board {
     pub watchdog: IndependentWatchdog,
     pub temp_select: [DigitalOutput; 5],
     pub temp_spi: TempSpi,
+    pub board230_rx: Board230Rx,
 }
 
 impl Board {
@@ -127,6 +153,18 @@ impl Board {
             &mut rcc
         );
 
+        // UART to receive data from the 230V board
+        let rx_pin = gpioa.pa3.into_floating_input(&mut gpioa.crl);
+        let board230_rx = p.USART2.rx(
+            rx_pin,
+            serial::Config::default()
+                .baudrate(9600.bps())
+                .wordlength_8bits()
+                .parity_none()
+                .stopbits(serial::StopBits::STOP1),
+            &mut rcc
+        );
+
         let mut watchdog = IndependentWatchdog::new(p.IWDG);
         watchdog.start(3000.millis());
 
@@ -140,6 +178,7 @@ impl Board {
             watchdog,
             temp_select,
             temp_spi,
+            board230_rx,
         }
     }
 }

@@ -16,6 +16,7 @@ pub fn copy_safe_pin(pin: Pin) -> &'static mut Pin {
     }
 }
 
+#[cfg(not(test))]
 #[allow(static_mut_refs)]
 #[inline(never)]
 #[panic_handler]

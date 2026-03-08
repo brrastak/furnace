@@ -16,8 +16,6 @@
 //-----------------------------------------------------------------------
 
 include <const.scad>
-include <recess.scad>
-
 include <YAPPgenerator_v3.scad>
 
 
@@ -119,10 +117,10 @@ pcb =
 
 //-------------------------------------------------------------------                            
 //-- padding between pcb and inside wall
-paddingFront        = 2;
+paddingFront        = 25;
 paddingBack         = 5;
 paddingRight        = 2;
-paddingLeft         = 30;
+paddingLeft         = 25;
 
 //-- Edit these parameters for your own box dimensions
 wallThickness       = 4;
@@ -135,8 +133,8 @@ lidPlaneThickness   = 4;
 //                       + basePlaneThickness
 //-- space between pcb and lidPlane :=
 //--      (bottonWallHeight+lidWallHeight) - (standoffHeight+pcbThickness)
-baseWallHeight      = 12;
-lidWallHeight       = 7;
+baseWallHeight      = 14.5;
+lidWallHeight       = 4.5;
 
 //-- ridge where base and lid off box can overlap
 //-- Make sure this isn't less than lidWallHeight
@@ -325,7 +323,15 @@ cutoutsBase =
 
 cutoutsLid  = 
 [
-    [disp_y, disp_x, disp_width, disp_length, 0, yappRectangle, yappCenter, yappCoordPCB]
+    // Display
+    [disp_y, disp_x, disp_width, disp_length, 0, yappRectangle, 2, yappCenter, yappCoordPCB],
+    // Display flat cable
+    [disp_y - disp_width / 2 - 0.5, disp_x, 1, 15, 0, yappRectangle, yappCenter, yappCoordPCB],
+
+    // Keyboard
+    [85, 27, 75, 87, 0, yappRectangle, 1, yappCenter, yappCoordPCB],
+    // Keyboard flat cable
+    [46, 1, 3, 35, 0, yappRectangle, yappCenter, yappCoordPCB]
 ];
 
 cutoutsFront =  
@@ -366,8 +372,8 @@ cutoutsRight =
 //-------------------------------------------------------------------
 snapJoins   =   
 [
-    [boxWidth/2, 5, yappFront, yappCenter],
-    [boxWidth/2, 5, yappBack, yappCenter],
+    // [boxWidth/2, 5, yappFront, yappCenter],
+    // [boxWidth/2, 5, yappBack, yappCenter],
     [boxLength/2 + 15, 5, yappLeft, yappCenter],
     [boxLength/2 + 15, 5, yappRight, yappCenter],
 ];
@@ -397,6 +403,10 @@ snapJoins   =
 //-------------------------------------------------------------------
 boxMounts =
 [
+    [20, 3.5, 15, 4, yappRight, yappCenter],
+    [shellLength-20, 3.5, 15, 4, yappRight, yappCenter],
+    [20, 3.5, 15, 4, yappLeft, yappCenter],
+    [shellLength-20, 3.5, 15, 4, yappLeft, yappCenter]
 ];
 
 
@@ -438,93 +448,6 @@ ridgeExtBack =
 [
 ];
 
-
-//===================================================================
-//  *** Display Mounts ***
-//    add a cutout to the lid with mounting posts for a display
-//-------------------------------------------------------------------
-//  Default origin = yappCoordBox: box[0,0,0]
-//
-//  Parameters:
-//   Required:
-//    p(0) = posx
-//    p(1) = posy
-//    p[2] : displayWidth = overall Width of the display module
-//    p[3] : displayHeight = overall Height of the display module
-//    p[4] : pinInsetH = Horizontal inset of the mounting hole
-//    p[5] : pinInsetV = Vertical inset of the mounting hole
-//    p[6] : pinDiameter,
-//    p[7] : postOverhang  = Extra distance towards outside of pins to move the post for the display to sit on - 0 = centered : pin Diameter will move the post to align to the outside of the pin (moves it half the distance specified for compatability : -pinDiameter will move it in.
-//    p[8] : walltoPCBGap = Distance from the display PCB to the surface of the screen
-//    p[9] : pcbThickness  = Thickness of the display module PCB
-//    p[10] : windowWidth = opening width for the screen
-//    p[11] : windowHeight = Opening height for the screen
-//    p[12] : windowOffsetH = Horizontal offset from the center for the opening
-//    p[13] : windowOffsetV = Vertical offset from the center for the opening
-//    p[14] : bevel = Apply a 45degree bevel to the opening
-// Optionl:
-//    p[15] : rotation
-//    p[16] : snapDiameter : default = pinDiameter*2
-//    p[17] : lidThickness : default = lidPlaneThickness
-//    n(a) = { <yappOrigin>, yappCenter } 
-//    n(b) = { <yappCoordBox> | yappCoordPCB | yappCoordBoxInside }
-//    n(c) = { <yappGlobalOrigin>, yappAltOrigin } // Only affects Top(lid), Back and Right Faces
-//    n(d) = [yappPCBName, "XXX"] : Specify a PCB. Defaults to [yappPCBName, "Main"]
-//    n(e) = {yappSelfThreading} : Replace the pins with self threading holes
-//-------------------------------------------------------------------
-displayMounts =
-[
-];
-
-//========= HOOK functions ============================
-  
-// Hook functions allow you to add 3d objects to the case.
-// Lid/Base = Shell part to attach the object to.
-// Inside/Outside = Join the object from the midpoint of the shell to the inside/outside.
-// Pre = Attach the object Pre before doing Cutouts/Stands/Connectors. 
-
-
-//===========================================================
-// origin = box(0,0,0)
-module hookLidInside()
-{
-    color("Blue")
-    recess(
-        recess_x = wallThickness + paddingBack + disp_y,
-        recess_y = disp_x,
-        recess_length = disp_width,
-        recess_width = disp_length,
-        recess_depth = 2,
-        hole_x = disp_length / 2,
-        hole_width = 1,
-        hole_length = 15
-    );
-
-} // hookLidInside()
-  
-
-//===========================================================
-// origin = box(0,0,0)
-module hookLidOutside()
-{
-} // hookLidOutside()
-
-//===========================================================
-//===========================================================
-// origin = box(0,0,0)
-module hookBaseInside()
-{
-  //if (printMessages) echo("hookBaseInside() ..");
-  
-} // hookBaseInside()
-
-//===========================================================
-// origin = box(0,0,0)
-module hookBaseOutside()
-{
-  //if (printMessages) echo("hookBaseOutside() ..");
-  
-} // hookBaseInside()
 
 // **********************************************************
 // **********************************************************

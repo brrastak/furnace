@@ -11,9 +11,7 @@ use embedded_graphics::{
 use embedded_hal::delay::DelayNs;
 use max31855::{Max31855, Unit};
 use micromath::F32Ext;
-// use panic_rtt_target as _;
-// use rtt_target::rtt_init_print;
-// use rtt_target::rprintln;
+use rtt_target::rtt_init_log;
 use rtic_monotonics::systick::prelude::*;
 use u8g2_fonts::{fonts, FontRenderer, types::*};
 use rtic_sync::{channel::*, make_channel};
@@ -66,6 +64,8 @@ mod app {
     #[init]
     fn init(cx: init::Context) -> (Shared, Local) {
 
+        rtt_init_log!();
+
         let board = Board::new(cx.device);
         let mut oled = board.oled;
         let heater_control = board.heater_control;
@@ -76,17 +76,15 @@ mod app {
         let temp_spi = board.temp_spi;
         let mut board230_rx = board.board230_rx;
 
-        // rtt_init_print!();
-
         Mono::start(cx.core.SYST, board.rcc.clocks.sysclk().to_Hz());
         
-        oled.init().unwrap();
+        oled.init().expect("Display initialization error");
 
         Mono::delay_ms(&mut Mono, 1000);
         buzzer.set_high();
         Mono::delay_ms(&mut Mono, 1000);
         buzzer.set_low();
-
+        log::info!("Initialization finished");
 
         let (keys_sender, keys_receiver) = make_channel!(KeySet, 1);
         let (temp_sender, temp_receiver) = make_channel!([Option<i16>; 5], 1);
@@ -169,12 +167,12 @@ mod app {
                             let str: &str = format_no_std::show(
                             &mut buf,
                             format_args!("{}°C\n", 
-                            number)).unwrap();
+                            number)).expect("Formatting error");
                             str
                         }
                         None => "--\n"
                     };
-                    temperatures.push_str(message).unwrap();
+                    temperatures.push_str(message).expect("String push error");
                 }
                 update_disp = true;
             }
@@ -193,20 +191,20 @@ mod app {
                                 data.current % 10,
                                 data.voltage * data.current / 10,
                                 data.triac_temp 
-                            )).unwrap();
-                        rx_data.push_str(str).unwrap();
+                            )).expect("Formatting error");
+                        rx_data.push_str(str).expect("String push error");
                     }
                     Err(Board230Error::UartError) => {
-                        rx_data.push_str("UartError").unwrap();
+                        rx_data.push_str("UartError").expect("String push error");
                     }
                     Err(Board230Error::CrcError) => {
-                        rx_data.push_str("CrcError").unwrap();
+                        rx_data.push_str("CrcError").expect("String push error");
                     }
                     Err(Board230Error::ParseError) => {
-                        rx_data.push_str("ParseError").unwrap();
+                        rx_data.push_str("ParseError").expect("String push error");
                     }
                     Err(Board230Error::NoTempValue) => {
-                        rx_data.push_str("NoTempValue").unwrap();
+                        rx_data.push_str("NoTempValue").expect("String push error");
                     }
                 }
                 
@@ -253,7 +251,7 @@ mod app {
                 )
                 .ok();
 
-                oled.flush().unwrap();
+                oled.flush().expect("OLED flush error");
                 update_disp = false;
             }
         }
@@ -286,19 +284,19 @@ mod app {
         const CRC: Crc<u8> = Crc::<u8>::new(&CRC_8_MAXIM_DOW);
 
         loop {
-            match rx_byte_receiver.recv().await.unwrap() {
+            match rx_byte_receiver.recv().await.expect("Receiver error") {
                 Ok(byte) => {
                     buf.push_back(byte).ok();
                 }
                 Err(err) => {
-                    rx_data_sender.send(Err(err)).await.ok();
+                    rx_data_sender.send(Err(err)).await.expect("Sender error");
                 }
             }
             // Full package received?
             if buf.is_full() {
-                if *buf.front().unwrap() != b'U' {
+                if *buf.front().expect("Buffer error") != b'U' {
                     // Wrong package start -> continue collecting data
-                    buf.pop_front().unwrap();
+                    buf.pop_front().expect("Buffer error");
                     continue;
                 }
 
@@ -306,12 +304,12 @@ mod app {
                 let input = buf.as_slices().0;
 
                 if CRC.checksum(&input) != 0 {
-                    rx_data_sender.send(Err(Board230Error::CrcError)).await.ok();
+                    rx_data_sender.send(Err(Board230Error::CrcError)).await.expect("Sender error");
                     continue;
                 }
 
                 let processed = parse_rx_data(&input).map(calculate_rms);
-                rx_data_sender.send(processed).await.ok();
+                rx_data_sender.send(processed).await.expect("Sender error");
             }
         }
     }
@@ -350,12 +348,19 @@ mod app {
 
             for (chip_select, data) in temp_select.iter_mut().zip(data.iter_mut()) {
                 *data = match temp_spi.read_all(chip_select, Unit::Celsius) {
-                    Ok(result) => Some(result.thermocouple.round() as i16),
-                    Err(_) => None
+                    Ok(result) => {
+                        let temperature = result.thermocouple.round() as i16;
+                        log::info!("Thermocouple read: {}°C", temperature);
+                        Some(temperature)
+                    },
+                    Err(err) => {
+                        log::error!("Thermocouple read error: {:?}", err);
+                        None
+                    }
                 };
                 Mono::delay(10.millis()).await; 
             }
-            temp_sender.send(data).await.unwrap();
+            temp_sender.send(data).await.expect("Sender error");
         }
     }
 
@@ -365,12 +370,14 @@ mod app {
 
         loop {   
             let smile = "^_^";
-            smile_sender.send(smile).await.ok();
+            smile_sender.send(smile).await.expect("Sender error");
             Mono::delay(2000.millis()).await;
 
             let smile = "^_~";
-            smile_sender.send(smile).await.ok();
+            smile_sender.send(smile).await.expect("Sender error");
             Mono::delay(500.millis()).await;
+
+            log::info!("Blink!");
         }
     }
 

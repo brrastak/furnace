@@ -46,7 +46,7 @@ pub struct RxData {
 }
 
 
-pub type OledDisplay =  GraphicsMode<I2CInterface<BlockingI2c<hal::pac::I2C1>>>;
+pub type OledDisplay = GraphicsMode<I2CInterface<BlockingI2c<hal::pac::I2C1>>>;
 pub type DigitalOutput = ErasedPin<Output>;
 pub type TempSpi = Spi<hal::pac::SPI2, u8>;
 pub type Board230Rx = Rx<hal::pac::USART2>;

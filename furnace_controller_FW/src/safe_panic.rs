@@ -1,6 +1,7 @@
 //! Module implementing a custom panic handler that obtains a copy of the heater control pin
 //! and puts it into a safe state whenever panic occurs
 use core::panic::PanicInfo;
+use log;
 use stm32f1xx_hal::gpio::*;
 
 
@@ -20,11 +21,13 @@ pub fn copy_safe_pin(pin: Pin) -> &'static mut Pin {
 #[allow(static_mut_refs)]
 #[inline(never)]
 #[panic_handler]
-fn panic(_info: &PanicInfo) -> ! {
+fn panic(info: &PanicInfo) -> ! {
 
     if let Some(mut pin) = unsafe { PIN.take() } {
         pin.set_low();
     }
+
+    log::error!("{}", info);
 
     loop {}
 }

@@ -1,9 +1,17 @@
 
 flash:
 	$(MAKE) build
-	stm8flash -c stlinkv2 -p stm8s103f3 -s flash -w ./c_target/furnace_230v.ihx
-	# unlock:
-	# stm8flash -c stlinkv2 -p stm8s001j3 -u
+	stm8flash -c stlinkv2 -p stm8s001j3 -s flash -w ./target/binary.ihx
+# 	stm8flash -c stlinkv2 -p stm8s103f3 -s flash -w ./target/binary.ihx
+
+unlock:
+	stm8flash -c stlinkv2 -p stm8s001j3 -u
+
+readopt:
+	stm8flash -c stlinkv2 -p stm8s001j3 -s opt -r opt.bin
+
+writeopt:
+	stm8flash -c stlinkv2 -p stm8s001j3 -s opt -w opt.bin
 
 build:
 	$(MAKE) rbuild

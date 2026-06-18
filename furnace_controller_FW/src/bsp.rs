@@ -48,7 +48,7 @@ pub struct RxData {
 
 pub type OledDisplay = GraphicsMode<I2CInterface<BlockingI2c<hal::pac::I2C1>>>;
 pub type DigitalOutput = ErasedPin<Output>;
-pub type TempSpi = Spi<hal::pac::SPI2, u8>;
+pub type TempSpi = Spi<hal::pac::SPI2, u8, PullUp>;
 pub type Board230Rx = Rx<hal::pac::USART2>;
 
 pub struct Board {
@@ -144,7 +144,7 @@ impl Board {
         let temp_select = [temp_spi_cs0, temp_spi_cs1, temp_spi_cs2, temp_spi_cs3, temp_spi_cs4];
         assert_eq!(temp_select.len(), TEMP_NUM);
         let temp_spi_clk = gpiob.pb13.into_alternate_push_pull(&mut gpiob.crh);
-        let temp_spi_miso = gpiob.pb14.into_floating_input(&mut gpiob.crh);
+        let temp_spi_miso = gpiob.pb14.into_pull_up_input(&mut gpiob.crh);
         let temp_spi = Spi::new(
             p.SPI2,
             (Some(temp_spi_clk), Some(temp_spi_miso), None::<spi2::Mo>),
